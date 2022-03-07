@@ -71,7 +71,7 @@
     ],
     "skills": [
       {
-        "name": "A category of job skills (e.g. 'Programming Languages')",
+        "name": "Programming Languages",
         "level": "",
         "keywords": [
           "Keywords under this category (e.g. 'Java', 'C++', etc)"

@@ -1,0 +1,42 @@
+<html>
+
+<head>
+	<style>
+		.main * {
+			display: block;
+			border: 2px solid lightgrey;
+			color: grey;
+			padding: 5px;
+			margin: 15px;
+		}
+	</style>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script>
+
+		$(document).ready(function() {
+			$("span").closest("ul").css({
+				"color": "green",
+				"border": "2px solid green"
+			});
+		});
+	</script>
+</head>
+
+<body class="main">
+	This is great-great grand parent element !
+	<div style="width:600px;">
+		This is great grand parent element !
+		<ul>
+			This is the second ancestor element !
+			<ul>
+				<!-- This element will be selected -->
+				This is first ancestor element !
+				<li>This is direct parent !
+				<span>This is span the child element !</span>
+				</li>
+			</ul>
+		</ul>
+	</div>
+</body>
+
+</html>

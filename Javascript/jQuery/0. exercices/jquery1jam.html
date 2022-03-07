@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+    <script>
+        // pour chaque script jquery verifie que la oage est bien chargée 
+        $(document).ready(function(){
+            // connection sur le bouton b1 de l'ecouteur d'évènement click 
+            // qu click tous les paragraphes sont masqués
+            $("button#b1").click( function(){
+                $("p#p1").hide()
+            })
+             // connection sur le bouton b1 de l'ecouteur d'évènement click 
+            // qu click tous les paragraphes sont masqués
+            $("button#b2").click( function(){
+                $("p#p1").show()
+            })
+            $("button#b3").click( function(){
+                $(".c1").hide()
+            })
+            $("#essai").click(function(){
+                $(this).hide() 
+            })  
+        })
+    </script>
+  
+</head>
+<body>
+    <div id="essai">ceci est un div </div>
+    <p id="p1" class="c1"> ceci est un paragraphe</p>
+    <p id="p2"> ceci est un autresparagraphe</p>
+    <p class="c1"> encore un autre paragraphe </p>
+    <button id="b1">clique pour cacher les paragraphes</button>
+    <button id="b2">clique pour montrer les paragraphes</button>
+    <button id="b3">clique cacher les paragraphes dont la classe est c1</button>
+</body>
+</html>

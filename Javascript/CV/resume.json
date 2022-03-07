@@ -1,5 +1,4 @@
 {
-    "version":"1",
     "basics": {
       "first name": "Damien",
       "last name": "Martin",
@@ -12,7 +11,8 @@
       "summary": "A one-sentence to one-paragraph overview text. Do not include any line-breaks.",
       "highlights": [
           "Bullet-point list items that you would like to include along with (or instead of) a summary paragraph."
-      ],
+      ]
+      },
       "location": {
         "address": "13 Rue Charles le Goffic",
         "postalCode": 29400,
@@ -26,8 +26,7 @@
           "username": "@Damdam_Dev",
           "url": "www.twitter.fr/Damdam_dev/"
         }
-      ]
-    },
+      ],
     "work": [
       {
         "company": "Your employer name",

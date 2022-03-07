@@ -1,0 +1,38 @@
+<html>
+
+<head>
+	<style>
+		.main_div * {
+			display: block;
+			border: 1px solid rgb(128, 58, 0);
+			color: rgb(128, 68, 0);
+			padding: 5px;
+			margin: 15px;
+		}
+	</style>
+	<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+		
+	</script>
+	<script>
+		$(document).ready(function() {
+			$("span").parent().css({
+				"color": "green",
+				"border": "2px solid green"
+			});
+		});
+	</script>
+</head>
+
+<body>
+
+<div class="main_div">
+	<div style="width:500px;">div (Great-Grandparent)
+	<ul>This is the grand-parent of the selected span element.!
+	    <li>This is the parent of the selected span element.!<span>This is the span element !!!</span></li>
+	</ul>
+	</div>
+</div>
+</body>
+
+</html>

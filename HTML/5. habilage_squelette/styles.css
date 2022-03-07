@@ -1,0 +1,120 @@
+body {
+    font-family: Arial,sans-serif;
+    text-align: center;
+    vertical-align: middle;
+    color: #444444;
+}
+header>.wrapper {
+    display: flex;
+    justify-content: space-around;
+    height:80px;
+    margin-top: 40px;
+
+}
+li {
+    display: inline-block;
+    list-style: none;
+    width: 200px;
+
+}
+nav ul {
+    padding: 0;
+    margin: 0;
+    border: 1px solid;
+    display: inline-block;
+    list-style: none;
+    width: 400px;
+
+}
+li>h4 {
+font-size: large;
+}
+li>p {
+font-size: x-small;
+}
+.wrapper>ul>li {
+    height: 200px;
+    border: 0px solid;
+    background-repeat: no-repeat;
+    background-position: top;
+    vertical-align: bottom;
+    padding-top: 110px;
+}
+#step-1 {
+    background-image: url(./images/steps-icon-1.png);
+}
+#step-2 {
+    background-image: url(./images/steps-icon-2.png);
+}
+#step-3 {
+    background-image: url(./images/steps-icon-3.png);
+}
+a:link {
+    color: #444444;
+    text-decoration: none;
+}
+a:visited {
+    color:#444444;
+}
+a:hover {
+    color: #02b8dd;
+}
+a:active {
+    text-decoration: underline;
+}
+#main-image>div {
+    background-image: url(./images/main1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 5%;
+    height: 25em;
+}
+#main-image>div>h2 {
+    font-size:xxx-large;
+}
+.button-1 {
+    color: white;
+    border: #fc7901 solid;
+    background-color: #fc7901;
+    padding: 4px 10px 4px 10px;
+}
+.button-1:hover {
+    color: #ffffff;
+}
+#contact>.wrapper>h3 {
+    position: relative;
+    text-decoration: underline #02b8dd;
+}
+#contact>.wrapper>p {
+    font-size: smaller;
+    position: relative;
+}
+.clear {
+    clear: both;
+}
+#contact {
+    height: 150px;
+    width: auto;
+    text-align: center;
+    clear: both;
+}
+.button-3 {
+    border: #02b8dd solid;
+    background-color: #02b8dd;
+    color: white;
+}
+footer {
+    height: 150px;
+    text-align: center;
+    clear: both;
+    background-color: #444444;
+}
+footer>div * {
+    color: white;
+}
+.copyright {
+    font-size: xx-small;
+}
+.orange {
+    color: #fc7901;
+}

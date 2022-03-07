@@ -1,0 +1,46 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <style>
+        div {
+            background-color: cadetblue;
+            height: 300px;
+            width: 300px;
+            position: absolute;
+            color: white;
+        }
+
+        button {
+            margin: 50px;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+
+            $("button").click(function () {
+                $("div#box").animate({
+                    left: '300px'
+                }, {
+                    duration: 3000,
+                    progress: function (promise) {
+                        console.log($("div#box").position().left);
+                    }
+                })
+            })
+
+        });
+    </script>
+</head>
+
+<body>
+    <button>GO</button>
+    <div id="box">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+        magna aliqua.
+    </div>
+
+</body>
+
+</html>

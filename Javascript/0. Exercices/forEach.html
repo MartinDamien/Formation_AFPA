@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <script>
+      let femmes = [{
+          nom_produit: "robe classe",
+          prix: 25,
+          photo: "robe.png",
+          tailles: [36, 38, 40]
+        },
+        {
+          nom_produit: "pantalon femmes",
+          prix: 45,
+          photo: "pantalonf.png",
+          tailles: [40]
+        },
+        {
+          nom_produit: "t-shirt femmes",
+          prix: 35.5,
+          photo: "tshirt.png",
+          tailles: ["s", "m", "l", "xl"]
+        },
+      ]
+ 
+      femmes.forEach(function(p) {
+      document.write(p.nom_produit+"<br>")
+      document.write(p.prix+"<br>")
+      document.write(p.photo+"<br>")
+      });
+
+    </script>
+    <title>Shopping Agency</title>
+  </head>
+  <body>
+  </body>
+</html>

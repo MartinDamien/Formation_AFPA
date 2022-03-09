@@ -42,4 +42,14 @@ function plus3($p){
     return $p;
 }
 
+function months ($tab){
+    echo"<table>";
+    foreach($tab as $trimester){
+        echo "<tr>";
+        foreach($trimester as $value){
+            print_r("<td>"."<td><td>".$value."<td>");
+        } echo"</tr>";
+    } echo"</table>";
+}
+
 ?>

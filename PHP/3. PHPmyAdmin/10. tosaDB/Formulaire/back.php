@@ -13,16 +13,20 @@
     //integration des données dans la BdD
     $sql = $pdo->prepare("INSERT INTO user(id,email,password,nom,prenom,role) VALUE(NULL,'$mail','$pass','$nom','$prenom','$role')");
     $sql->execute();
+    
     $stmt = $pdo->prepare("SELECT * FROM users WHERE email=?");
+
     //execute the statement
-    $stmt->execute([$email]);
+    $stmt->execute([$_POST['mail']]);
     //fetch result
     $user = $stmt->fetch();
     if ($user) {
-        // email exists
+        echo "email exists";
     } else {
-        // email does not exist
+        echo "email does not exist";
     }
+
+
     ?>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">

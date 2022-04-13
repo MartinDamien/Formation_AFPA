@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+
+      function rechercherEntier(tab, x) {
+        indiceBas = 0;
+        indiceHaut = tab.lenght;
+        indiceMilieu = (indiceBas + indiceHaut) % 2;
+        trouver = false;
+
+        while ((trouver = false) && indiceBas <= indiceHaut) {
+          if (y < tab[indiceMilieu]) {
+            indiceHaut = indiceMilieu - 1;
+          } else if (y > tab[indiceMilieu]) {
+            indiceBas = indiceMilieu + 1;
+          } else trouver = true;
+        } 
+      }
+    </script>
+  </head>
+  <body></body>
+</html>

@@ -1,120 +1,76 @@
-body {
-    font-family: Arial,sans-serif;
-    text-align: center;
-    vertical-align: middle;
-    color: #444444;
-}
-header>.wrapper {
-    display: flex;
-    justify-content: space-around;
-    height:80px;
-    margin-top: 40px;
-
-}
-li {
-    display: inline-block;
-    list-style: none;
-    width: 200px;
-
-}
-nav ul {
-    padding: 0;
+*
+{
     margin: 0;
-    border: 1px solid;
-    display: inline-block;
-    list-style: none;
-    width: 400px;
-
+    padding: 0;
+    border: 1px solid black;
+    }
+body 
+{
+    font-family: Arial,sans-serif;
+    font-size: 15px;
 }
-li>h4 {
-font-size: large;
+h1, h2,h3,h4
+{
+  color: #444;  
 }
-li>p {
-font-size: x-small;
+h1{
+    font-size: 12px;
 }
-.wrapper>ul>li {
-    height: 200px;
-    border: 0px solid;
-    background-repeat: no-repeat;
-    background-position: top;
-    vertical-align: bottom;
-    padding-top: 110px;
+h2{
+    font-size: 12px;
 }
-#step-1 {
-    background-image: url(./images/steps-icon-1.png);
+h3{
+    font-size: 12px;
 }
-#step-2 {
-    background-image: url(./images/steps-icon-2.png);
+h4{
+    font-size: 12px;
 }
-#step-3 {
-    background-image: url(./images/steps-icon-3.png);
-}
-a:link {
-    color: #444444;
+a{
     text-decoration: none;
+    font-size: 12px;
 }
-a:visited {
-    color:#444444;
-}
-a:hover {
-    color: #02b8dd;
-}
-a:active {
+a:hover{
     text-decoration: underline;
 }
-#main-image>div {
-    background-image: url(./images/main1.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: 5%;
-    height: 25em;
+a:visited{
+    color: rgb(141, 25, 25);
 }
-#main-image>div>h2 {
-    font-size:xxx-large;
+.orange{
+    color: #FF7A01;
 }
-.button-1 {
-    color: white;
-    border: #fc7901 solid;
-    background-color: #fc7901;
-    padding: 4px 10px 4px 10px;
+
+/*header*/
+header 
+{
+    height: 120px;   
 }
-.button-1:hover {
-    color: #ffffff;
+header h1
+{
+    float: left;
+    margin-top: 32px;
 }
-#contact>.wrapper>h3 {
-    position: relative;
-    text-decoration: underline #02b8dd;
+header nav
+{
+    float: right;   
+    margin-top: 50px;
 }
-#contact>.wrapper>p {
-    font-size: smaller;
-    position: relative;
+header nav ul li
+{
+    
+    display: inline-block;
 }
-.clear {
-    clear: both;
+header nav ul li a
+{
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-right: 20px;
 }
-#contact {
-    height: 150px;
-    width: auto;
-    text-align: center;
-    clear: both;
+/*footer*/
+footer{
+    height: 120px;
 }
-.button-3 {
-    border: #02b8dd solid;
-    background-color: #02b8dd;
-    color: white;
-}
-footer {
-    height: 150px;
-    text-align: center;
-    clear: both;
-    background-color: #444444;
-}
-footer>div * {
-    color: white;
-}
-.copyright {
-    font-size: xx-small;
-}
-.orange {
-    color: #fc7901;
+footer .wrapper{
+    height: 120px;
+    width: 130px;
+
 }

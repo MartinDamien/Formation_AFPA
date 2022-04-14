@@ -1,0 +1,19 @@
+$message-shared {
+    border: 1px solid #ccc;
+    padding: 10px;
+    color: #333;
+}
+
+$equal-height {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.message {
+    @extend $message-shared;
+}
+
+.succes {
+    @extend $message-shared;
+}
+

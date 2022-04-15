@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            font-size: xx-large;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        function Person(nom,age,argent){
+            this.name = nom;
+            this.age = age ;
+            this.riche = argent
+            //methode
+
+            //this.affiche = function(){console.log("Hello my name is"+this.name+"i'm "+this.age)
+
+           //donne en fonction fléche :
+           this.affiche = () => document.write("Bonjour, je m'apelle "+this.name+" j'ai "+this.age+" ans.<br>")
+           this.gagne = () => document.write("Je gagne "+this.riche+"€.<br>")
+        }
+
+        let jam = new Person("jam",44,4000)
+        let fred = new Person("Fred",66,1200)
+
+        jam.affiche()
+        jam.gagne()
+        fred.affiche()
+
+
+    </script>
+</body>
+</html>

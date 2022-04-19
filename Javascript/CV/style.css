@@ -1,17 +1,126 @@
 * {
-    background: #0f0c29;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #24243e, #302b63, #0f0c29); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    overflow: hidden;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
-.div{
-    
-    width: 100%;
-    padding: 150 px 0xp;
-    margin: 20px;
-    background-image: url;
-    
+section {
+  background: #0f0c29; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #221939,
+    #302b63
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #221939,
+    #302b63
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  padding: 50px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  min-height: 100vh;
+}
+/*debut logo*/
+.bolle {
+  position: relative;
+  width: 75px;
+  height: 75px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  border: 2px solid transparent;
+  transform-origin: bottom center;
+  animation: animate 5s linear infinite;
+}
+.bolle::before {
+  content: "";
+  position: absolute;
+  top: -5%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40%;
+  height: 7px;
+  border: 5px solid #444;
+  border-radius: 50%;
+  box-shadow: 0 3px #222;
+}
+.bolle::after {
+  content: "";
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  width: 37px;
+  height: 15px;
+  background: rgba(255, 255, 255, 0.1);
+}
+.liquide {
+  position: absolute;
+  top: 50%;
+  left: 2px;
+  right: 2px;
+  bottom: 2px;
+  background-color: #6cfb41;
+  border-bottom-left-radius: 150px;
+  border-bottom-right-radius: 150px;
+  filter: drop-shadow(0 0 40px #6cfb41);
+  transform-origin: top center;
+  animation: animateliquid 5s linear infinite;
+}
+.liquide::before {
+  content: "";
+  position: absolute;
+  top: -8%;
+  width: 100%;
+  height: 5px;
+  background: #5cd437;
+  border-radius: 50%;
+  filter: drop-shadow(0 0 20px #6cfb41);
+}
+@keyframes animate {
+  0% {
+    filter: hue-rotate(0deg);
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(15deg);
+  }
+  50% {
+    filter: hue-rotate(60deg);
+    transform: rotate(0deg);
+  }
+  75% {
+    transform: rotate(-15deg);
+  }
+  100% {
+    filter: hue-rotate(0deg);
+    transform: rotate(0deg);
+  }
+}
+@keyframes animateliquid {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(-15deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  75% {
+    transform: rotate(15deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+/*fin logo*/
+
+.div {
+  width: 100%;
+  padding: 150 px 0xp;
+  margin: 20px;
+  background-image: url;
 }

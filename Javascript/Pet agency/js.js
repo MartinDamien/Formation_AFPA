@@ -19,27 +19,6 @@ const petsData = [
     birthYear: 2016,
     photo: "https://learnwebcode.github.io/json-example/images/cat-1.jpg",
   },
-  {
-    name: "Meowsalot",
-    species: "chat",
-    favFoods: ["thon", "catnip", "celerie"],
-    birthYear: 2016,
-    photo: "https://learnwebcode.github.io/json-example/images/cat-1.jpg",
-  },
-  {
-    name: "Meowsalot",
-    species: "chat",
-    favFoods: ["thon", "catnip", "celerie"],
-    birthYear: 2016,
-    photo: "https://learnwebcode.github.io/json-example/images/cat-1.jpg",
-  },
-  {
-    name: "Meowsalot",
-    species: "chat",
-    favFoods: ["thon", "catnip", "celerie"],
-    birthYear: 2016,
-    photo: "https://learnwebcode.github.io/json-example/images/cat-1.jpg",
-  },
 ];
 function age(birthYear) {
     let calculatedAge = new Date().getFullYear() - birthYear;

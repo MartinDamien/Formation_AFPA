@@ -4,16 +4,54 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+      *{
+        padding: 0;
+        margin: 0;
+       /* border: 1px solid;*/
+      }
+      nav{
+        height: auto;
+        width: 80%;
+        padding: 10px 0 10px 0;
+        margin: auto;
+        display: grid;
+        justify-content: center;
+        text-align: center;
+        
+      }
+      nav ul{
+        height: auto;
+        width: 600px;
+        padding: 10px;
+        list-style: none;
+        display: inline-flex;
+        justify-content: space-evenly;
+        
+      }
+      li{
+        height: auto;
+        width: fit-content;
+        cursor: pointer;
+
+      }
+    </style>
 </head>
 <body>
 <nav>
+  <h1>TITRE</h1>
     <ul id="menu">
+      <li>Homme</li>
+      <li>Femmes</li>
+      <li>enfants</li>
+      <button>GO</button>
     </ul>
     <div id="image_principale">
     </div>
 
     </div>
 </nav>
+<a href="http://www.afpa.fr">GO TO AFPA</a>
 <script>
     //
     // depuis E6 on peut servir du backquote pour entourer une chaine de caractères en multiligne et pouvoir utiliser des ' et des " sans se soucier 
@@ -78,6 +116,45 @@ for(let i=0; i < vals.length; i++ ) {
         console.log(produits[j]);
     }
 }
+
+/* Quand on click dans le boutton, la detection d'evenement "click" est desactivée.
+
+let btn = document.querySelector("button")
+btn.addEventListener("click", () =>{
+  console.log(event)
+})*/
+
+/*detecte les subtiliter dans les evenements (ex: quelle boutton de la souris appuie sur le boutton)
+
+let btn = document.querySelector("button")
+btn.addEventListener("mousedown", (event) =>{
+  console.log(event)
+  if(event.button == 0){
+    console.log("bouton gauche")
+  }else if(event.button == 1){
+    console.log("bouton millieux")
+  }else if(event.button == 2){
+    console.log("bouton droit")
+  }
+})*/
+
+
+/*
+let btn = document.querySelector("button")
+  btn.addEventListener("mousedown", (event) => {
+    console.log(event.target.nodeName)
+  })*/
+
+
+// l'hyperlien afpa.fr est intercepté par JS et l'execution normale inhibée
+
+//par event.preventDefault
+let lien = document.querySelector("a") 
+lien.addEventListener("click", (event) => {
+  console.log("NON !!!") 
+  event.preventDefault()
+})
+
 
 </script>
 </body>

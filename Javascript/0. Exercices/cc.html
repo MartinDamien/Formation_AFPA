@@ -155,6 +155,12 @@ lien.addEventListener("click", (event) => {
   event.preventDefault()
 })
 
+let leinput = document.querySelector("input")
+leinput.addEventListener("keydown", (event) => {
+  if(event.ctrlKey && event.key == 'a') {
+    alert("DANGER !!!!!")
+  }
+})
 
 </script>
 </body>

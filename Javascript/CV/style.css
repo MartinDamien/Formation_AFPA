@@ -1,8 +1,10 @@
 * {
   padding: 0;
   margin: 0;
-  box-sizing: border-box;
+  border: white 1px solid;
+  
 }
+
 section {
   background: #0f0c29; /* fallback for old browsers */
   background: -webkit-linear-gradient(
@@ -16,13 +18,58 @@ section {
     #302b63
   ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
-  padding: 50px;
-  display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
   min-height: 100vh;
+  display: flex;
 }
+
+/*navbar*/
+
+.wrapper{
+  width: 100%;
+  height: fit-content;
+  padding: 10px;
+  display: inline-flex;
+  justify-content: space-between;
+  
+}
+nav{
+  min-width: 70%;
+  height: fit-content;
+  padding: 10px;
+  justify-content: flex-end;
+}
+nav ul{
+  width: 40%;
+  height: 20px;
+  display: inline-flex;
+  justify-content: flex-end;
+  justify-content: space-evenly;
+}
+nav ul li{
+  width: fit-content;
+  height: auto;
+  justify-content: space-evenly;
+  list-style-type: none;
+}
+
+/*Fonts*/
+h1{
+  font-size: xx-large;
+  color: white;
+}
+
+
 /*debut logo*/
+#logo{
+  min-width: fit-content;
+  padding: 0 5px 0 10px;
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#logo h1{
+  margin: 7px;
+}
 .bolle {
   position: relative;
   width: 75px;
@@ -118,9 +165,22 @@ section {
 }
 /*fin logo*/
 
-.div {
-  width: 100%;
-  padding: 150 px 0xp;
-  margin: 20px;
-  background-image: url;
+
+
+a:link{
+  font-size: larger;
+  text-decoration: underline;
+  padding: 0 0 2px 0;
+  border: none;
+  color: green;
+
 }
+a:link, a:visited {
+  text-decoration: none;
+  color: green;
+}
+a:hover, a:active {
+  text-decoration: underline;
+  color: #ffffffc9;
+}
+

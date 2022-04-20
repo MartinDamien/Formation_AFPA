@@ -8,9 +8,9 @@ http.onload = function () {
         var enfants = magasin[2];
     }
 }
-http.send(); 
+http.send();
 
-console.log(hommes)    
+console.log(hommes) 
 /*
 let output = "";
 for (let categorie of hommes) {

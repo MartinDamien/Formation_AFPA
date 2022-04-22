@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="#" />
+    <title>Document</title>
+    <style></style>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
+    <script>
+    function Person(nom,lage){
+        this.name = nom,
+        this.age = lage;
+    }
+
+    // constructeur
+    function Person(n, p, a, s) 
+    // attributs
+    this.nom = n;
+    this.prenom = p;
+    this.age = a;
+    this.salaire = s;
+    this.presentation = function () {
+        console.log("<small>Je m'appelle " + this.prenom + " " + this.nom + " j'ai " + this.age + " ans" + " et je touche " + this.salaire + "€ / mois" + "</small><br>" );
+    }
+    let Jo = new Person("Smith", "Jo", 55, 4000);
+    let Fred = new Person("Collins", "Fred", 45, 2000);
+    
+    Jo.presentation();
+    Fred.presentation();
+    
+    </script>
+  </head>
+
+  <body></body>
+</html>

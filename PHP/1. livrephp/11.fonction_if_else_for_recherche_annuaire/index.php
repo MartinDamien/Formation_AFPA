@@ -1,5 +1,5 @@
 <?php
-require "../outils.php"
+require "outils.php"
 ?>
 <!DOCTYPE html>
 <html>

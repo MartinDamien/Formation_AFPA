@@ -1,5 +1,6 @@
-  // Specifies where Git code lens will be shown in the document for the specified languages
-  "gitlens.codeLens.scopesByLanguage": [
+// Specifies where Git code lens will be shown in the document for the specified languages
+// "gitlens.codeLens.scopesByLanguage"
+  [
     {
       "language": "azure-pipelines",
       "scopes": ["document"]
@@ -52,4 +53,4 @@
       "language": "yaml",
       "scopes": ["document"]
     }
-  ],
+  ]

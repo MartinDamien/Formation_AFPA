@@ -14,13 +14,13 @@
     <button>get</button>
 
     <script>
-      $("button").click(function(){
+      $("button").on("click",function(){
         $.get("https://api.coindesk.com/v1/bpi/currentprice.json",function(data){
-          $("#vrac").text(data),
-          let obj = JSON.parse(data),
+          $("#vrac").text(data);
+          let obj = JSON.parse(data);
           console.log(obj);
         }
-      }) 
+      })
     </script>
   </body>
 </html>

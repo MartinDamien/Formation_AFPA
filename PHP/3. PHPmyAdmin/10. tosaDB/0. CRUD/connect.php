@@ -9,7 +9,7 @@ $password = "" ;
 $pdo = new PDO("mysql:host=".$dbhost.";dbname=".$dbname.";charset=UTF8",$dbuser ,$password);
 // $pdo est la connection à la BDD 3 arguments pour la PDO (host+dbname , user , password)
 
-$sql = $pdo->prepare("SELECT * FROM user");
+$sql = $pdo->prepare("SELECT * FROM test");
 $sql->execute();
 $rows = $sql->fetchAll();
 

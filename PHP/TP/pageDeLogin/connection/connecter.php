@@ -11,7 +11,7 @@
 
 <body>
   <header>
-    <div id="logo">
+    <div id="logo" href="../mainpage.html">
       <div class="bolle">
         <div class="liquide"></div>
       </div>
@@ -41,17 +41,15 @@
   $sql = $pdo->prepare("SELECT * FROM user WHERE email = ? and password = ?");
   $sql->execute([$email, $password]);
   if ($sql->rowCount() >= 1) {
-    echo 'Bienvenuuuue';
+    redirection:
+        header("location:../mainpage.html");
+    echo '<div class="card"><p>Bienvenue</p></div>';
+
   } else {
-    echo "interdit";
+    echo '<div class="card"><p>Interdit</p></div>';
   }
 
   ?>
-  <div class="card">
-    <p>
-      Bienvenue
-    </p>
-  </div>
 </body>
 
 </html>

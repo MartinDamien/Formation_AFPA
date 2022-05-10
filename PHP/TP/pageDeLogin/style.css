@@ -8,7 +8,7 @@
 
 /*Fonts*/
 h1{
-  font-size: 2.4rem;
+  font-size: 2rem;
   color: white;
 }
 
@@ -68,7 +68,7 @@ nav ul li{
 /*debut logo*/
 #logo{
   min-width: fit-content;
-  padding: 15px 0 15px 10px;
+  padding: 10px;
   display: inline-flex;
   justify-content: space-between;
   align-items: center;
@@ -176,4 +176,14 @@ nav ul li{
 main{
   height: 700px;
   width: 100%;
+}
+
+.card{
+  display: grid;
+  justify-content: center;
+  font-size: 2rem;
+  height: 80px;
+  width: 250px;
+  border-radius: 15px;
+  background-color: white;
 }

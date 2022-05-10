@@ -25,7 +25,7 @@
       </header>
 
       <main>
-        <form action="back.php" method="post">
+        <form action="inscription.php" method="post">
         <label for="mail">mail</label><br />
         <input type="text" name="mail" id="" placeholder="mail" /><br />
         
@@ -47,5 +47,33 @@
         <button type="submit">OK</button>
       </form>
       </main>
+      <?php
+    require_once '../connect.php';
+
+    $mail = $_POST['mail'];
+    $pass = $_POST['password'];
+    $nom = $_POST['nom'];
+    $prenom = $_POST['prenom'];
+    $role = $_POST['role'];
+
+try {
+    //integration des données dans la BdD
+    $sql = $pdo->prepare("INSERT INTO user(id,email,password,nom,prenom,ID_role) VALUE(NULL,?,?,?,?,?)");
+    $sql->execute([$mail, $pass, $nom, $prenom, $role]);
+
+    $sqlmail = $pdo->prepare("SELECT * FROM `user` WHERE `email` LIKE = ?");
+    $sqlmail->execute([$mail]);
+    if ($sqlmail->rowCount() == 1) {
+        redirection:
+        header("location:inscription.html");
+    } else {
+        echo "vous etes bien inscrit" . "<br>";
+    }
+
+}
+catch (PDOException $e) { echo $e->getMessage() ; }
+    
+
+    ?>
   </body>
 </html>

@@ -40,7 +40,6 @@ body {
 /*navbar*/
 
 header{
-  border: 1px blue solid;
   width: 98%;
   padding: 5px;
   margin: auto;
@@ -175,7 +174,6 @@ nav ul li{
 /*body*/
 
 main{
-  border: 2px red solid;
   height: 700px;
   width: 100%;
 }

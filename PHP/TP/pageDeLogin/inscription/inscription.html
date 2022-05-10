@@ -4,32 +4,48 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sign In</title>
+    <link rel="stylesheet" href="../style.css">
+    <title>The Bottle's - Sign Up</title>
   </head>
   <body>
-    <div class="button">
-      <a href="../mainpage.html">return</a>
-    </div>
+    <section>
+      <header>
+        <div class="wrapper">
+          <div id="logo">
+            <div class="bolle">
+              <div class="liquide"></div>
+            </div>
+            <h1>The Bottle's</h1>
+          </div>
+          <div class="button">
+          <a href="../mainpage.html">return</a>
+        </div>
+      </header>
 
-    <form action="back.php" method="post">
-      <label for="mail">mail</label><br />
-      <input type="text" name="mail" id="" placeholder="mail" /><br />
-
-      <label for="password">password</label><br />
-      <input type="password" name="password" id="" placeholder="password" /><br />
-
-      <label for="nom">nom</label><br />
-      <input type="text" name="nom" id="" placeholder="nom" /><br />
-
-      <label for="prenom">prenom</label><br />
-      <input type="text" name="prenom" id="" placeholder="prenom" /><br />
-
-      <label for="role">role</label><br />
-      <select name="role" id="">
-        <option value=1>Admin</option>
-        <option value=2>Client</option>
-      </select><br />
+      <main>
+        <form action="back.php" method="post">
+        <label for="mail">mail</label><br />
+        <input type="text" name="mail" id="" placeholder="mail" /><br />
+        
+        <label for="password">password</label><br />
+        <input type="password" name="password" id="" placeholder="password" /><br />
+        
+        <label for="nom">nom</label><br />
+        <input type="text" name="nom" id="" placeholder="nom" /><br />
+        
+        <label for="prenom">prenom</label><br />
+        <input type="text" name="prenom" id="" placeholder="prenom" /><br />
+        
+        <label for="role">role</label><br />
+        <select name="role" id="">
+          <option value=1>Admin</option>
+          <option value=2>Client</option>
+        </select><br />
+        
         <button type="submit">OK</button>
-    </form>
+      </form>
+      </main>
+
+    </section>
   </body>
 </html>

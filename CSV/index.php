@@ -17,23 +17,19 @@ require "../1.connect/0.boataout.php";
 
     $file = fopen("csv/produit2.csv", 'r');
 
-
     while (!feof($file)) {
-
 
         $line = fgetcsv($file, 1024, ";");
         $arraylengh = count($line);
-        //debug($line);
-        for ($line < 0; $line < $arraylengh; $line++) {
-            $categ = $line[0];
-            $nom = $line[1];
-            $descr = $line[2];
-            $pht = $line[3];
-            $tva = $line[4];
-            $photo = $line[5];
-            if($line>$arrlengh){
-                break;
-            }
+        debug($line);
+        foreach($line as $lines){
+            $categ = $lines[0];
+            $nom = $lines[1];
+            $descr = $lines[2];
+            $pht = $lines[3];
+            $tva = $lines[4];
+            $photo = $lines[5];
+            
         }
     }
     fclose($file);

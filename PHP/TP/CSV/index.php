@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <?php
-    require "connect.php";
+    require "connect/connect.php";
     require "../../0.boataout.php";
 ?>
 <html lang="en">
@@ -13,22 +13,14 @@
 </head>
 
 <body>
-
-    <!-- <form action="index.php" method="post" enctype="multipart/form-data">
-        upload CSV:
-        <input type="file" name="fileToUpload" id="fileToUpload">
-        <input type="submit" value="Upload" name="submit">
-    </form> -->
     <?php
      
 
     $file = fopen("csv/produit2.csv", 'r');
     while (!feof($file)) {
         $line[] = fgetcsv($file, 1024, ";");
-    }
-    fclose($file);
-    $arrlength = count($line);
-
+    }fclose($file);
+    
     foreach ($line as $value) {
         $categ = $line[0];
         $nom = $line[1];
@@ -40,6 +32,17 @@
 
 
     debug($categ);
+
+    $table = $pdo->prepare("CREATE TABLE categorie(
+    $categ[0] INT AUTO_INCREMENT,
+    $categ[1] VARCHAR(100),
+    $categ[2] VARCHAR(255),
+    $categ[3] INT,
+    $categ[4] INT,
+    $categ[5],
+    PRYMARY KEY($categ[0])
+    )");
+    $table->execute();
 
 
     // if(is_array($line)){

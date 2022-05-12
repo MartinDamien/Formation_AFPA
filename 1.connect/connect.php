@@ -2,9 +2,9 @@
 require_once 'config.php';
 class Connection
 {
-    public static function make($host, $db, $user, $password)
+    public static function make($host, $dbname, $user, $password)
     {
-        $dsn = "mysql:host=$host;dbname=$db;charset=UTF8";
+        $dsn = "mysql:host=$host;dbname=$dbname;charset=UTF8";
         try {
             $options = [PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION];
             
@@ -14,4 +14,4 @@ class Connection
             die($e->getMessage());
         }
     }
-}return Connection::make($host, $db, $user, $password);
+}return Connection::make($host, $dbname, $user, $password);

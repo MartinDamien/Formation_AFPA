@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <?php
-    require "connect/connect.php";
+    $pdo = require "connect/connect.php";
     require "../../0.boataout.php";
 ?>
 <html lang="en">

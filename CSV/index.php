@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <?php
-    $pdo = require "../connect/connect.php";
-    require "../connect/0.boataout.php";
+    $pdo = require "../1.connect/connect.php";
+    require "../1.connect/0.boataout.php";
 ?>
 <html lang="en">
 

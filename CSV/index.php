@@ -16,7 +16,6 @@
     while (!feof($file)) {
         $line = fgetcsv($file, 1024, ";");
         $arraylengh = count($line);
-        debug($line);
         for ($line < 0; $line < $arraylengh; $line++) {
             $categ = $line[0];
             $nom = $line[1];
@@ -25,11 +24,14 @@
             $tva = $line[4];
             $photo = $line[5];
         }
-
         
+        // transition de la boucle for a l'INSERT
+        // voir les bindValue
+
         $inser = $pdo->prepare("CREATE TABLE IF NOT EXISTS categorie(categorie VARCHAR(100) , nom_produit VARCHAR(100), description VARCHAR(255), PHT INT, TVA INT, photo VARCHAR(100))");
+        $inser->execute();
         $inser = $pdo->prepare("INSERT INTO `categorie` (`categorie`, `nom_produit`, `description`, `PHT`, `TVA`, `photo`) VALUES ('?', '?', '?', '?', '?', '?');");
-        $inser->execute('$line[0],$line[1],$line[2],$line[3],$line[4],$line[5]');
+        $inser->query('$categ,$nom,$descr,$pht,$tva,$photo');
     }
     fclose($file);
 

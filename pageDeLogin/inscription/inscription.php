@@ -48,7 +48,7 @@
       </form>
       </main>
       <?php
-    require_once '../connect.php';
+    require '../../1.connect/connect.php';
 
     $mail = $_POST['mail'];
     $pass = $_POST['password'];

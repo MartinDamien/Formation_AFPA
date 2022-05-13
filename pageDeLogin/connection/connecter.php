@@ -34,7 +34,7 @@
 
 
   <?php
-  require_once '../connect.php';
+  require_once '../../1.connect/connect.php';
   $email = $_POST['email'];
   $password = $_POST['password'];
 

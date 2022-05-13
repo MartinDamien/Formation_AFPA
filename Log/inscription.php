@@ -1,16 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="style.css">
     <title>The Bottle's - Sign Up</title>
   </head>
 
   <body>
       <header>
-          <div id="logo" href="../mainpage.html">
+          <div id="logo">
             <div class="bolle">
               <div class="liquide"></div>
             </div>
@@ -19,7 +19,7 @@
 
           <div class="identite">
             <div class="button">
-              <a href="../mainpage.html">return</a>
+              <a href="index.html">return</a>
             </div>
           </div>
       </header>
@@ -48,7 +48,7 @@
       </form>
       </main>
       <?php
-    require '../../1.connect/connect.php';
+    require '../1.connect/connect.php';
 
     $mail = $_POST['mail'];
     $pass = $_POST['password'];

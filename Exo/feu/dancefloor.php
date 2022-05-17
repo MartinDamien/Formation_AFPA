@@ -1,9 +1,7 @@
 <?php
-class Bois implements Inflammable, Flottable {
+class Dancefloor implements Inflammable {
     public function enflammer() {
-        echo "Je brule et fait des braises";
-    }
-        public function flotter() {
-        echo "Je flotte";
+        echo("Youhouhou!!!");
     }
 }
+?>

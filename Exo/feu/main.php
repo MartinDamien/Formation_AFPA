@@ -1,9 +1,11 @@
 <?php
 require "Flottable.php"; // Interface
-require "Inflammable.php"; // Interface
+require "inflamable.php"; // Interface
 require "Bois.php";
 require "Dancefloor.php";
 
+
+echo"<pre>";
 $tab=array();
 
 $b = new Bois();
@@ -16,3 +18,4 @@ foreach($tab as $val) {
     $val->enflammer();
     echo "<br>";
 }
+echo"</pre>";

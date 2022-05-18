@@ -70,10 +70,10 @@ class UserLogin
 	private $errors = NULL;
 	
 	//The various user levels
-	const LEVEL_PENDING 	= 0; //User is still pending email confirmation
-	const LEVEL_USER 		= 1; //Standard user with normal privaleges
-	const LEVEL_MODERATOR 	= 2; //Special case users with higher privaleges
-	const LEVEL_ADMIN 		= 3; //Administrators with all privaleges
+	const LEVEL_PENDING = 0; //User is still pending email confirmation
+	const LEVEL_USER = 1; //Standard user with normal privaleges
+	const LEVEL_MODERATOR = 2; //Special case users with higher privaleges
+	const LEVEL_ADMIN = 3; //Administrators with all privaleges
 	
 	//Password flags
 	const PW_NONE			= 0;	//Password is default unencoded

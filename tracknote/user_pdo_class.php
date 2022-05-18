@@ -1,15 +1,5 @@
 <?php
 
-define('USERNAME_REGEX',    '%[^a-z0-9\-\[\]\.\_=!\$\%\^&*(){}?@#$+\'"\/]+%is');
-define('EMAIL_REGEX',        '%[a-z0-9._-]+@[a-z0-9_-]+\.[a-z.]+%i');
-
-//Cookie defines
-define('COOKIE_TIMEOUT', (52 * 7 * 60 * 60)); //cookies set to a year by default
-
-//current time
-if (!defined('TIME_NOW'))
-    define('TIME_NOW', time());
-
 class UserLogin
 {
     //The MySQL DB class to use

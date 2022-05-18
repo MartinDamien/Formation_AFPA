@@ -5,4 +5,4 @@ $f = function () use (&$s) {
 };
 
 $s = "how are you ta soeur?";
-$f(); //how are you ?
+$f(); // how are you?

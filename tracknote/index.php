@@ -40,13 +40,20 @@ require "../1.connect/boataout.php"; ?>
             $this->prenom = $p;
             $this->password = $pass;
         }
-
+        public function debug($n, $p, $pass){
+            echo"<pre>";
+            print_r($n, $p, $pass);
+            echo"</pre>";
+        }
+        
         private function dtb(){
-            
+
         }
     }
 
-
+    function nouveau($nom,$prenom,$password){
+        $new = new utilisateur($nom,$prenom,$password);
+    }
 
     ?>
 </body>

@@ -12,7 +12,7 @@ class utilisateur
             $this->password = $password;
         }
 
-        public function setNom($nom){
+       /* public function setNom($nom){
             $this->nom = $nom;
         }
         public function setPrenom($prenom){
@@ -37,5 +37,7 @@ class utilisateur
             echo "<pre>";
             print_r($n, $p, $pass);
             echo "</pre>";
-        }
+        }*/
+
+        
     }

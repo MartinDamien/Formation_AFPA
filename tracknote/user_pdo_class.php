@@ -1,5 +1,4 @@
 <?php
-
 class UserLogin
 {
     //The MySQL DB class to use
@@ -33,9 +32,9 @@ class UserLogin
     const LEVEL_ADMIN = 3; //Administrators with all privaleges
 
     //Password flags
-    const PW_NONE            = 0;    //Password is default unencoded
-    const PW_MD5             = 1;    //Password has been ecoded to MD5 already
-    const PW_SALT             = 2;    //Password has been salted already
+    const PW_NONE = 0;    //Password is default unencoded
+    const PW_MD5 = 1;    //Password has been ecoded to MD5 already
+    const PW_SALT = 2;    //Password has been salted already
 
     /*
 	* Class Constructor
@@ -100,7 +99,7 @@ class UserLogin
 	* remember_me 	- bool - Whether to remember this user or not
 	* password_flags - int - Binary flags denoting the state of the submitted password (PW_NONE, PW_MD5, PW_SALT)
 	*/
-    function login($username = '', $password = '', $remember_me = false, $password_flags =PW_NONE)
+    function login($username = '', $password = '', $remember_me = false, $password_flags = PW_NONE)
     {
         if (!strlen($username)) {
             $this->errors[] = 'No username was submitted!';

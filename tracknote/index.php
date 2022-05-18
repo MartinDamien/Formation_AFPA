@@ -1,16 +1,16 @@
 <!DOCTYPE html>
-<?php
-require "../1.connect/connect.php";
+<?php require "../1.connect/connect.php";
 require "../1.connect/boataout.php";
-require "../1.connect/boataclass.php";
-?>
+require "../1.connect/boataclass.php"; ?>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <form action="index.php" method="post">
         <label for="nom">nom :<br>
@@ -24,5 +24,28 @@ require "../1.connect/boataclass.php";
         </label>
         <input type="button" value="submit">
     </form>
+    <?php
+
+    $nom = $_POST['nom'];
+    $prenom = $_POST['prenom'];
+    $password = $_POST['password'];
+
+    class utilisateur
+    {
+        private $nom;
+        private $prenom;
+        private $password;
+
+        public function __construct($n, $p, $pass){
+            $this->nom = $n;
+            $this->prenom = $p;
+            $this->password = $pass;
+        }
+    }
+
+    
+
+    ?>
 </body>
+
 </html>

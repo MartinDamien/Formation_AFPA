@@ -1,8 +1,7 @@
 <!DOCTYPE html>
-<?php require "../1.connect/connect.php";
-require "../1.connect/boataout.php";
-require "../1.connect/boataclass.php"; ?>
-<html lang="en">
+<?php $pdo = require "../1.connect/connect.php";
+require "../1.connect/boataout.php"; ?>
+<html lang="fr">
 
 <head>
     <meta charset="UTF-8">
@@ -41,9 +40,13 @@ require "../1.connect/boataclass.php"; ?>
             $this->prenom = $p;
             $this->password = $pass;
         }
+
+        private function dtb(){
+            
+        }
     }
 
-    
+
 
     ?>
 </body>

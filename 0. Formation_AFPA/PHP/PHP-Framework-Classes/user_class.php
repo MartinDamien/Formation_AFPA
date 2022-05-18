@@ -444,4 +444,3 @@ class UserLogin
 			return $this->errors[count($this->errors)-1];
 	}
 }
-?>

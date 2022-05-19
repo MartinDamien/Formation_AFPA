@@ -12,7 +12,7 @@
     <ul>
         <?php
         foreach ($result as $value) {?>
-        <li><?= $value['nom']?><a href="controlllers/afficheModifEtudiant/<?= $value['id'] ?>"> Modif</a></li><!-- echo "<li>" . $result['nom'] . "-" . $result['prenom'] . "-" . $result['email'] . "</li>"; -->
+        <li><?= $value['nom']?> <?= $value['prenom']?> <?= $value['email']?> <a href="controlllers/afficheModifEtudiant/<?= $value['id'] ?>">modifier</a></li><!-- echo "<li>" . $result['nom'] . "-" . $result['prenom'] . "-" . $result['email'] . "</li>"; -->
         <?php } ?>
     </ul>
 </body>

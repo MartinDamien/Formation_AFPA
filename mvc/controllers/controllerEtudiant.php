@@ -28,6 +28,7 @@ function ajoutEtudiant()
     addEtudiant($_POST);
 }
 
-function afficheModifEtudiant(){
-    
+function afficheModifEtudiant($id){
+    $result = getUnEtudiant($id);
+    require('views/viewModifEtudiant.php');
 }

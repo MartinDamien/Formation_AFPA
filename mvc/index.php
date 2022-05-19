@@ -14,6 +14,8 @@ if ($_GET['action']) {
     require_once('controllers/' . $controller . '.php');
 
     if(function_exists($action)) {
+        if(isset($params[2]) && isset($params[3]) && isset($params[4])){
+
 
         if(isset($params[2]) && isset($params[3])){
             $action($params[2], $params[3]);

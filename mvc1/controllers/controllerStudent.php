@@ -12,3 +12,9 @@ function listeEtudiant()
     $result = getEtudiants();
     require('view/viewAllStudent.php');
 }
+
+function listeUnEtudiant()
+{
+    $result = getUnEtudiants();
+    require('../view/viewOneStudent.php');
+}

@@ -7,7 +7,10 @@ if ($_GET['action']) {
     }
     require_once('controllers/' . $controller . '.php');
     if (function_exists($action)) {
-        $action(); //ditBonjour();
+        if( isset($params[2]) && isset($params[3]) ){
+            $action($params[2],$params[3]);
+            
+        }
     }
 } else {
     echo "pas de controllers";

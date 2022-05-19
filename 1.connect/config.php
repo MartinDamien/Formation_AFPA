@@ -1,5 +1,5 @@
 <?php
 $host = 'localhost';
-$dbname = 'etudiant';
+$dbname = 'formation';
 $user = 'root';
 $password = '';

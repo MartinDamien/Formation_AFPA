@@ -27,3 +27,4 @@ function ajoutEtudiant()
 {
     addEtudiant($_POST);
 }
+

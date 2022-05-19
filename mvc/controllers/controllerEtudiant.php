@@ -27,3 +27,7 @@ function ajoutEtudiant()
 {
     addEtudiant($_POST);
 }
+
+function afficheModifEtudiant(){
+    
+}

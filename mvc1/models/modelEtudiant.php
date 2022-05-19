@@ -19,9 +19,9 @@ function getUnEtudiant($id){
 }
 
 function addEtudiant($etu){
-    // echo "<pre>";
-    // print_r($etu);
-    // echo "</pre>";
+    echo "<pre>";
+    print_r($etu);
+    echo "</pre>";
     $n = $etu['nom'];
     $p = $etu['prenom'];
     $e = $etu['email'];

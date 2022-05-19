@@ -13,15 +13,19 @@ if ($_GET['action']) {
     }
     require_once('controllers/' . $controller . '.php');
 
-    if (function_exists($action)) {
-        if (isset($params[2]) && isset($params[3])) {
+    if(function_exists($action)) {
+
+        if(isset($params[2]) && isset($params[3])){
             $action($params[2], $params[3]);
         } elseif (isset($params[2])) {
             $action($params[2]);
-        } else {
+        }else 
+        {
             $action();
         }
-    }
+        }else {
+            echo "fonction n'existe pas";
+        }
 } else {
-    echo "controlleur n'existe pas";
+    echo "controlleur n'existe pas"; die;
 }

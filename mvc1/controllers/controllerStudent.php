@@ -6,8 +6,9 @@ function ditBonjour()
     echo "Bonjour";
 }
 
+
 function listeEtudiant()
 {
     $result = getEtudiants();
-    print_r($result);
+    require('view/viewAllStudent.php');
 }

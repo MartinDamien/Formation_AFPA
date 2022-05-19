@@ -32,3 +32,8 @@ function afficheModifEtudiant($id){
     $result = getUnEtudiant($id);
     require('views/viewModifEtudiant.php');
 }
+
+function modifEtudiant($id){
+    //execute une foontion du modele
+    updateEtudiant($id,$_POST);
+}

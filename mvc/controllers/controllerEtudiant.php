@@ -1,11 +1,9 @@
 <?php
-require_once('models/modelEtudiant.php');
 
 function ditBonjour()
 {
     echo "Bonjour";
 }
-
 
 function listeEtudiant()
 {
@@ -19,11 +17,13 @@ function listeUnEtudiant($id)
     require('views/viewOneEtudiant.php');
 }
 
-function afficheAddEtudiant(){
+function afficheAddEtudiant()
+{
     require('views/viewAddEtudiant.php');
 }
 
-
-function ajoutEtudiant(){
+require_once('models/modelEtudiant.php');
+function ajoutEtudiant()
+{
     addEtudiant($_POST);
 }

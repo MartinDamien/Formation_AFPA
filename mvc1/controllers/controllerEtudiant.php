@@ -24,5 +24,6 @@ function afficheAddEtudiant(){
 }
 
 function ajoutEtudiant(){
-    require ('../models/modelEtudiants.php');
+    addEtudiant($_POST);
+    require ('models/modelEtudiant.php');
 }

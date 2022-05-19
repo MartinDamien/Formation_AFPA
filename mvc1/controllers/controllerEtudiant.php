@@ -20,10 +20,10 @@ function listeUnEtudiant($id)
 }
 
 function afficheAddEtudiant(){
-    require ('views/viewAddEtudiant.php');
+    require('views/viewAddEtudiant.php');
 }
+
 
 function ajoutEtudiant(){
     addEtudiant($_POST);
-    require ('models/modelEtudiant.php');
 }

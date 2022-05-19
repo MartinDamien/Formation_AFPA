@@ -19,13 +19,14 @@ function getUnEtudiant($id){
 }
 
 function addEtudiant($etu){
-    echo "<pre>";
-    print_r($etu);
-    echo "</pre>";
+    // echo "<pre>";
+    // print_r($etu);
+    // echo "</pre>";
     $n = $etu['nom'];
     $p = $etu['prenom'];
     $e = $etu['email'];
     $pass = $etu['password'];
+    
     $bddPDO = connexionBDD();
     $requete = "INSERT INTO etudiant (nom,prenom,email,password) VALUES(?,?,?,?)";
     $stmt = $bddPDO->prepare($requete);

@@ -8,12 +8,12 @@
 </head>
 <body>
     <h1>modif etudiant</h1>
-    <form action="../controllers/modifEtudiant./<?= $result = $value['id']?>" method="post">
+    <form action="../../controllers/modifEtudiant./<?= $result = $value['id']?>" method="post">
         <input type="text" name="nom" placeholder="nom" value>
         <input type="text" name="prenom" placeholder="prenom" value>
         <input type="text" name="email" placeholder="email" value>
         <input type="text" name="password" placeholder="password" value>
-        <button type="submit">modif</button>
+        <button type="submit" value="enregistrer">enregistrer</button>
     </form>
     
 </body>

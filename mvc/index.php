@@ -26,6 +26,9 @@ if ($_GET['action']) {
         }else {
             echo "fonction n'existe pas";
         }
+
 } else {
-    echo "controlleur n'existe pas"; die;
+ 
+    require_once('controllers/controllerEtudiant.php');
+    listeEtudiant();
 }

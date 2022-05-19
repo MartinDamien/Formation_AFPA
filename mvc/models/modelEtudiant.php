@@ -36,18 +36,13 @@ function addEtudiant($etu){
 }
 
 function updateEtudiant($id,$post){
-    // echo "<pre>";
-    // print_r($etu);
-    // echo "</pre>";
     $n = $post['nom'];
     $p = $post['prenom'];
     $e = $post['email'];
     $pass = $post['password'];
     
     $bddPDO = connexionBDD();
-    $requete = "UPDATE etudiant SET nom=?,prenom=?,email=?,password=? WHERE id =?";
+    $requete = "UPDATE etudiant SET nom=?,prenom=?,email=?,password=? WHERE id =$id";
     $stmt = $bddPDO->prepare($requete);
-    $stmt->execute(array($n,$p,$e,$pass,$id));
-
-    die;
+    $stmt->execute(array($n,$p,$e,$pass));
 }

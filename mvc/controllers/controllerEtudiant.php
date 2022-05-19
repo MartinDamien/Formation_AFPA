@@ -34,6 +34,7 @@ function afficheModifEtudiant($id){
 }
 
 function modifEtudiant($id){
+    require_once('models/modelEtudiant.php');
     //execute une foontion du modele
     updateEtudiant($id,$_POST);
 }

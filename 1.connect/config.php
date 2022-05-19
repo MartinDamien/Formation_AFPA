@@ -1,5 +1,5 @@
 <?php
 $host = 'localhost';
-$dbname = 'parenthesemcd';
+$dbname = 'etudiant';
 $user = 'root';
 $password = '';

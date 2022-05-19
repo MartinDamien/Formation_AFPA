@@ -1,5 +1,5 @@
 <?php
-require_once('..\models\model.php');
+require_once('models/modelstudents.php');
 
 function ditBonjour()
 {

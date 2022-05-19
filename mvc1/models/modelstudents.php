@@ -1,11 +1,11 @@
 <?php
-
-require_once('models/model.php');
+require_once('model.php');
 
 function getEtudiants()
 {
     $bddPDO = connexionBDD();
     $requete = "SELECT * FROM etudiants ORDER BY id ASC";
-    $resultGetEtudiants = $bddPDO->query($requete);
-    return $resultGetEtudiants;
+    $result = $bddPDO->query($requete);
+    $data = $result->fetchAll(PDO::FETCH_ASSOC);
+    return $data;
 }

@@ -11,10 +11,9 @@
 <body>
     <ul>
         <?php
-        foreach ($result as $result) {
-            echo "<li>" . $result['nom'] . "-" . $result['prenom'] . "-" . $result['email'] . "</li>";
-        }
-        ?>
+        foreach ($result as $result) {?>
+        <li><?= $value['nom']?></li><!-- echo "<li>" . $result['nom'] . "-" . $result['prenom'] . "-" . $result['email'] . "</li>"; -->
+        <?php } ?>
     </ul>
 </body>
 

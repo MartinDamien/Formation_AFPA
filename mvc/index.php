@@ -1,32 +1,56 @@
-<?php
+<!DOCTYPE html>
+<html lang="en">
 
-if ($_GET['action']) {
+<head>
+    <?php
 
-    $params = explode("/", $_GET["action"]);
-    $controller = $params[0];
-    // $arg = $params[2];
+    echo "SCRIPT_FILENAME:";
+    echo $_SERVER['SCRIPT_FILENAME'];
+    echo "<br>";
+    $root = str_replace('index.php', '', $_SERVER['SCRIPT_FILENAME']);
+    define('_ROOT', $root);
+
+    if ($_GET['action']) {
+
+        $params = explode("/", $_GET["action"]);
+        $controller = $params[0];
+        // $arg = $params[2];
 
 
 
-    if (isset($params[1])) {
-        $action = $params[1];
-    }
-    require_once('controllers/' . $controller . '.php');
-
-    if (function_exists($action)) {
-        if (isset($params[2]) && isset($params[3]) && isset($params[4])) {
-            $action($params[2], $params[3], $params[4]);
-        } elseif (isset($params[2]) && isset($params[3])) {
-            $action($params[2], $params[3]);
-        } elseif (isset($params[2])) {
-            $action($params[2]);
-        } elseif (!isset($params)) {
-            echo "fonction n'existe pas";
-        } else {
-            $action();
+        if (isset($params[1])) {
+            $action = $params[1];
         }
-    } else {
-        require_once('controllers/controllerEtudiant.php');
-        listeEtudiant();
+        require_once(_ROOT.'controllers/' . $controller . '.php');
+
+        if (function_exists($action)) {
+            if (isset($params[2]) && isset($params[3]) && isset($params[4])) {
+                $action($params[2], $params[3], $params[4]);
+            } elseif (isset($params[2]) && isset($params[3])) {
+                $action($params[2], $params[3]);
+            } elseif (isset($params[2])) {
+                $action($params[2]);
+            } elseif (!isset($params)) {
+                echo "fonction n'existe pas";
+            } else {
+                $action();
+            }
+        } else {
+            require_once(_ROOT.'controllers/controllerEtudiant.php');
+            listeEtudiant();
+        }
     }
-}
+    ?>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <a href="http://localhost/AFPA/Formation_AFPA/mvc/controllerEtudiant">Etudiant</a></br>
+    <a href="http://localhost/AFPA/Formation_AFPA/mvc/controllerEtudiant">Cours</a></br>
+    <a href="http://localhost/AFPA/Formation_AFPA/mvc/controllerEtudiant">Inscription</a></br>
+</body>
+
+</html>

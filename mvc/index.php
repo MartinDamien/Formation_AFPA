@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
     <meta charset="UTF-8">
@@ -15,7 +15,9 @@
         <li><a href="http://localhost/AFPA/Formation_AFPA/mvc/controllerEtudiant/afficheAddEtudiant">ajout Etudiant</a></li>
     </ul>
     <ul>
-        <a href="http://localhost/AFPA/Formation_AFPA/mvc/controllerCourses">Cours</a>
+    <a href="http://localhost/AFPA/Formation_AFPA/mvc/controllerCours">Cours</a>
+        <li><a href="http://localhost/AFPA/Formation_AFPA/mvc/controllerCours/listeCours">liste Cours</a></li>
+        <li><a href="http://localhost/AFPA/Formation_AFPA/mvc/controllerCours/afficheAddCours">ajout Cours</a></li>
     </ul>
     <ul>
         <a href="http://localhost/AFPA/Formation_AFPA/mvc/controllerInscription">Inscription</a>

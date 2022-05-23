@@ -4,9 +4,9 @@ require_once('model.php');
 function getCours()
 {
     $bddPDO = connexionBDD();
-    $requete = "SELECT * FROM cours ORDER BY id ASC";
-    $resultGetEtudiant = $bddPDO->query($requete);
-    $data = $resultGetEtudiant->fetchAll(PDO::FETCH_ASSOC);
+    $requete = "SELECT * FROM cours ORDER BY id_cours ASC";
+    $resultGetCours = $bddPDO->query($requete);
+    $data = $resultGetCours->fetchAll(PDO::FETCH_ASSOC);
     return $data;
 }
 
@@ -35,7 +35,7 @@ function addCours($cours)
     die;
 }
 
-function updateEtudiant($id, $cours)
+function updateCours($id, $cours)
 {
     $idc = $cours['id_cours'];
     $c = $cours['code'];

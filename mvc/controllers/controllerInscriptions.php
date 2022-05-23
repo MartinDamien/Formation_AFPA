@@ -8,16 +8,16 @@ function addCourseToStudent($studentId, $courseId)
 
     if ($nb_course != 0) {
         $message = "vous étes deja inscris a ce cours ";
-        // getAllCoursesStudent();
+        // getAllCoursStudent();
     } else {
         $result = addCourseForStudent($studentId, $courseId);
 
         if (!$result) {
             $message = "le cours choisie n'a pas ete attribué";
-            // getAllCoursesStudent();
+            // getAllCoursStudent();
         } else {
             $message = "vous etes bien inscris à ce cours";
-            getAllMyCourses();
+            getAllMyCours();
         }
     }
     require('views/errors.php');
@@ -25,20 +25,20 @@ function addCourseToStudent($studentId, $courseId)
     //     $message = "vous ,n'êtes pas connecter pour s'incrire à ce cours";
 }
 
-function getAllMyCourses($studentId)
+function getAllMyCours($studentId)
 {
-    // getMyCourses est à créer dans modelInscriptions
-    $resultGetCourses = getMyCourses($studentId);
+    // getMyCours est à créer dans modelInscriptions
+    $resultGetCours = getMyCours($studentId);
 
-    if (!$resultGetCourses) {
+    if (!$resultGetCours) {
         $message = "La récuperation des cours a rencontré un problème";
     } else {
-        $nb_courses = $resultGetCourses->rowCount();
-        if ($nb_courses == 0) {
+        $nb_cours = $resultGetCours->rowCount();
+        if ($nb_cours == 0) {
             $message = "Vous n'êtes inscris à aucun cours!";
-            getAllCoursesStudents();
+            getAllCoursStudents();
         } else {
-            require_once('views/viewCoursesForStudent.php');
+            require_once('views/viewCoursForStudent.php');
         }
     }
 }

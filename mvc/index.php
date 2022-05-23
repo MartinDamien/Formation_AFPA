@@ -11,12 +11,12 @@
 <body>
     <ul>
         <a href="http://localhost/AFPA/Formation_AFPA/mvc/controllerEtudiant">Etudiant</a>
-        <li><a href="http://localhost/AFPA/Formation_AFPA/mvc/controllerEtudiant/listeEtudiant">liste Etudiant</a></li>
+        <li><a href="http://localhost/AFPA/Formation_AFPA/mvc/controllerEtudiant/listeEtudiant">liste Etudiant</a>  <a href="http://localhost/AFPA/Formation_AFPA/mvc/controllerEtudiant/listeUnEtudiant">details Etudiant</a></li>
         <li><a href="http://localhost/AFPA/Formation_AFPA/mvc/controllerEtudiant/afficheAddEtudiant">ajout Etudiant</a></li>
     </ul>
     <ul>
     <a href="http://localhost/AFPA/Formation_AFPA/mvc/controllerCours">Cours</a>
-        <li><a href="http://localhost/AFPA/Formation_AFPA/mvc/controllerCours/listeCours">liste Cours</a></li>
+        <li><a href="http://localhost/AFPA/Formation_AFPA/mvc/controllerCours/listeCours">liste Cours</a>  <a href="http://localhost/AFPA/Formation_AFPA/mvc/controllerEtudiant/listeUnCours">details Cours</a></li>
         <li><a href="http://localhost/AFPA/Formation_AFPA/mvc/controllerCours/afficheAddCours">ajout Cours</a></li>
     </ul>
     <ul>

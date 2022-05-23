@@ -1,16 +1,16 @@
 <?php
 // session_start();
 
-function addCourseToStudent($studentId, $courseId)
+function addCourseToStudent($studentId)
 {
-
+    $coursId = $_POST['id_cours'];
     $nb_course = $result->rowcount();
 
     if ($nb_course != 0) {
         $message = "vous étes deja inscris a ce cours ";
         // getAllCoursStudent();
     } else {
-        $result = addCourseForStudent($studentId, $courseId);
+        $result = addCourseForStudent($studentId);
 
         if (!$result) {
             $message = "le cours choisie n'a pas ete attribué";

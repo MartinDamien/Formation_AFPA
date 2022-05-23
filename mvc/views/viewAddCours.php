@@ -8,10 +8,9 @@
 </head>
 <body>
     <form action="../controllerCours/ajoutCours" method="POST">
-        <input type="text" name="nom" placeholder="nom" id="">
-        <input type="text" name="prenom" placeholder="prenom" id="">
-        <input type="text" name="email" placeholder="email" id="">
-        <input type="text" name="password" placeholder="password" id="">
+        <input type="text" name="code" placeholder="code" id="">
+        <input type="text" name="titre" placeholder="titre" id="">
+        <input type="text" name="langage" placeholder="langage" id="">
         <button type="submit">envoyer</button>
     </form>
 </body>

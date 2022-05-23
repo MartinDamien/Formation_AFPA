@@ -13,7 +13,7 @@ function getCours()
 function getUnCours($id)
 {
     $bddPDO = connexionBDD();
-    $req = "SELECT * FROM cours WHERE id=?";
+    $req = "SELECT * FROM cours WHERE id_cours=?";
     $stmt = $bddPDO->prepare($req);
     $stmt->execute(array($id));
     $data = $stmt->fetch(PDO::FETCH_ASSOC);
@@ -22,15 +22,14 @@ function getUnCours($id)
 
 function addCours($cours)
 {
-    $idc = $cours['id_cours'];
     $c = $cours['code'];
     $t = $cours['titre'];
     $l = $cours['langage'];
 
     $bddPDO = connexionBDD();
-    $requete = "INSERT INTO cours (id_cours,code,titre,langage) VALUES(?,?,?,?)";
+    $requete = "INSERT INTO cours (code,titre,langage) VALUES(?,?,?)";
     $stmt = $bddPDO->prepare($requete);
-    $stmt->execute(array($idc, $c, $t, $l));
+    $stmt->execute(array($c, $t, $l));
 
     die;
 }

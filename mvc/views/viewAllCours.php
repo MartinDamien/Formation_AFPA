@@ -6,8 +6,11 @@ require('header.html');
     <ul>
         <?php
         foreach ($result as $value) { ?>
-            <li><?= $value['code'] ?> <?= $value['titre'] ?> <?= $value['langage'] ?> <a href="../controllerCours/afficheModifCours/<?= $value['id_cours'] ?>">modifier</a></li>
-            <!-- echo "<li>" . $result['nom'] . "-" . $result['prenom'] . "-" . $result['email'] . "</li>"; -->
+            <li><?= $value['code'] ?> <?= $value['titre'] ?> <?= $value['langage'] ?>
+                <a href="../controllerCours/listeUnCours/<?= $value['id_cours'] ?>">afficher</a>
+                <a href="../controllerCours/afficheModifCours/<?= $value['id_cours'] ?>">modifier</a>
+                <a href="../controllerCours/afficheModifCours/<?= $value['id_cours'] ?>">supprimer</a>
+            </li>
         <?php } ?>
     </ul>
 </body>

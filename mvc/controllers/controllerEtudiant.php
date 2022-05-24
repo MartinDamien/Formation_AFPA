@@ -38,6 +38,7 @@ function modifEtudiant($id)
 {
     //execute une foontion du modele
     updateEtudiant($id, $_POST);
+    listeEtudiant();
 }
 
 function suprimeEtudiant($id)
@@ -45,7 +46,7 @@ function suprimeEtudiant($id)
     delEtudiant($id);
 }
 
-function afficheconnexion(){
+function connexion(){
     require('views/connect.php');
     connectEtudiant($_POST);
 }

@@ -1,23 +1,16 @@
-<!DOCTYPE html>
-<html lang="fr">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>viewAllEtudiant</title>
-</head>
+<?php
+require('header.html');
+?>
 
 <body>
     <ul>
         <?php
-        foreach ($result as $value) {?>
-        <li><?= $value['nom']?> <?= $value['prenom']?> <?= $value['email']?> 
-        <a href="../controllerEtudiant/listeUnEtudiant/<?= $value['id'] ?>">afficher</a>
-        <a href="../controllerEtudiant/afficheModifEtudiant/<?= $value['id'] ?>">modifier</a>
-        <a href="../controllerEtudiant/suprimeEtudiant/<?= $value['id'] ?>">suprimer</a></li>
+        foreach ($result as $value) { ?>
+            <li><?= $value['nom'] ?> <?= $value['prenom'] ?> <?= $value['email'] ?>
+                <a href="../controllerEtudiant/listeUnEtudiant/<?= $value['id'] ?>">afficher</a>
+                <a href="../controllerEtudiant/afficheModifEtudiant/<?= $value['id'] ?>">modifier</a>
+                <a href="../controllerEtudiant/suprimeEtudiant/<?= $value['id'] ?>">suprimer</a>
+            </li>
         <?php } ?>
     </ul>
 </body>
-
-</html>

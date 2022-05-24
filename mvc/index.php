@@ -1,38 +1,11 @@
-<!DOCTYPE html>
-<html lang="fr">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-
-<body>
-    <ul>
-        <a href="http://localhost/AFPA/mvc/controllerEtudiant">Etudiant</a>
-        <li><a href="http://localhost/AFPA/mvc/controllerEtudiant/listeEtudiant">liste Etudiant</a></li>
-        <li><a href="http://localhost/AFPA/mvc/controllerEtudiant/afficheAddEtudiant">ajout Etudiant</a></li>
-    </ul>
-    <ul>
-        <a href="http://localhost/AFPA/mvc/controllerCours">Cours</a>
-        <li><a href="http://localhost/AFPA/mvc/controllerCours/listeCours">liste Cours</a></li>
-        <li><a href="http://localhost/AFPA/mvc/controllerCours/afficheAddCours">ajout Cours</a></li>
-    </ul>
-    <ul>
-        <a href="http://localhost/AFPA/mvc/controllerinscriptions">Inscription</a>
-        <a href="http://localhost/AFPA/mvc/controllerinscriptions/">Inscription</a>
-    </ul>
-
-    <hr>
-</body>
 <?php
 
-echo "SCRIPT_FILENAME:";
-echo $_SERVER['SCRIPT_FILENAME'];
-echo "<br>";
-define('_ROOT', str_replace('index.php', '', $_SERVER['SCRIPT_FILENAME']));
 
+// echo "SCRIPT_FILENAME:";
+// echo $_SERVER['SCRIPT_FILENAME'];
+// echo "<br>";
+define('_ROOT', str_replace('index.php', '', $_SERVER['SCRIPT_FILENAME']));
+define('_URL', "http://localhost/AFPA/mvc/");
 
 if ($_GET['action']) {
 

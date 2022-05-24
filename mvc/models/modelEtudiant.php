@@ -51,7 +51,7 @@ function updateEtudiant($id, $post)
 function delEtudiant($id)
 {
     $bddPDO = connexionBDD();
-    $req = "DELETE FROM etudiants WHERE etudiants.id = $id";
+    $req = "DELETE FROM etudiants WHERE etudiants.id = ?";
     $stmt = $bddPDO->prepare($req);
     $stmt->execute(array($id));
 }

@@ -1,5 +1,17 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 1px solid;
+}
+body{
+  height: 100vh;
+  width: 150vh;
+}
 header {
   background-color: aquamarine;
-  height: 400px;
   display: inline;
+}
+.dropdown-menu{
+  width: 15%;
+  border: black 2px;
 }

@@ -22,9 +22,6 @@ function getUnEtudiant($id)
 
 function addEtudiant($etu)
 {
-    // echo "<pre>";
-    // print_r($etu);
-    // echo "</pre>";
     $n = $etu['nom'];
     $p = $etu['prenom'];
     $e = $etu['email'];
@@ -49,4 +46,12 @@ function updateEtudiant($id, $post)
     $requete = "UPDATE etudiants SET nom=?,prenom=?,email=?,password=? WHERE id =$id";
     $stmt = $bddPDO->prepare($requete);
     $stmt->execute(array($n, $p, $e, $pass));
+}
+
+function delEtudiant($id)
+{
+    $bddPDO = connexionBDD();
+    $req = "DELETE FROM etudiants WHERE etudiants.id = $id";
+    $stmt = $bddPDO->prepare($req);
+    $stmt->execute(array($id));
 }

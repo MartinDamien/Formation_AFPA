@@ -31,8 +31,7 @@
 echo "SCRIPT_FILENAME:";
 echo $_SERVER['SCRIPT_FILENAME'];
 echo "<br>";
-$root = str_replace('index.php', '', $_SERVER['SCRIPT_FILENAME']);
-define('_ROOT', $root);
+define('_ROOT', str_replace('index.php', '', $_SERVER['SCRIPT_FILENAME']));
 
 
 if ($_GET['action']) {

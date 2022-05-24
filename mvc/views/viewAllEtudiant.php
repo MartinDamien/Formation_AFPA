@@ -12,9 +12,9 @@
     <ul>
         <?php
         foreach ($result as $value) {?>
-        <li><?= $value['nom']?> <?= $value['prenom']?> <?= $value['email']?> <a
-                href="../controllerEtudiant/afficheModifEtudiant/<?= $value['id'] ?>">modifier</a></li>
-        <!-- echo "<li>" . $result['nom'] . "-" . $result['prenom'] . "-" . $result['email'] . "</li>"; -->
+        <li><?= $value['nom']?> <?= $value['prenom']?> <?= $value['email']?> 
+        <a href="../controllerEtudiant/afficheModifEtudiant/<?= $value['id'] ?>">modifier</a></li>
+        <a href="../controllerEtudiant/suprimeEtudiant/<?= $value['id'] ?>">suprimer</a></li>
         <?php } ?>
     </ul>
 </body>

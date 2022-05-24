@@ -20,7 +20,8 @@
         <li><a href="http://localhost/AFPA/mvc/controllerCours/afficheAddCours">ajout Cours</a></li>
     </ul>
     <ul>
-        <a href="http://localhost/AFPA/mvc/controllerInscription">Inscription</a>
+        <a href="http://localhost/AFPA/mvc/controllerinscriptions">Inscription</a>
+        <a href="http://localhost/AFPA/mvc/controllerinscriptions/">Inscription</a>
     </ul>
 
     <hr>

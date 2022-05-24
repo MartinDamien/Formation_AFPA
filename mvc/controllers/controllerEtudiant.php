@@ -46,6 +46,6 @@ function suprimeEtudiant($id)
 }
 
 function connection(){
-
+    connectEtudiant();
     require('views/connect.php');
 }

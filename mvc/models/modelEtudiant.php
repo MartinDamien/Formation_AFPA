@@ -55,3 +55,7 @@ function delEtudiant($id)
     $stmt = $bddPDO->prepare($req);
     $stmt->execute(array($id));
 }
+function connectEtudiant($_POST)
+{
+
+}

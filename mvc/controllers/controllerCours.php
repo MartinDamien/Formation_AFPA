@@ -25,12 +25,14 @@ function ajoutCours()
     addCours($_POST);
 }
 
-function afficheModifCours($id){
+function afficheModifCours($id)
+{
     $result = getUnCours($id);
     require('views/viewModifCours.php');
 }
 
-function modifCours($id){
+function modifCours($id)
+{
     //execute une foontion du modele
-    updateCours($id,$_POST);
+    updateCours($id, $_POST);
 }

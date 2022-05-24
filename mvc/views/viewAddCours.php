@@ -2,7 +2,7 @@
 require('header.html');
 ?>
 <main>
-    <form action="../controllerCours/ajoutCours" method="POST">
+    <form action="<?= _URL ?>controllerCours/ajoutCours" method="POST">
         <input type="text" name="code" placeholder="code" id="">
         <input type="text" name="titre" placeholder="titre" id="">
         <input type="text" name="langage" placeholder="langage" id="">

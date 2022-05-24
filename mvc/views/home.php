@@ -1,4 +1,7 @@
 <?php
 require('header.html');
 ?>
-<p>bienvenue sur la page principale</p>
+<main>
+    <p>bienvenue sur la page principale</p>
+</main>
+

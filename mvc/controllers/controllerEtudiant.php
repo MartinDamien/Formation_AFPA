@@ -23,7 +23,6 @@ function afficheAddEtudiant()
     require('views/viewAddEtudiant.php');
 }
 
-
 function ajoutEtudiant()
 {
     addEtudiant($_POST);
@@ -40,6 +39,7 @@ function modifEtudiant($id)
     //execute une foontion du modele
     updateEtudiant($id, $_POST);
 }
+
 function suprimeEtudiant($id)
 {
     delEtudiant($id);

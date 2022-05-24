@@ -57,5 +57,16 @@ function delEtudiant($id)
 }
 function connectEtudiant($_POST)
 {
+    $mail = $_POST['email'];
+    $password = $_POST['password'];
 
+    $bddPDO = connexionBDD();
+    $req = "SELECT * FROM etudiants WHERE mail =?";
+    $stmt = $bddPDO->prepare($req);
+    $stmt->execute($mail);
+    if ($stmt->rowCount() >= 1) {
+        
+      } else {
+        echo('mauvais identifiants');
+      }
 }

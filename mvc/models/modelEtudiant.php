@@ -71,18 +71,18 @@ function connectEtudiant($post)
                 $stmt->execute();
                 $count = $stmt->rowCount();
                 $row   = $stmt->fetch(PDO::FETCH_ASSOC);
-                var_dump($row);
+                
                 if ($count == 1 && !empty($row)) {
-                    /******************** Your code ***********************/
-                    $_SESSION['sess_user_id'] = $row['uid'];
-                    $_SESSION['sess_user_name'] = $row['name'];
-                    $_SESSION['sess_name'] = $row['name'];
-                    $_SESSION['sess_name'] = $row['name'];
+                    var_dump($row);
+                    $_SESSION['sess_user_id'] = $row['id'];
+                    $_SESSION['sess_user_nom'] = $row['nom'];
+                    $_SESSION['sess_uesr_prenom'] = $row['prenom'];
+                    $_SESSION['sess_user_mail'] = $row['email'];
                 } else {
                     echo('unvalid mail & pacewoarde!');
                 }
             } catch (PDOException $e) {
-                echo "Error : " . $e->getMessage();
+                echo "Erreur : " . $e->getMessage();
             }
         } else {
             echo('Remplis les deux cases!');

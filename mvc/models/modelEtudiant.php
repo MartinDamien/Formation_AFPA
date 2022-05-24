@@ -55,10 +55,10 @@ function delEtudiant($id)
     $stmt = $bddPDO->prepare($req);
     $stmt->execute(array($id));
 }
-function connectEtudiant($_POST)
+function connectEtudiant($post)
 {
-    $mail = $_POST['email'];
-    $password = $_POST['password'];
+    $mail = $post['email'];
+    $password = $post['password'];
 
     $bddPDO = connexionBDD();
     $req = "SELECT * FROM etudiants WHERE mail =?";

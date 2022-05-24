@@ -1,6 +1,5 @@
 <?php
 
-
 // echo "SCRIPT_FILENAME:";
 // echo $_SERVER['SCRIPT_FILENAME'];
 // echo "<br>";
@@ -36,8 +35,7 @@ if ($_GET['action']) {
         echo "Fonction n'existe pas";
     }
 } else {
-    require_once(_ROOT . 'controllers/controllerEtudiant.php');
-    listeEtudiant();
+    require_once(_ROOT . 'views/home.php');
 }
 ?>
 

@@ -1,4 +1,10 @@
 <?php
+//start session
+session_start();
+if (isset($_SESSION['sus_user_id']) && $_SESSION['sus_user_id'] != "") {
+    echo ('Bienvenue');
+    echo '<h4><a href="logout.php">Logout</a></h4>';
+}
 
 // echo "SCRIPT_FILENAME:";
 // echo $_SERVER['SCRIPT_FILENAME'];

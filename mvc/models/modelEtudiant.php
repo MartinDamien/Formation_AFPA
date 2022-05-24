@@ -55,18 +55,37 @@ function delEtudiant($id)
     $stmt = $bddPDO->prepare($req);
     $stmt->execute(array($id));
 }
+
 function connectEtudiant($post)
 {
-    $mail = $post['email'];
-    $password = $post['password'];
-
-    $bddPDO = connexionBDD();
-    $req = "SELECT * FROM etudiants WHERE mail =?";
-    $stmt = $bddPDO->prepare($req);
-    $stmt->execute($mail);
-    if ($stmt->rowCount() >= 1) {
-        
-      } else {
-        echo('mauvais identifiants');
-      }
+    $bddPDO = connexionBDD(); 
+    if (isset($post['loginBtn'])) {
+        $mail = trim($post['email']);
+        $password = trim($post['password']);
+        if ($mail != "" && $password != "") {
+            try {
+                $requete = "SELECT * FROM etudiants WHERE mail =:mail and password=:password";
+                $stmt = $bddPDO->prepare($requete);
+                $stmt->bindParam('mail', $mail, PDO::PARAM_STR);
+                $stmt->bindValue('password', $password, PDO::PARAM_STR);
+                $stmt->execute();
+                $count = $stmt->rowCount();
+                $row   = $stmt->fetch(PDO::FETCH_ASSOC);
+                var_dump($row);
+                if ($count == 1 && !empty($row)) {
+                    /******************** Your code ***********************/
+                    $_SESSION['sess_user_id'] = $row['uid'];
+                    $_SESSION['sess_user_name'] = $row['name'];
+                    $_SESSION['sess_name'] = $row['name'];
+                    $_SESSION['sess_name'] = $row['name'];
+                } else {
+                    echo('unvalid mail & pacewoarde!');
+                }
+            } catch (PDOException $e) {
+                echo "Error : " . $e->getMessage();
+            }
+        } else {
+            echo('Remplis les deux cases!');
+        }
+    }
 }

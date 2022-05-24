@@ -24,8 +24,8 @@ function getOnStudentCourses($studentId)
                 WHERE inscription.id_student = '$studentId' AND inscription.id_cours = cours.id_cours";
     $stmt = $bddPDO->prepare($req);
     $stmt->execute(array($studentId));
-    $data = $stmt->fetch(PDO::FETCH_ASSOC);
-    return $data;
+    $result = $stmt->fetch(PDO::FETCH_ASSOC);
+    return $result;
 }
 
 function getCoursesStudent($studentId, $courseId)
@@ -34,6 +34,6 @@ function getCoursesStudent($studentId, $courseId)
     $req = "SELECT * FROM inscription WHERE id_student=? AND id_cours = ? ";
     $stmt = $bddPDO->prepare($req);
     $stmt->execute(array($studentId, $courseId));
-    $data = $stmt->fetch(PDO::FETCH_ASSOC);
-    return $data;
+    $result = $stmt->fetch(PDO::FETCH_ASSOC);
+    return $result;
 }

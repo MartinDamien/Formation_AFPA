@@ -7,6 +7,12 @@
     <title>Document</title>
 </head>
 <body>
+    <ul>
+        <?php 
+            foreach($result as $value ) { ?>
+                <li><?= $value['nom'] ?><a href="controllerEtudiant/afficheModifEtudiant/<?= $value['id']?>">modif</a></li>
+           <?php } ?>
+    </ul>
     
 </body>
 </html>

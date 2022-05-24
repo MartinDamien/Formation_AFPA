@@ -45,7 +45,7 @@ function suprimeEtudiant($id)
     delEtudiant($id);
 }
 
-function connection(){
-    connectEtudiant($_POST);
+function afficheconnexion(){
     require('views/connect.php');
+    connectEtudiant($_POST);
 }

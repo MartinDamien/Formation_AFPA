@@ -2,7 +2,7 @@
 require('header.html');
 ?>
 
-<body>
+<main>
     <h1>modif etudiant</h1>
     <form action="<?= _URL ?>controllerEtudiant/modifEtudiant/<?= $result['id'] ?>" method="post">
         <input type="text" name="nom" placeholder="nom" value=<?= $result['nom'] ?>>
@@ -11,4 +11,4 @@ require('header.html');
         <input type="text" name="password" placeholder="password" value=<?= $result['password'] ?>>
         <button type="submit" value="enregistrer">enregistrer</button>
     </form>
-</body>
+</main>

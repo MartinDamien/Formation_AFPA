@@ -2,7 +2,7 @@
 require('header.html');
 ?>
 
-<body>
+<main>
     <ul>
         <?php
         foreach ($result as $value) { ?>
@@ -13,4 +13,4 @@ require('header.html');
             </li>
         <?php } ?>
     </ul>
-</body>
+</main>

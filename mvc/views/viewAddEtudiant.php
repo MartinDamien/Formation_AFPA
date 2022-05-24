@@ -2,7 +2,7 @@
 require('header.html');
 ?>
 
-<body>
+<main>
     <form action="../controllerEtudiant/ajoutEtudiant" method="POST">
         <input type="text" name="nom" placeholder="nom" id="">
         <input type="text" name="prenom" placeholder="prenom" id="">
@@ -10,4 +10,4 @@ require('header.html');
         <input type="text" name="password" placeholder="password" id="">
         <button type="submit">envoyer</button>
     </form>
-</body>
+</main>

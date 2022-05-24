@@ -1,7 +1,7 @@
 <?php
 require('header.html');
 ?>
-<body>
+<main>
     <h1>modif etudiant</h1>
     <form action="../controllers/modifEtudiant/<?= $result['id_cours']?>" method="post">
         <input type="text" name="code" placeholder="code" value=<?= $result['code']?>>
@@ -10,4 +10,4 @@ require('header.html');
         <button type="submit" value="enregistrer">enregistrer</button>
     </form>
 
-</body>
+</main>

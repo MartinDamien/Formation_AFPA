@@ -36,3 +36,11 @@ function afficheFilm()
     $data = $resultFilm->fetchAll(PDO::FETCH_ASSOC);
     return $data;
 }
+
+function suprim($id)
+{
+    $bddPDO = connexionBDD();
+    $requete = "DELETE FROM film WHERE film.id = ?";
+    $stmt = $bddPDO->prepare($requete);
+    $stmt->execute(array($id));
+}

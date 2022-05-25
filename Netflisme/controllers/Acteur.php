@@ -11,5 +11,10 @@ function affiche()
 {
     $result = afficheActeur();
     require('views/viewActeur.php');
-    
+}
+
+
+function suprimer($id)
+{
+    function suprim($id);
 }

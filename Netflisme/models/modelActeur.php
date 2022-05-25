@@ -11,7 +11,7 @@ function addActeur($post)
             $prenom = $post['prenom'];
             $cover = $_FILES['avatar']['name'];
             $bddPDO = connexionBDD();
-            $fichier = pathinfo($_FILES['image']['name']);
+            $fichier = pathinfo($_FILES['avatar']['name']);
             $extension_upload = $fichier['extension'];
             $extensions_autorisees = array('jpg', 'jpeg', 'gif', 'png', 'JPG', 'JPEG');
             if (in_array($extension_upload, $extensions_autorisees)) {

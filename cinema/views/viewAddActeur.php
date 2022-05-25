@@ -2,7 +2,7 @@
 require('header.html');
 ?>
 <main>
-    <form method="POST" action="<?= _URL ?>controllerActeur.php/nouvelleActeur" enctype="multipart/form-data">
+    <form method="POST" action="<?= _URL ?>controllerActeur/nouvelleActeur" enctype="multipart/form-data">
         <input type="text" name="nom" placeholder="nom">
         <input type="text" name="Prenom" placeholder="prenom">
         <input type="file" name="avatar" placeholder="cover">

@@ -4,5 +4,6 @@ require('models/modelActeur.php');
 function nouvelleActeur()
 {
     require('views/viewAddActeur.php');
-    addActeur($post);
+    addActeur($_POST);
+    
 }

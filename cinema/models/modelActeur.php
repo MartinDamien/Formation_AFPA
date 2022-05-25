@@ -29,3 +29,7 @@ function addActeur($post)
     }
     die;
 }
+
+function affiche()
+{
+}

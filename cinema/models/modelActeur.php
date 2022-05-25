@@ -10,11 +10,10 @@ function addActeur($post)
             $nom = $post['nom'];
             $prenom = $post['prenom'];
             $cover = $_FILES['avatar']['name'];
-            echo($cover);
             $bddPDO = connexionBDD();
 
-            
-            if (move_uploaded_file($_FILES['avatar']['tmp_name'], $dossier . basename($cover))){ //Si la fonction renvoie TRUE, c'est que ça a fonctionné...
+
+            if (move_uploaded_file($_FILES['avatar']['tmp_name'], $dossier . basename($cover))) { //Si la fonction renvoie TRUE, c'est que ça a fonctionné...
                 echo 'Upload effectué avec succès !';
             } else {
                 echo 'Echec de l\'upload !'; //Sinon (la fonction renvoie FALSE).
@@ -24,7 +23,6 @@ function addActeur($post)
             $stmt->bindParam('nom', $nom, PDO::PARAM_STR);
             $stmt->bindValue('prenom', $prenom, PDO::PARAM_STR);
             $stmt->execute(array($nom, $prenom, $cover));
-
         } else {
             $erreur = "un problème de téléchargement est survenu !!";
         }

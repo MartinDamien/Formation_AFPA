@@ -2,6 +2,6 @@
 require('header.html');
 ?>
 <main>
-    <h1>page principale</h1>
+    <h1>Tuh-Duh</h1>
 </main>
 

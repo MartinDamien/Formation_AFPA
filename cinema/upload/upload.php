@@ -10,6 +10,6 @@ if (isset($_FILES['avatar'])) {
     {
         echo 'Upload effectué avec succès !';
     } else {
-        /*echo 'Echec de l\'upload !'; //Sinon (la fonction renvoie FALSE).*/
+        echo 'Echec de l\'upload !'; //Sinon (la fonction renvoie FALSE).
     }
 }

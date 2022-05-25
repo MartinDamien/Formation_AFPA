@@ -5,13 +5,54 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Neflisme</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        background-color: #2e3440;
+      }
+      header {
+        height: 100px;
+        background-color: #3b4252;
+        box-shadow: 0 0 19px 0 black;
+      }
+      .container {
+        width: 60rem;
+      }
+      #text{
+        font-size: large;
+        font-family: "Courier New", Courier, monospace;
+        color: white;
+      }
+      a {
+        background-color: #445d8f;
+        text-decoration: none;
+        font-size: large;
+        font-family: "Courier New", Courier, monospace;
+        color: white;
+      }
+      a:hover {
+        color: black;
+        background-color: white;
+      }
+      .logo {
+        font-family: Georgia, "Times New Roman", Times, serif;
+        color: rgb(180, 2, 2);
+        font-size: xx-large;
+      }
+    </style>
   </head>
   <body>
     <header>
-      <a href="http://localhost/AFPA/Netflisme/Acteur/affiche">liste acteur</a>
-      <a href="http://localhost/AFPA/Netflisme/Acteur/nouvelleActeur">ajout acteur</a><br />
-      <a href="http://localhost/AFPA/Netflisme/Film/affiche">liste film</a>
-      <a href="http://localhost/AFPA/Netflisme/Film/nouveauFilm">ajout film</a>
+      <h1 class="logo">N</h1>
+      <div class="container">
+        <a href="http://localhost/AFPA/Netflisme/Acteur/affiche">liste acteur</a>
+        <a href="http://localhost/AFPA/Netflisme/Acteur/nouvelleActeur">ajout acteur</a><br />
+        <a href="http://localhost/AFPA/Netflisme/Film/affiche">liste film</a>
+        <a href="http://localhost/AFPA/Netflisme/Film/nouveauFilm">ajout film</a>
+      </div>
     </header>
   </body>
 </html>

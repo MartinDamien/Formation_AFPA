@@ -4,8 +4,8 @@
 // echo $_SERVER['SCRIPT_FILENAME'];
 // echo "<br>";
 define('_ROOT', str_replace('index.php', '', $_SERVER['SCRIPT_FILENAME']));
- echo _ROOT;
-define('_URL', "http://localhost/AFPA/cinema/");
+// echo _ROOT;
+define('_URL', "http://localhost/AFPA/Netflisme/");
 
 if ($_GET['action']) {
 

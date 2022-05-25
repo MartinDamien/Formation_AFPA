@@ -5,7 +5,7 @@
 // echo "<br>";
 define('_ROOT', str_replace('index.php', '', $_SERVER['SCRIPT_FILENAME']));
 // echo _ROOT;
-define('_URL', "http://localhost/AFPA/Netflisme/");
+define('_URL', "http://localhost/http/Netflisme/");
 
 if ($_GET['action']) {
 

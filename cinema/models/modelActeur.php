@@ -3,18 +3,22 @@ require_once('model.php');
 
 function addActeur($post)
 {
-    if (isset($_FILES['image']) and $_FILES['image']['error'] == 0) {
-        if ($_FILES['image']['size'] <= 1000000) {
+    if (isset($_FILES['avatar']) and $_FILES['avatar']['error'] == 0) {
+        if ($_FILES['avatar']['size'] <= 1000000) {
 
             $dossier = 'upload/'; // non du fichier ou on va copier le fichier
             $nom = $post['nom'];
             $prenom = $post['prenom'];
-            $cover = $_FILES['image']['name'];
+            $cover = $_FILES['avatar']['name'];
             echo($cover);
             $bddPDO = connexionBDD();
 
-            move_uploaded_file($_FILES['image']['tmp_name'], $dossier . basename($cover));
-
+            
+            if (move_uploaded_file($_FILES['avatar']['tmp_name'], $dossier . basename($cover))){ //Si la fonction renvoie TRUE, c'est que ça a fonctionné...
+                echo 'Upload effectué avec succès !';
+            } else {
+                echo 'Echec de l\'upload !'; //Sinon (la fonction renvoie FALSE).
+            }
             $requete = "INSERT INTO acteur (nom,prenom,cover) VALUES(?,?,?)";
             $stmt = $bddPDO->prepare($requete) or exit(print_r($bddPDO->errorInfo()));
             $stmt->bindParam('nom', $nom, PDO::PARAM_STR);

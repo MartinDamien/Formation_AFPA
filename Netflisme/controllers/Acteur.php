@@ -17,4 +17,5 @@ function affiche()
 function suprimer($id)
 {
     suprim($id);
+    affiche();
 }

@@ -16,3 +16,8 @@ function affiche()
 function modif(){
     
 }
+function suprimer($id)
+{
+    suprim($id);
+    affiche();
+}

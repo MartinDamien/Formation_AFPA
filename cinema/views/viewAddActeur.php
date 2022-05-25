@@ -9,3 +9,4 @@ require('header.html');
         <button type="submit">envoyer</button>
     </form>
 </main>
+<?php if (isset($erreur)) { echo $erreur;} ?>

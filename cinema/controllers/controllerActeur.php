@@ -7,9 +7,9 @@ function nouvelleActeur()
     addActeur($_POST);
 }
 
-function afficheActeur()
+function affiche()
 {
-    $result = affiche();
+    $result = afficheActeur();
     require('views/viewActeur.php');
     
 }

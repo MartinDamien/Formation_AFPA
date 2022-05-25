@@ -11,12 +11,12 @@ function addActeur($post)
             $prenom = $post['prenom'];
             $cover = $_FILES['avatar']['name'];
             $bddPDO = connexionBDD();
-
-
-            if (move_uploaded_file($_FILES['avatar']['tmp_name'], $dossier . basename($cover))) { //Si la fonction renvoie TRUE, c'est que ça a fonctionné...
-                echo 'Upload effectué avec succès !';
-            } else {
-                echo 'Echec de l\'upload !'; //Sinon (la fonction renvoie FALSE).
+            $fichier = pathinfo($_FILES['image']['name']);
+            $extension_upload = $fichier['extension'];
+            $extensions_autorisees = array('jpg', 'jpeg', 'gif', 'png', 'JPG', 'JPEG');
+            if (in_array($extension_upload, $extensions_autorisees))
+            {
+                move_uploaded_file($_FILES['avatar']['tmp_name'], $dossier . basename($cover));
             }
             $requete = "INSERT INTO acteur (nom,prenom,cover) VALUES(?,?,?)";
             $stmt = $bddPDO->prepare($requete) or exit(print_r($bddPDO->errorInfo()));
@@ -30,11 +30,14 @@ function addActeur($post)
     die;
 }
 
-function affiche()
+function afficheActeur()
 {
     $bddPDO = connexionBDD();
     $requete = "SELECT * FROM film ORDER BY id ASC";
     $resultActeur = $bddPDO->query($requete);
     $data = $resultActeur->fetchAll(PDO::FETCH_ASSOC);
+    echo"<pre>";
+    print_r($data);
+    echo"</pre>";
     return $data;
 }

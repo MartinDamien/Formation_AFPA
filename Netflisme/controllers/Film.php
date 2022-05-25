@@ -12,3 +12,6 @@ function affiche()
     $result = afficheFilm();
     require('views/viewFilm.php');
 }
+
+function modif(){
+}

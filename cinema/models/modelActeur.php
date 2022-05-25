@@ -32,5 +32,9 @@ function addActeur($post)
 
 function affiche()
 {
-    
+    $bddPDO = connexionBDD();
+    $requete = "SELECT * FROM film ORDER BY id ASC";
+    $resultActeur = $bddPDO->query($requete);
+    $data = $resultActeur->fetchAll(PDO::FETCH_ASSOC);
+    return $data;
 }

@@ -9,6 +9,7 @@ function nouvelleActeur()
 
 function afficheActeur()
 {
+    $result = affiche();
     require('views/viewActeur.php');
-    affiche();
+    
 }

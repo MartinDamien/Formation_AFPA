@@ -37,7 +37,8 @@ function afficheActeur()
     $data = $resultActeur->fetchAll(PDO::FETCH_ASSOC);
     return $data;
 }
-function suprim($id){
+function suprim($id)
+{
     $bddPDO = connexionBDD();
     $requete = "DELETE FROM acteur WHERE acteur.id = ?";
     $stmt = $bddPDO->prepare($requete);

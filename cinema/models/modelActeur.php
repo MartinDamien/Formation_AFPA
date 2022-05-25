@@ -14,8 +14,7 @@ function addActeur($post)
             $fichier = pathinfo($_FILES['image']['name']);
             $extension_upload = $fichier['extension'];
             $extensions_autorisees = array('jpg', 'jpeg', 'gif', 'png', 'JPG', 'JPEG');
-            if (in_array($extension_upload, $extensions_autorisees))
-            {
+            if (in_array($extension_upload, $extensions_autorisees)) {
                 move_uploaded_file($_FILES['avatar']['tmp_name'], $dossier . basename($cover));
             }
             $requete = "INSERT INTO acteur (nom,prenom,cover) VALUES(?,?,?)";
@@ -33,11 +32,9 @@ function addActeur($post)
 function afficheActeur()
 {
     $bddPDO = connexionBDD();
-    $requete = "SELECT * FROM film ORDER BY id ASC";
+    $requete = "SELECT * FROM acteur ORDER BY id ASC";
     $resultActeur = $bddPDO->query($requete);
     $data = $resultActeur->fetchAll(PDO::FETCH_ASSOC);
-    echo"<pre>";
-    print_r($data);
-    echo"</pre>";
+
     return $data;
 }

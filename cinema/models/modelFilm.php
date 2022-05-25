@@ -27,3 +27,13 @@ function addFilm($post)
     }
     die;
 }
+
+function afficheFilm()
+{
+    $bddPDO = connexionBDD();
+    $requete = "SELECT * FROM Film ORDER BY id ASC";
+    $resultFilm = $bddPDO->query($requete);
+    $data = $resultFilm->fetchAll(PDO::FETCH_ASSOC);
+    
+    return $data;
+}

@@ -1,10 +1,10 @@
 <?php
 require_once('model.php');
 
-function addActeur(){
-    $nom = "";
-    $prenom = "";
-    $cover = "";
+function addActeur($post){
+    $nom = $post['nom'];
+    $prenom = $post['prenom'];
+    $cover = $post[''];
 
     $bddPDO = connexionBDD();
     $requete = "INSERT INTO acteur (nom,prenom,cover) VALUES(?,?,?)";

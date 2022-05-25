@@ -35,6 +35,5 @@ function afficheActeur()
     $requete = "SELECT * FROM acteur ORDER BY id ASC";
     $resultActeur = $bddPDO->query($requete);
     $data = $resultActeur->fetchAll(PDO::FETCH_ASSOC);
-
     return $data;
 }

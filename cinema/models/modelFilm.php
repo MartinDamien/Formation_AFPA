@@ -34,6 +34,5 @@ function afficheFilm()
     $requete = "SELECT * FROM Film ORDER BY id ASC";
     $resultFilm = $bddPDO->query($requete);
     $data = $resultFilm->fetchAll(PDO::FETCH_ASSOC);
-    
     return $data;
 }

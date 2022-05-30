@@ -1,11 +1,11 @@
 <?php 
 namespace mvcobjet\models\daos;
-use mvcobjet\models\Entities\Actor;
+use mvcobjet\models\Entities\acteur;
 
-class ActorDao extends BaseDao {
+class acteurDao extends BaseDao {
 
     public function creeObj($fields) {
-        $acteur = new Actor();
+        $acteur = new acteur();
         $acteur->setId($fields['id']); 
         $acteur->setFirstName($fields['firstName']);
         $acteur->setLastName($fields['lastName']);
@@ -13,16 +13,16 @@ class ActorDao extends BaseDao {
     }
 
     public function findAll() {
-            $sql = "SELECT * FROM actor" ;
+            $sql = "SELECT * FROM acteur" ;
             $stmt = $this->db->prepare($sql); 
             $result = $stmt->execute();
             if ($result) {
-                $actors = [] ;
+                $acteurs = [] ;
                 while ($row =  $stmt->fetch(\PDO::FETCH_ASSOC)) {
-                //    $actors[] =  $this->creeObj($row) ;  
-                    array_push($actors,$this->creeObj($row));
+                //    $acteurs[] =  $this->creeObj($row) ;  
+                    array_push($acteurs,$this->creeObj($row));
                 }
-                return $actors;
+                return $acteurs;
             }
     }
 }

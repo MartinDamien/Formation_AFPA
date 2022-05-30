@@ -7,6 +7,6 @@ use mvcobjet\controllers\FrontController;
 // ainsi je peux creér un instance de mon controller front
 
 $fc = new FrontController();
-print_r($fc);
-$fc->index;
+// print_r($fc);
+$fc->index();
 ?>

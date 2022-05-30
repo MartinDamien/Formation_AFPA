@@ -16,11 +16,14 @@ $frontController = new FrontController();
 //instentation d'un objet klein
 $klein = new \Klein\Klein();
 
-$klein->respond('GET','/',function() use ($frontController){
+// je crée une closure avec l'objet $FrontController qui dera utiliser
+// plus tard quand la fonction de callback sera executé
+// 
+$klein->respond('GET', '/', function () use ($frontController) {
     $frontController->index();
 });
 
-$klein->respond('GET', '/helloworld',function(){
+$klein->respond('GET', '/helloworld', function () {
     return 'hello world';
 });
 

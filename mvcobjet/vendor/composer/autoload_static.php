@@ -6,29 +6,29 @@ namespace Composer\Autoload;
 
 class ComposerStaticInit5a4a302ad484bd18c7c8f19ae780985f
 {
-    public static $prefixLengthsPsr4 = array (
-        'm' => 
-        array (
+    public static $prefixLengthsPsr4 = array(
+        'm' =>
+        array(
             'mvcobjet\\' => 9,
         ),
-        'K' => 
-        array (
+        'K' =>
+        array(
             'Klein\\' => 6,
         ),
     );
 
-    public static $prefixDirsPsr4 = array (
-        'mvcobjet\\' => 
-        array (
+    public static $prefixDirsPsr4 = array(
+        'mvcobjet\\' =>
+        array(
             0 => __DIR__ . '/../..' . '/src',
         ),
-        'Klein\\' => 
-        array (
+        'Klein\\' =>
+        array(
             0 => __DIR__ . '/..' . '/klein/klein/src/Klein',
         ),
     );
 
-    public static $classMap = array (
+    public static $classMap = array(
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
     );
 
@@ -38,7 +38,6 @@ class ComposerStaticInit5a4a302ad484bd18c7c8f19ae780985f
             $loader->prefixLengthsPsr4 = ComposerStaticInit5a4a302ad484bd18c7c8f19ae780985f::$prefixLengthsPsr4;
             $loader->prefixDirsPsr4 = ComposerStaticInit5a4a302ad484bd18c7c8f19ae780985f::$prefixDirsPsr4;
             $loader->classMap = ComposerStaticInit5a4a302ad484bd18c7c8f19ae780985f::$classMap;
-
         }, null, ClassLoader::class);
     }
 }

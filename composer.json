@@ -4,14 +4,13 @@
     "type": "project",
     "autoload": {
         "psr-4": {
-            "Madha\\Http\\": "src/"
+            "mvcobjet\\": "src"
         }
     },
     "authors": [
         {
             "name": "Damien Martin",
-            "email": "90847522+MartinDamien@users.noreply.github.com",
-            "role": "Developer"
+            "email": "90847522+MartinDamien@users.noreply.github.com"
         }
     ],
     "require": {}

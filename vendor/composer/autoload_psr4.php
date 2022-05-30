@@ -6,5 +6,5 @@ $vendorDir = dirname(__DIR__);
 $baseDir = dirname($vendorDir);
 
 return array(
-    'Madha\\Http\\' => array($baseDir . '/src'),
+    'mvcobjet\\' => array($baseDir . '/src'),
 );

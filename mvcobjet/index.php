@@ -7,6 +7,16 @@ use mvcobjet\controllers\FrontController;
 // ainsi je peux creér un instance de mon controller front
 
 $fc = new FrontController();
-// print_r($fc);
-$fc->index();
-?>
+
+//instentation d'un objet klein
+$klein = new \Klein\klein();
+
+// klein->respond('GET','function(){
+//     $frontController->index();
+// }')
+
+klein->respond('GET','function(){
+    $frontController->index();
+}')
+
+$klein->dispatch();

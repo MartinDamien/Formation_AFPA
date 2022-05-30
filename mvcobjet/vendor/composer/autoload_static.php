@@ -4,12 +4,16 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInitb6247a1f832034eb885d65b94adf2daa
+class ComposerStaticInit5a4a302ad484bd18c7c8f19ae780985f
 {
     public static $prefixLengthsPsr4 = array (
         'm' => 
         array (
             'mvcobjet\\' => 9,
+        ),
+        'K' => 
+        array (
+            'Klein\\' => 6,
         ),
     );
 
@@ -17,6 +21,10 @@ class ComposerStaticInitb6247a1f832034eb885d65b94adf2daa
         'mvcobjet\\' => 
         array (
             0 => __DIR__ . '/../..' . '/src',
+        ),
+        'Klein\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/klein/klein/src/Klein',
         ),
     );
 
@@ -27,9 +35,9 @@ class ComposerStaticInitb6247a1f832034eb885d65b94adf2daa
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInitb6247a1f832034eb885d65b94adf2daa::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInitb6247a1f832034eb885d65b94adf2daa::$prefixDirsPsr4;
-            $loader->classMap = ComposerStaticInitb6247a1f832034eb885d65b94adf2daa::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInit5a4a302ad484bd18c7c8f19ae780985f::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit5a4a302ad484bd18c7c8f19ae780985f::$prefixDirsPsr4;
+            $loader->classMap = ComposerStaticInit5a4a302ad484bd18c7c8f19ae780985f::$classMap;
 
         }, null, ClassLoader::class);
     }

@@ -7,4 +7,5 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'mvcobjet\\' => array($baseDir . '/src'),
+    'Klein\\' => array($vendorDir . '/klein/klein/src/Klein'),
 );

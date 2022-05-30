@@ -13,5 +13,7 @@
             "email": "90847522+MartinDamien@users.noreply.github.com"
         }
     ],
-    "require": {}
+    "require": {
+        "klein/klein": "^2.1"
+    }
 }

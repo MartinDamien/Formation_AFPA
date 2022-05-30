@@ -1,0 +1,18 @@
+{
+    "name": "madha/http",
+    "description": "projet en mvc objet",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "Madha\\Http\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Damien Martin",
+            "email": "90847522+MartinDamien@users.noreply.github.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {}
+}

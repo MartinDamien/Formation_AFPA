@@ -2,25 +2,25 @@
 
 namespace mvcobjet\controllers;
 
-use mvcobjet\models\daos\ActeurDao;
+use mvcobjet\models\daos\ActorDao;
 
 class BackController
 {
 
   function liste()
   {
-    $acteurDao = new ActeurDao();
-    $result = $acteurDao->findAll();
+    $ActorDao = new ActorDao();
+    $result = $ActorDao->findAll();
     echo "<pre>";
     print_r($result);
     echo "</pre>";
   }
 }
 
-function getActeur($id)
+function getActor($id)
 {
-  $acteurDao = new ActeurDao();
-  $result = $acteurDao->findById($id);
+  $ActorDao = new ActorDao();
+  $result = $ActorDao->findById($id);
   echo "<pre>";
   print_r($result);
   echo "</pre>";

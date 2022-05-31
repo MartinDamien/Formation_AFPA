@@ -33,9 +33,9 @@ $klein->respond('GET', '/hello', function () {
     return 'hello world';
 });
 
-$klein->respond('GET', '/getActeur/[:lid]', function () use ($backController) {
+$klein->respond('GET', '/getActor/[:lid]', function () use ($backController) {
     // on retrouve le parametre de l'url dans l'objet $request géré par klein
-    $backController->getActeur($request->lid);
+    $backController->getActor($request->lid);
 });
 
 $klein->dispatch();

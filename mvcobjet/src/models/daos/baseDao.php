@@ -1,6 +1,6 @@
 <?php
 //DAO : Data Access Object
-namespace MVC\models\daos;
+namespace mvcobjet\models\daos;
 
 use PDO;
 

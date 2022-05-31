@@ -1,7 +1,6 @@
 <?php
 
 namespace mvcobjet\models\daos;
-
 use mvcobjet\models\entities\acteur;
 
 class ActeurDao extends BaseDao
@@ -26,6 +25,19 @@ class ActeurDao extends BaseDao
                 $acteurs[] = $this->creeObj($row);
             }
             return $acteurs;
+        }
+    }
+
+    public function findById($id)
+    {
+        $sql = "SELECT * FROM acteur WHERE id = :id";
+        $stmt = $this->db->prepare($sql);
+        $stmt->bindValue(':id', $id, \PDO::PARAM_INT);
+        $result = $stmt->execute();
+        if ($result) {
+            $row = $stmt->fetch(Acteur::class);
+            return $this->creeObj($row);
+            // renvoie le resultat de la requete
         }
     }
 }

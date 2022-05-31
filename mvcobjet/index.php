@@ -1,6 +1,5 @@
 <?php
-require_once('vendor/autoload.php');
-
+require_once "vendor/autoload.php"; 
 use mvcobjet\controllers\FrontController;
 use mvcobjet\controllers\BackController;
 
@@ -21,7 +20,7 @@ $klein = new \Klein\Klein();
 
 // je crée une closure avec l'objet $FrontController qui dera utiliser
 // plus tard quand la fonction de callback sera executé
-// 
+// elle sera executé quand on tapera dans l'url le chemin jusqu'a la racine
 $klein->respond('GET', '/', function () use ($frontController) {
     $frontController->index();
 });
@@ -30,8 +29,13 @@ $klein->respond('GET', '/liste', function () use ($backController) {
     $backController->liste();
 });
 
-$klein->respond('GET', '/helloworld', function () {
+$klein->respond('GET', '/hello', function () {
     return 'hello world';
+});
+
+$klein->respond('GET', '/getActeur/[:lid]', function () use ($backController) {
+    // on retrouve le parametre de l'url dans l'objet $request géré par klein
+    $backController->getActeur($request->lid);
 });
 
 $klein->dispatch();

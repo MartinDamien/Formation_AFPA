@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "772986a0ab33b282bdc85c1c768f903a",
+    "content-hash": "ae1022ec84b17347bccc307c0a05b63a",
     "packages": [
         {
             "name": "klein/klein",

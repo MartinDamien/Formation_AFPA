@@ -1,41 +1,41 @@
 <?php
 
 namespace mvcobjet\models\daos;
-use mvcobjet\models\entities\acteur;
+use mvcobjet\models\entities\Actor;
 
-class ActeurDao extends BaseDao
+class ActorDao extends BaseDao
 {
 
     public function creeObj($fields)
     {
-        $acteur = new acteur();
-        $acteur->setId($fields['id']);
-        $acteur->setPrenom($fields['prenom']);
-        $acteur->setNom($fields['nom']);
+        $Actor = new Actor();
+        $Actor->setId($fields['id']);
+        $Actor->setPrenom($fields['first_name']);
+        $Actor->setNom($fields['last_name']);
     }
 
     public function findAll()
     {
-        $sql = "SELECT * FROM acteur";
+        $sql = "SELECT * FROM Actor";
         $stmt = $this->db->prepare($sql);
         $result = $stmt->execute();
         if ($result) {
-            $acteurs = [];
+            $Actors = [];
             while ($row = $stmt->fetch(\PDO::FETCH_ASSOC)) {
-                $acteurs[] = $this->creeObj($row);
+                $Actors[] = $this->creeObj($row);
             }
-            return $acteurs;
+            return $Actors;
         }
     }
 
     public function findById($id)
     {
-        $sql = "SELECT * FROM acteur WHERE id = :id";
+        $sql = "SELECT * FROM Actor WHERE id = :id";
         $stmt = $this->db->prepare($sql);
         $stmt->bindValue(':id', $id, \PDO::PARAM_INT);
         $result = $stmt->execute();
         if ($result) {
-            $row = $stmt->fetch(Acteur::class);
+            $row = $stmt->fetch(Actor::class);
             return $this->creeObj($row);
             // renvoie le resultat de la requete
         }

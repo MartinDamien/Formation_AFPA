@@ -1,9 +1,9 @@
 {
-    "name": "afpa/mvcobjet",
+    "name": "mvcobjet",
     "type": "project",
     "autoload": {
         "psr-4": {
-            "Mvcobjet\\": "src/"
+            "mvcobjet\\": "src/"
         }
     },
     "authors": [

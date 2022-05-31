@@ -6,6 +6,6 @@ $vendorDir = dirname(__DIR__);
 $baseDir = dirname($vendorDir);
 
 return array(
+    'mvcobjet\\' => array($baseDir . '/src'),
     'Klein\\' => array($vendorDir . '/klein/klein/src/Klein'),
-    'Afpa\\Mvcobjet\\' => array($baseDir . '/src'),
 );

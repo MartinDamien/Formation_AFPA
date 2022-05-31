@@ -2,21 +2,21 @@
     'root' => array(
         'pretty_version' => 'dev-main',
         'version' => 'dev-main',
-        'type' => 'library',
+        'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => '58ac8baac1e4d8daf7c9e7dfe7ee511d28f264f0',
-        'name' => '__root__',
+        'reference' => '7c1e3a4e4199d5ab85b0ca7ac1e1121405b04106',
+        'name' => 'afpa/mvcobjet',
         'dev' => true,
     ),
     'versions' => array(
-        '__root__' => array(
+        'afpa/mvcobjet' => array(
             'pretty_version' => 'dev-main',
             'version' => 'dev-main',
-            'type' => 'library',
+            'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => '58ac8baac1e4d8daf7c9e7dfe7ee511d28f264f0',
+            'reference' => '7c1e3a4e4199d5ab85b0ca7ac1e1121405b04106',
             'dev_requirement' => false,
         ),
         'klein/klein' => array(

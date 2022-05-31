@@ -1,11 +1,10 @@
 <?php
-require_once 'vendor/autoload.php';
+require_once('vendor/autoload.php');
 
-use mvcobjet\controllers\FrontController;
-use mvcobjet\controllers\BackController;
 
-$frontController = new FrontController();
-$backController = new BackController();
+
+$frontController = new mvcobjet\controllers\FrontController();
+$backController = new mvcobjet\controllers\BackController();
 
 $base  = dirname($_SERVER['PHP_SELF']);
 if (ltrim($base, '/')) {

@@ -1,4 +1,17 @@
 {
+    "name": "afpa/mvcobjet",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "Mvcobjet\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Damien Martin",
+            "email": "martindamien284@gmail.com"
+        }
+    ],
     "require": {
         "klein/klein": "^2.1"
     }

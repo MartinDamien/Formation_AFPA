@@ -1,5 +1,5 @@
 {
-    "name": "mvcobjet",
+    "name": "afpa/mvcobjet",
     "type": "project",
     "autoload": {
         "psr-4": {

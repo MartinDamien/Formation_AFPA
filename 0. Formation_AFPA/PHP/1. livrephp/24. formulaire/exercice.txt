@@ -1,0 +1,19 @@
+faire un user.php avec un formulaire qui me permet d'enregistrer un fichier utilisateur.txt en appelant le fichier record.php
+
+1. email
+2. nom
+3. prenom
+4. n° rue
+5. nom rue
+6. code postal
+7. ville
+
+
+<form action="record.php" method="post">
+<input type="text" name=nom
+<input...
+
+dans utilisateur.csv 
+
+jo@gmail.com;Smith;Jo;0298546532;8;Rue des lilas;29200;Brest
+dans record.php faire un print_r(ou debug) de la variable global $_POST

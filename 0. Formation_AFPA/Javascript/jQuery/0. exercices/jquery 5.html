@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="#">
+    <title>Document</title>
+    <style>
+       div {
+           background-color: rgb(0, 250, 250);
+           height: 25vh;
+           width: 25vh;
+           position: absolute;
+       }
+       button {
+        margin: 8vh;
+       }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+
+            $("button").click(function() {
+                $( "div#bouate" ).animate({left:'300px'},2000);
+                $( "div#bouate2" ).animate({ width: [ "toggle", "swing" ], height: [ "toggle", "swing" ], opacity: "toggle" }, 5000, "linear" );
+            });
+        });
+    </script>
+</head>
+<body>
+
+    <button>Bouton</button>
+
+    <div id="bouate">
+        Eu ut mollit ea qui aute eiusmod exercitation laborum. Ullamco ad magna pariatur eu officia 
+        consequat dolore commodo. Cillum excepteur tempor irure exercitation ullamco dolore laboris 
+        dolor qui nisi laborum excepteur exercitation. Officia ut do minim veniam cupidatat tempor.
+     </div>
+     <div id="bouate2">
+        Eu ut mollit ea qui aute eiusmod exercitation laborum. Ullamco ad magna pariatur eu officia 
+        consequat dolore commodo. Cillum excepteur tempor irure exercitation ullamco dolore laboris 
+        dolor qui nisi laborum excepteur exercitation. Officia ut do minim veniam cupidatat tempor.
+     </div>
+
+</body>
+</html>

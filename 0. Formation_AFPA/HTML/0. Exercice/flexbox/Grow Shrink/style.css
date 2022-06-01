@@ -1,0 +1,44 @@
+#main {
+ /* width: 350px;*/
+  height: 100px;
+  border: 1px solid #c3c3c3;
+  display: flex;
+}
+
+.item {
+  flex-grow: 1 ;            /* chaque div est élargi à proportion égale  */
+  flex-shrink: 1 ;          /* chaque div est rétréci à proportion égale */ 
+  flex-basis: 100px ;       /* taille initiale de l'item.
+  /* Les 3 fonctions flex-grow, flex-shrink et flex-basis peuvent être déclarées ainsi
+  flex: 1 1 100px ;
+  */
+   
+  /*
+     Différence entre flex-basis et width. 
+     Lorsque la direction de flex est row, flex-basis  contrôle la largeur.
+     Mais lorsque la direction de flex est column, flex-basis contrôle la hauteur.
+     En utilisant la propriété flex, trois propriétés (flex-grow, flex-shrink et flex-basis) 
+     peuvent être combinées en une seule déclaration. 
+     En utilisant width, la même règle nécessiterait plusieurs lignes de code.   
+  */
+}
+
+.item:nth-child(1) {
+ background-color: aquamarine;
+}
+.item:nth-child(2) {
+    background-color: blue;
+  
+}
+.item:nth-child(3) {
+    background-color: chartreuse;
+   flex-shrink: 2; /* retrecissement d'un fraction 1/2 */
+}
+.item:nth-child(4) {
+    background-color:cadetblue;
+    flex-grow: 2; /* j'étire sur 2 portions caculées. */
+}
+
+.item:nth-child(5) {
+  background-color: darkgreen;
+}

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="FR-fr">
+    <header>
+        <meta charset="UTF-8">
+        <title>display</title>
+        <meta  name="viewport" content="width=device" ></meta>
+        <link href="Style.css" rel="Stylesheet"/>
+    </header>
+    
+    <style>
+        .vert {
+            color: green;
+        }
+        .rougevert {
+            background-color: green;
+            color: red;
+        }
+        .rouge {
+            color: red;
+        }
+        .rouge2 {
+            background-color: red;
+        }
+        div {
+            border: 5px solid red;
+
+
+        }
+        div * {
+            border: 5px solid #ffe600;
+        }
+        div>h3 {
+            border: 5px solid #ffe600;
+        }
+        div>p{
+            border: 5px solid #ffe600;
+        }
+
+
+
+        /* div * / selectionne tout le contenue de la div
+        div>h1 / selectionne le h1 enfant de la div */
+    </style>
+
+    <body>
+
+        <hgroup >
+            <h1 class="vert">passer ce 1er titre en couleur vert</h1>
+            <h2 class="rouge">
+             sous titre en rouge
+            </h2>
+        </hgroup>
+        
+        <!-- faire une bordure rouge sur ce div et jaune pour chacun des éléménet de ce div -->
+        <div>
+        <h2>Level 2 heading</h2>
+        <p>Some more text</p>
+        <h3>Level 3 heading</h3>
+        <p>A bit more text</p>
+        </div>
+        
+        <hgroup>
+            <h2>Another level 2 heading</h2>
+            <h3>
+              Subheading to level 2 heading
+            </h3>
+        </hgroup>
+        <p>The last bit of text</p> 
+        <h2>Level 2 heading</h2>
+        
+        <!-- fond du dernier paragraphe en vert-->
+        <p class="rouge">font de tous les paragraphes en rouge</p>
+        <p class="rougevert">fond du bloc en vert </p>
+        <p class="rougevert">paragraphe 1</p>
+        <p class="rougevert">paragraphe 2</p>
+        <p class="rougevert">paragraphe 3</p>
+
+   </body>
+</html>

@@ -1,0 +1,41 @@
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>jQuery.getJSON demo</title>
+  <style>
+  img {
+    height: 100px;
+    float: left;
+  }
+  </style>
+  <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+</head>
+<body>
+<h1>TITRE</h1>
+<hr>
+
+<div id="images">
+ICI
+</div>
+
+<hr style="clear:both;">
+<footer>&copy; avec plein de copyright dedans</footer>
+
+<script>
+(function() {
+  var flickerAPI = "https://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?";
+  $.getJSON( flickerAPI, {
+    tags: "mount rainier",
+    tagmode: "any",
+    format: "json"
+  }).done(function( data ) {
+      console.log(data);
+      $.each( data.items, function( i, item ) {
+        $( "<img>" ).attr( "src", item.media.m ).appendTo( "#images" );
+        if ( i === 19 ) {
+          return false;
+        }
+      });
+    });
+})();
+</script>

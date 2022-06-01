@@ -1,0 +1,11 @@
+/* selectionne tout le Tableau*/
+SELECT * FROM `user` 
+
+/* changer * en le nom de la colonne desirer pour l'afficher*/
+SELECT nom FROM `user` WHERE 1
+
+/*modifie un valeur de l'utilisateur*/
+UPDATE `user` SET `prenom` = 'Johny' WHERE `user`.`id` = 3; 
+
+/*fonction "and" pour trouver plus precisement les elements*/
+UPDATE `user` SET `prenom` = "jimmy" WHERE nom = "Dupond" AND prenom = "Pol"

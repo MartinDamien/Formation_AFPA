@@ -1,0 +1,65 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+        li {    float:left;  /* display: inline-block */
+                list-style-type: none;
+                margin-left:30px; 
+                cursor:pointer; 
+        }
+        li:hover {
+            background-color: silver ;
+        }
+        
+        article {
+            width: 900px;
+            margin:20px auto;
+        }
+        
+        .masque {
+            display:none;
+        
+        }
+        
+        .montre {
+            display:block
+        }
+
+        hr { clear:both;}
+
+    </style>
+</head>
+<body>
+    <nav id="navbar">
+        <ul>
+            <li>article1</li>
+            <li>article2</li> 
+        </ul>
+        <hr>
+    </nav>
+
+    <article id="monart1" class="montre">
+        At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.
+    </article>
+
+    <article id="monart2" class="masque">
+        On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble that are bound to ensue; and equal blame belongs to those who fail in their duty through weakness of will, which is the same as saying through shrinking from toil and pain. These cases are perfectly simple and easy to distinguish
+    </article>
+</body>
+<script>
+    var lis = document.getElementById("li")
+
+    lis[0].addEventListener("click", function (evt) {
+        document.getElementById("monart1").classList.remove("montre")
+        document.getElementById("monart2").classList.add("masque")})
+
+        lis[1].addEventListener("click", function (evt) {
+        document.getElementById("monart1").classList.remove("montre")
+        document.getElementById("monart1").classList.add("masque")
+        document.getElementById("monart2").classList.add("montre")})
+</script>
+</html>

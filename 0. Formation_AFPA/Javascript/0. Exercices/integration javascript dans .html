@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="" content="">
+    <meta name="" content="">
+    <title>Document</title>
+    <style>
+        .vertjaune { background-color: yellow;color: greenyellow;}
+        .grossi { font-size: 60px;}
+    </style>
+</head>
+<body>
+    <div id="header">
+        en-tête 
+    </div>
+    <div id="mydiv">
+        Hello World
+        <p id="article">Esse commodo anim do nulla enim. Reprehenderit velit aliquip veniam irure proident in culpa nostrud voluptate nostrud qui voluptate elit eiusmod. Velit ad cupidatat reprehenderit quis voluptate pariatur. Cillum laboris nisi deserunt non tempor id incididunt velit nulla ex et adipisicing est veniam. Eu qui magna cillum adipisicing culpa officia non exercitation quis aute. Mollit nulla velit dolor culpa proident fugiat sit exercitation laborum minim.</p>
+    </div>
+    
+    <div id="autre">
+        </div>
+    <div id="footer">
+        pied
+    </div>
+<script>
+
+         var mondiv = document.getElementById(mydiv) ;
+         console.log(mondiv) ;
+
+         document.getElementById("mydiv").innerHTML = "<strong>bonjour world<strong>" ;
+         document.getElementById("autre").innerHTML = "bienvenue" ;
+
+         document.getElementById("article").style.color="green"
+         document.getElementById("article").style.backgroundColor="black"
+         //normalement le propriété css s'apelle backgroung-color
+
+         document.getElementById("article").style.display = "none"   
+
+         var autre = document.getElementById("autre");
+         autre.classList.add("vertjaune");
+         autre.classList.add("grossi");
+
+         let divs = document.querySelectorAll("div");
+         console.log(divs)
+        
+         let autre = document.getElementById("autre");
+          //créer un paragraphe
+        let newP = document.createElement("p") ;  // = <p></p>
+          //créer un texte
+         let newTexte = document.createTextNode("Quis ut enim consequat adipisicing excepteur.")
+         newP.appendChild(newTexte);
+         autre.appendChild(newP)
+
+          //créer un lien hypertexte
+         let newA = document.createElement("a") ;
+         newA.setAttribute("href", "https://google.fr");
+         let linkTexte = document.createTextNode("lien vers google") ;
+         newA.appendChild(linkTexte)
+         let footer = document.getElementById("footer")
+         footer.appendChild(newA)
+
+</script>
+</body>
+</html>

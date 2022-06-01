@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+    <title>Document</title>
+    <style>
+      .produit {
+        background-color: orangered;
+        border: 1px solid black;
+        width: 100px;
+        height: 40px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <button>ajoute</button>
+    <div class="produit" id="pid1">pantalon numero 1</div>
+    <div class="produit" id="pid2">pantalon jean</div>
+    <div class="produit" id="pid3">robe</div>
+    <div id="container"></div>
+
+    <script>
+      $(document).ready(function () {
+
+        $(".produit").on("click",function () {  //ne fonctionne que sur les element present au chargement de la page
+          console.log($(this).attr("id"));
+        });
+
+        $("button").click(function () {
+          $("#container").append(`<div class="produit" id="pid4">robe 2</div>`);
+        });
+
+        $(document).on("click",".produit",fuction(alert))
+      
+      });
+    </script>
+  </body>
+</html>

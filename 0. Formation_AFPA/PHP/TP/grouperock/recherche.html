@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        font-size: 90px;
+        margin: 20px 0;
+      }
+      body {
+        background-color: rgba(10, 9, 9, 0.95);
+        height: 90vh;
+        display: grid;
+        justify-content: center;
+      }
+      form {
+        text-align: center;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container"></div>
+
+    <form action="recherche.php" method="post">
+        <input type="text" name="titre" placeholder="Titre" /><br />
+        
+        <select name="artiste" id="art">
+            <option value="1">WAMPAS</option>
+            <option value="2">Les Sheriff</option>
+            <option value="3">Joan Osborne</option>
+            <option value="4">Leonard Cohen</option>
+        </select><br />
+
+        <select name="genre" id="">
+            <option value="1">Alternatif</option>
+            <option value="2">Folk</option>
+        </select><br />
+
+        <button type="submit">Enregistrer</button>
+    </form>
+  </body>
+</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      // declaration des variables
+      var t = [4, 5, 6];
+      var t2 = [
+        [1, 2, 3],
+        [4, 5, 6],
+        [7, 8, 9],
+      ];
+      var t3 = [
+        [8, 7, 6],
+        [5, 4, 3],
+        [2, 1, 0],
+      ];
+
+      //exercice 1:
+      console.log("exercice 1")
+      console.log(t2[0][1]);
+
+      //exercice 2: parcourir un tableau à deux dimensions
+      console.log("exercice 2: parcourir un tableau à deux dimensions")
+      for (var i = 0; i < t2.length; i++) {
+        console.log(t2[i]);
+      }
+      
+
+      // exercice 3: additionner les valeurs de deux tableaux
+      console.log("exercice 3: additionner les valeurs de deux tableaux")
+      for (var i = 0; i < 3; i++) {
+        for (var i2 = 0; i2 < 3; i2++) {
+          console.log(t2[i][i2] + t3[i][i2]);
+        }
+      }
+      //exercice 4:
+      console.log("exercice 4")
+      function multiply(a, b) {
+        var aNumRangs = a.length;
+        var aNumCols = a[0].length;
+        var bNumRangs = b.length;
+        var bNumCols = b[0].length;
+
+        var m = [];
+        for (var r = 0; r < aNumRangs; r++) {
+          m[r] = [];
+          for (var c = 0; c < bNumCols; c++) {
+            m[r][c] = 0;
+            for (var i = 0; i < aNumCols; i++) {
+              m[r][c] += a[r][i] * b[i][c];
+            }
+          }
+        }
+        return m;
+      }
+
+      var a = [
+          [8, 3],
+          [2, 4],
+          [3, 6],
+        ],
+        b = [
+          [1, 2, 3],
+          [4, 6, 8],
+        ];
+
+      console.log(a);
+      console.log(b);
+
+      console.log(multiply(a, b));
+
+      //exercice 5:
+      console.log("exercice 5")
+      function tribulle(tab) {
+        //pour i allant de taille de t-1 a 1
+        for (var i = tab.length; i > 0; i--) {
+          // pour j allant de 0 a j-1
+          for (var j = 0; j < i - 1; j++) {
+            if (tab[j + 1] < tab[j]) {
+              // (T[j+1],[j]) = (T[j],T[j+1])
+              var tmp = tab[j];
+              tab[j] = tab[j + 1];
+              tab[j + 1] = tmp;
+            }
+          }
+        }
+      }
+
+      var tabx = [5, 8, 11, 6, 1, 9, 3];
+
+      tribulle(tabx);
+      console.log(tabx);
+
+      //exercice 6: les switch
+      console.log("exercice 6: les switch")
+      var a = 3;
+
+      switch(a){
+        case 1:
+          console.log("un")
+        break
+        case 2:
+          console.log("deux")
+        break
+        case 3:
+          console.log("else")
+        break
+      }
+    </script>
+  </head>
+  <body>
+    <center>
+      <h1>Fais F12</h1>
+      <h2>et regarde la console</h2>
+    </center>
+  </body>
+</html>

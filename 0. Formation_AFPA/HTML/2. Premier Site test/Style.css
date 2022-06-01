@@ -1,0 +1,37 @@
+body
+{
+    background-image: linear-gradient(to left, #fbc2eb 0%, #a6c1ee 100%);
+}
+footer
+{
+    background-image: href="image/image.jpg";
+    size: 100px;
+}
+h1  
+{
+    color: rgb(32, 121, 223);
+}
+h2
+{
+    color: rgb(0, 100, 33);
+}
+p
+{
+    color: rgb(0, 0, 0);
+}
+ul
+{
+    color: rgb(0, 0, 0);
+}
+ol
+{
+    color: rgb(0, 0, 0);
+}
+dl
+{
+    color: rgb(0, 0, 0);
+}
+a
+{
+    size: 100px;
+}

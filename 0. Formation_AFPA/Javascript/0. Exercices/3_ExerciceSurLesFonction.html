@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      //exercice 1: fonction factorielle
+      console.log("exercice 1: fonction factorielle");
+      function fact(x) {
+        var result = 0;
+        for (var i = 1; i < x; i++) {
+          console.log((result = x * i));
+        }
+        return result;
+      }
+
+      //console.log(fact(5));
+
+      function fact2(n) {
+        if (n <= 1) {
+          return 1;
+        } else {
+          return n * fact(n - 1);
+        }
+      }
+      //console.log(fact2(5));
+
+      function fact3(x) {
+        var i,x, f = 1;
+        for (i = 1; i <= x; i++) {
+          f = f * i; // ou f *= i;
+        }return f;
+      }
+
+      console.log(fact3(170));
+      // exercice 2: objet
+      console.log("exercice 2: objet")
+      function Node(value){
+          this.value = value
+          this.left = null
+          this.right = null
+      }
+      // Utilisation
+      var root = new Node(2)
+      root.left = new Node(1)
+      root.right = new Node(3)
+
+      console.log(root);
+    </script>
+  </head>
+  <body>
+    <center>
+      <h1>Fais F12</h1>
+      <h2>et regarde la console</h2>
+    </center>
+  </body>
+</html>

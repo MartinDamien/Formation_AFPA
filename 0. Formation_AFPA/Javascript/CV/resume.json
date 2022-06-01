@@ -1,0 +1,80 @@
+{
+    "basics": {
+      "first name": "Damien",
+      "last name": "Martin",
+      "label": "",
+      "picture": "",
+      "email": "martindamien284@gmail.com",
+      "phone": "06 76 29 52 31",
+      "degree": "",
+      "website": "Your website URL",
+      "summary": "A one-sentence to one-paragraph overview text. Do not include any line-breaks.",
+      "highlights": [
+          "Bullet-point list items that you would like to include along with (or instead of) a summary paragraph."
+      ]
+      },
+      "location": {
+        "address": "13 Rue Charles le Goffic",
+        "postalCode": 29400,
+        "city": "Landivisiau",
+        "countryCode": 33,
+        "region": "Bretagne"
+      },
+      "profiles": [
+        {
+          "network": "twitter",
+          "username": "@Damdam_Dev",
+          "url": "www.twitter.fr/Damdam_dev/"
+        }
+      ],
+    "work": [
+      {
+        "company": "Your employer name",
+        "position": "Your job title",
+        "website": "The URL for the employer's website",
+        "startDate": "Your start date, in YYYY-MM-DD format",
+        "endDate": "Your end date, in YYY-MM-DD format (leave blank for a current position)",
+        "summary": "A one-sentence to one-paragraph summary of this employer or position",
+        "highlights": [
+          "Bullet-point list items that you would like to include along with (or instead of) a summary paragraph."
+        ]
+      }
+    ],
+    "additionalWork": [
+      {
+        "company": "Job history that you would like to group separately (e.g. old jobs, academic positions, etc)",
+        "position": "All fields under the section are the same as for 'work'",
+        "website": "",
+        "startDate": "",
+        "endDate": "",
+        "summary": "",
+        "highlights": [
+          "Templates typically omit highlights for 'additionalWork' positions"
+        ]
+      }
+    ],
+    "workLabel": "Overrides the template label for the 'work' section (e.g. 'Recent Experience')",
+    "additionalWorkLabel": "Overrides the template label for the 'additionalWork' section (e.g. 'Prior Experience')",
+    "education": [
+      {
+        "institution": "Your school name",
+        "area": "Your area of study or degree earned",
+        "studyType": "",
+        "startDate": "Your start date, in YYYY-MM-DD format",
+        "endDate": "Your completion date, in YYYY-MM-DD format",
+        "gpa": "",
+        "courses": [
+          ""
+        ]
+      }
+    ],
+    "skills": [
+      {
+        "name": "Programming Languages",
+        "level": "",
+        "keywords": [
+          "Keywords under this category (e.g. 'Java', 'C++', etc)"
+        ]
+      }
+    ]
+  }

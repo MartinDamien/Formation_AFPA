@@ -1,0 +1,36 @@
+<html>
+
+<head>
+	<style>
+		.descendants * {
+			display: block;
+			border: 2px solid grey;
+			color: lightgrey;
+			padding: 5px;
+			margin: 15px;
+		}
+	</style>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script>
+		$(document).ready(function() {
+			$("div").find("span").css({
+				"color": "green",
+				"border": "2px solid green"
+			});
+		});
+	</script>
+</head>
+
+<body>
+	<div class="descendants" style="width:500px;">
+        This is the current element !!!
+		<p>This is the paragraph element !!!
+			<span> This is span element !!!</span>
+		</p>
+		<p>This is the paragraph element !!!
+			<span>This is span element !!!</span>
+		</p>
+	</div>
+</body>
+
+</html>

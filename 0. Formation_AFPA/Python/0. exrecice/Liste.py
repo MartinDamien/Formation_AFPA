@@ -1,5 +1,0 @@
-liste = ["Maxime", "Martine", "Christopher", "Carlos", "Michael", "Eric"]
-trois_premiers = liste[0: 4]
-trois_derniers = liste[3:]
-milieu = liste[1:5]
-premier_dernier = liste[::5]

@@ -12,6 +12,10 @@ class ComposerStaticInit669a9dc44e0daf123ab46c408fa2d101
     );
 
     public static $prefixLengthsPsr4 = array (
+        'a' => 
+        array (
+            'alloCine\\' => 9,
+        ),
         'T' => 
         array (
             'Twig\\' => 5,
@@ -25,13 +29,13 @@ class ComposerStaticInit669a9dc44e0daf123ab46c408fa2d101
         array (
             'Klein\\' => 6,
         ),
-        'A' => 
-        array (
-            'AlloCine\\' => 9,
-        ),
     );
 
     public static $prefixDirsPsr4 = array (
+        'alloCine\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/src',
+        ),
         'Twig\\' => 
         array (
             0 => __DIR__ . '/..' . '/twig/twig/src',
@@ -47,10 +51,6 @@ class ComposerStaticInit669a9dc44e0daf123ab46c408fa2d101
         'Klein\\' => 
         array (
             0 => __DIR__ . '/..' . '/klein/klein/src/Klein',
-        ),
-        'AlloCine\\' => 
-        array (
-            0 => __DIR__ . '/../..' . '/src',
         ),
     );
 

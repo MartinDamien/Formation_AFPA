@@ -5,7 +5,6 @@ $base  = dirname($_SERVER['PHP_SELF']);
 if (ltrim($base, '/')) {
     $_SERVER['REQUEST_URI'] = substr($_SERVER['REQUEST_URI'], strlen($base));
 }
-echo($base);
 
 $klein = new \Klein\Klein();
 

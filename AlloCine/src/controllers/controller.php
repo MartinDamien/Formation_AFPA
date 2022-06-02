@@ -13,6 +13,6 @@ class controller
     }
 
     public function index(){
-        echo '$this->twig->render('index.html.twig');';
+        echo $this->twig->render('index.html.twig');
     }
 }

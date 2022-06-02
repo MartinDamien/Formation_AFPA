@@ -3,7 +3,7 @@
     "type": "project",
     "autoload": {
         "psr-4": {
-            "Afpa\\AlloCine\\": "src/"
+            "AlloCine\\": "src/"
         }
     },
     "authors": [

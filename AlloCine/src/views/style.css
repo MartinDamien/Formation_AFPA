@@ -3,7 +3,7 @@
   padding: 0;
 }
 header {
-  background-color: #2e8b57;
+  background-color: hsl(180, 10%, 21%);
   height: 100px;
   width: 100%;
   z-index: 1;
@@ -11,16 +11,19 @@ header {
   justify-content: space-around;
 }
 body {
-  background-color: #f8f8f8;
+  background-color: #1f1c1c;
   height: 100%;
   width: 100%;
+  color: #f8f8f8;
+  font-family: 'Roboto', sans-serif;
 }
 footer {
-  background-color: #2e8b57;
+  background-color: hsl(180, 10%, 21%);
   position: absolute;
+  vertical-align: middle;
   object-position: center;
   bottom: 0;
-  height: 100px;
+  height: 60px;
   width: 100%;
   z-index: 1;
 }
@@ -28,8 +31,6 @@ h1 {
   width: 250px;
   text-align: center;
   font-size: 50px;
-  color: #f8f8f8;
-  font-family: 'Roboto', sans-serif;
 }
 ul {
   width: 300px;
@@ -44,5 +45,7 @@ a {
   text-decoration: none;
   color: #f8f8f8;
   font-size: 20px;
-  font-family: "Comic Sans MS", cursive, sans-serif;
+}
+a::hover {
+  color: #137481;
 }

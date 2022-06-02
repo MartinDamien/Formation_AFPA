@@ -1,0 +1,19 @@
+{
+    "name": "afpa/allo-cine",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "Afpa\\AlloCine\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Damien Martin",
+            "email": "martindamien284@gmail.com"
+        }
+    ],
+    "require": {
+        "klein/klein": "^2.1",
+        "twig/twig": "^3.4"
+    }
+}

@@ -1,25 +1,78 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        {% block head %}
-            <meta charset=\"UTF-8\" />
-            <link rel=stylesheet href="">
-            <title>AFPA{% block title %}{% endblock %}</title>
+    <head>{% block head %}
+        <meta charset=\"UTF-8\" />
+        <link href="style.css" rel="stylesheet" type="text/css" />
+        {% block stylesheets %}{% endblock %}
+        <title>AFPA{% block title %}{% endblock %}</title>
         {% endblock %}
+        <style>
+            * 
+            {
+                margin: 0;
+                padding: 0;
+            }
+            header
+            {
+                background-color: #2E8B57;
+                height: 100px;
+                width: 100%;
+                display: flex;
+                justify-content: space-around;
+                
+            }
+            body 
+            {
+                background-color: #F8F8F8;
+                height: 100%;
+                width: 100%;
+            }
+            footer
+            {
+                background-color: #2E8B57;
+                position: absolute;
+                bottom: 0;
+                height: 100px;
+                width: 100%;
+                justify-content: center;
+            }
+            h1
+            {
+                width: 250px;
+                text-align: center;
+                font-size: 50px;
+                color: #F8F8F8;
+                font-family:'Roboto'
+            }
+            ul{
+                width: 300px;
+                list-style: none;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin: 0;
+                padding: 0;
+            }
+            a{
+                text-decoration: none;
+                color: #F8F8F8;
+                font-size: 20px;
+                font-family: 'Roboto'
+            }
+        </style>
     </head>
-    <body>
-    <header>
-    {% block header %}{% endblock %}
-    </header>
-    <main>
-        {% block body %}
+<body>
+<header>{% block header %}{% endblock %}
+</header>
+<main>
+    {% block body %}
         <div id="content">{% block content %}{% endblock %}</div>
-        {% endblock %}
-    </main>
-        <footer>
-            {% block footer %}
-                <p>&copy; Copyright 2022 by <a href="http://domain.invalid/">AFPA</a></p>
-            {% endblock %}
-        </footer>
-    </body>
+    {% endblock %}
+</main>
+<footer>
+    {% block footer %}
+        <p>&copy; Copyright 2022 by <a href="http://domain.invalid/">AFPA</a></p>
+    {% endblock %}
+</footer>
+</body>
 </html>

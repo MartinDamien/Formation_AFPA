@@ -28,7 +28,7 @@ $routeur->respond('GET', '/hello', function () {
     return 'Hello World!';
 });
 
-$routeur->respond('GET','/Film/', function () use ($controller) {
+$routeur->respond('GET','/Film', function () use ($controller) {
     $controller->getAllFilm();
 });
 

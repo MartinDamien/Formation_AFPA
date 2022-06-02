@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        {% block head %}
+            <meta charset=\"UTF-8\" />
+            <link rel=stylesheet href="">
+            <title>AFPA{% block title %}{% endblock %}</title>
+        {% endblock %}
+    </head>
+    <body>
+    <header>
+    {% block header %}{% endblock %}
+    </header>
+    <main>
+        {% block body %}
+        <div id="content">{% block content %}{% endblock %}</div>
+        {% endblock %}
+    </main>
+        <footer>
+            {% block footer %}
+                <p>&copy; Copyright 2022 by <a href="http://domain.invalid/">AFPA</a></p>
+            {% endblock %}
+        </footer>
+    </body>
+</html>

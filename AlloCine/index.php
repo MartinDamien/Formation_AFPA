@@ -6,7 +6,7 @@ if (ltrim($base, '/')) {
     $_SERVER['REQUEST_URI'] = substr($_SERVER['REQUEST_URI'], strlen($base));
 }
 
-$klein = new \Klein\Klein();
+$routeur = new \Klein\Klein();
 
 use Twig\Environment;
 
@@ -20,13 +20,13 @@ use alloCine\controllers\controller;
 
 $controller = new controller($twig);
 
-$klein->respond('GET', '/', function () use ($controller) {
+$routeur->respond('GET', '/', function () use ($controller) {
     $controller->index();
 });
 
-$klein->respond('GET', '/hello', function () {
+$routeur->respond('GET', '/hello', function () {
     return 'Hello World!';
 });
 
 
-$klein->dispatch();
+$routeur->dispatch();

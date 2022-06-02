@@ -4,7 +4,7 @@ namespace alloCine\models;
 
 use PDO;
 
-class model
+class Model
 {
     protected $db;
 

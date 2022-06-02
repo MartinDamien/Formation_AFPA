@@ -13,3 +13,8 @@ use Twig\Environment;
 $loader = new \Twig\Loader\FilesystemLoader(__DIR__ . '/src/views');
 $twig = new Environment($loader, ['cache' => false, 'debug' => true]);
 $twig->addExtension(new \Twig\Extension\DebugExtension());
+
+
+$routeur->respond('GET', '/', function () use () {
+    echo $twig->render('index.html.twig');
+});

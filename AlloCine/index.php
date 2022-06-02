@@ -5,8 +5,9 @@ $base  = dirname($_SERVER['PHP_SELF']);
 if (ltrim($base, '/')) {
     $_SERVER['REQUEST_URI'] = substr($_SERVER['REQUEST_URI'], strlen($base));
 }
+echo($base);
 
-$routeur = new \Klein\Klein();
+$klein = new \Klein\Klein();
 
 use Twig\Environment;
 
@@ -15,6 +16,18 @@ $twig = new Environment($loader, ['cache' => false, 'debug' => true]);
 $twig->addExtension(new \Twig\Extension\DebugExtension());
 
 
-$routeur->respond('GET', '/', function () use ($untruc) {
-    $untruc->index();
+
+use alloCine\controllers\controller;
+
+$controller = new controller($twig);
+
+$klein->respond('GET', '/', function () use ($controller) {
+    $controller->index();
 });
+
+$klein->respond('GET', '/hello', function () {
+    return 'Hello World!';
+});
+
+
+$klein->dispatch();

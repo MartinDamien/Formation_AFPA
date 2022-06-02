@@ -27,7 +27,7 @@ class ComposerStaticInit669a9dc44e0daf123ab46c408fa2d101
         ),
         'A' => 
         array (
-            'Afpa\\AlloCine\\' => 14,
+            'AlloCine\\' => 9,
         ),
     );
 
@@ -48,7 +48,7 @@ class ComposerStaticInit669a9dc44e0daf123ab46c408fa2d101
         array (
             0 => __DIR__ . '/..' . '/klein/klein/src/Klein',
         ),
-        'Afpa\\AlloCine\\' => 
+        'AlloCine\\' => 
         array (
             0 => __DIR__ . '/../..' . '/src',
         ),

@@ -15,6 +15,6 @@ $twig = new Environment($loader, ['cache' => false, 'debug' => true]);
 $twig->addExtension(new \Twig\Extension\DebugExtension());
 
 
-$routeur->respond('GET', '/', function () use () {
-    echo $twig->render('index.html.twig');
+$routeur->respond('GET', '/', function () use ($untruc) {
+    $untruc->index();
 });

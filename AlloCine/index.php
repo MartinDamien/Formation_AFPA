@@ -24,12 +24,20 @@ $routeur->respond('GET', '/', function () use ($controller) {
     $controller->index();
 });
 
-$routeur->respond('GET', '/hello', function () {
-    return 'Hello World!';
-});
-
 $routeur->respond('GET','/Film', function () use ($controller) {
     $controller->getAllFilm();
+});
+
+$routeur->respond('GET','/Genre', function () use ($controller) {
+    $controller->getAllGenre();
+});
+
+$routeur->respond('GET','/Realisateur', function () use ($controller) {
+    $controller->getAllRealisateur();
+});
+
+$routeur->respond('GET', '/Acteur', function () use ($controller) {
+    $controller->getAllActeur();
 });
 
 

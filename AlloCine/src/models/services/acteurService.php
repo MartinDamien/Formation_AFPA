@@ -12,5 +12,11 @@ class ActeurService
     {
         $this->ActeurDao = new ActeurDao();
     }
+
+    public function getAllActeur()
+    {
+        $result = $this->ActeurDao->findAll();
+        return $result;
+    }
     
 }

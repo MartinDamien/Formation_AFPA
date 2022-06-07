@@ -1,6 +1,6 @@
 <?php
 
-namespace mvcobjet\Models\Entities;
+namespace Allocine\Models\Entities;
 
 class Genre
 {

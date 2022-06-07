@@ -1,1 +1,1 @@
-{"version":1,"defects":{"ClassHasAttributeTest::testFailure":3},"times":{"CalculatorTest::testAdd":0.006,"StackTest::testEmpty":0.094,"StackTest::testPush":0.001,"StackTest::testPop":0,"ClassHasAttributeTest::testFailure":0.01}}
+{"version":1,"defects":{"ClassHasAttributeTest::testFailure":3},"times":{"CalculatorTest::testAdd":0.006,"StackTest::testEmpty":0.094,"StackTest::testPush":0.001,"StackTest::testPop":0,"ClassHasAttributeTest::testFailure":0.01,"ApplicationTest::testThatRunLogsApplicationStart":0.859}}

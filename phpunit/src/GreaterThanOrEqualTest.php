@@ -2,7 +2,7 @@
 
 use PHPUnit\Framework\TestCase;
 
-class GreatThanOrEqualTest extends TestCase
+class GreaterThanOrEqualTest extends TestCase
 {
     public function testFailure()
     {

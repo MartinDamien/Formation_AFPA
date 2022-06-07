@@ -2,13 +2,25 @@
 
 namespace alloCine\controllers;
 
+use AlloCine\models\services\ActeurService; 
+use AlloCine\models\services\FilmService;
+use AlloCine\models\services\GenreService;
+use AlloCine\models\services\RealisateurService;
+
 class controller
 {
-
+    private $acteurService;
+    private $filmService;
+    private $genreService;
+    private $realisateurService;
     private $twig;
 
     public function __construct($t)
     {
+        $this->acteurService = new ActeurService();
+        $this->filmService = new FilmService();
+        $this->genreService = new GenreService();
+        $this->realisateurService = new RealisateurService();
         $this->twig = $t;
     }
 

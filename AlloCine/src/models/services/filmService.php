@@ -1,6 +1,6 @@
 <?php
 
-namespace alloCine\services;
+namespace alloCine\models\services;
 
 use alloCine\models\daos\filmDao;
 

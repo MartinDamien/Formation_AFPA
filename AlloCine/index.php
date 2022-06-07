@@ -40,5 +40,4 @@ $routeur->respond('GET', '/Acteur', function () use ($controller) {
     $controller->getAllActeur();
 });
 
-
 $routeur->dispatch();

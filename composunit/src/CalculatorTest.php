@@ -11,11 +11,6 @@ class CalculatorTest extends TestCase
         $this->calculator = new Calculator();
     }
  
-    protected function tearDown(): void
-    {
-        $this->calculator = NULL;
-    }
- 
     public function testAdd(): void 
     {
         $result = $this->calculator->add(1, 2);

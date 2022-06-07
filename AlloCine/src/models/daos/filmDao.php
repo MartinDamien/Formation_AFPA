@@ -29,7 +29,7 @@ class FilmDao extends Model
 
     public function findById($id)
     {
-        $sql = "SELECT * FROM actor WHERE id = ?";
+        $sql = "SELECT * FROM movie WHERE id = ?";
         $stmt = $this->db->prepare($sql);
         $result = $stmt->execute([$id]);
         if ($result) {

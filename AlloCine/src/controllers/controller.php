@@ -37,7 +37,7 @@ class controller
 
     public function getAllActeur()
     {
-        $result = $this->acteurService->getAllActeur();
+        $result = $this->ActeurService->getAllActeur();
         echo $this->twig->render('acteur.html.twig');
     }
 }

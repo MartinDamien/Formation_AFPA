@@ -10,6 +10,9 @@ class ActeurDao extends Model
     {
         $acteur = new Acteur();
         $acteur->setId($fields['id']);
+        $acteur->setNom($fields['first_name']);
+        $acteur->setPrenom($fields['last_name']);
+        return $acteur;
     }
 
     public function findAll()

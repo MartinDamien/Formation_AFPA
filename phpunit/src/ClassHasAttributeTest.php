@@ -10,3 +10,4 @@ final class ClassHasAttributeTest extends TestCase
         $this->assertClassHasAttribute('toto', Calculator::class);
     }
 }
+

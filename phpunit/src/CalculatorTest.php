@@ -18,4 +18,3 @@ class CalculatorTest extends TestCase
     }
  
 }
-?>

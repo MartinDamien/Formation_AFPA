@@ -12,4 +12,5 @@
 	{% for realisateur in realisateurs %}
 	<a href="http://localhost/http/alloCine/Realisateur/' . $realisateurs->getId() . '">{{ realisateur.prenom | upper }}&nbsp; {{ realisateur.nom | upper }}</a><br/>
 	{% endfor %}
+	<a href="http://localhost/http/alloCine/Realisateur/new">+</a>
 {% endblock %}

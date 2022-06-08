@@ -1,0 +1,15 @@
+{% extends "base.html.twig" %} {% block title %} - Acteur {% endblock %} {%
+block header %}
+<h1>Acteurs</h1>
+{% endblock %} {% block content %}
+<form action="" method="post">
+  <label for="nom">
+    Nom
+    <input type="text" name="nom" value="{{ acteur.nom }}" />
+  </label>
+  <label for="prenom">
+    Prénom
+    <input type="text" name="prenom" value="{{ acteur.prenom }}" />
+  </label>
+</form>
+{% endblock %}

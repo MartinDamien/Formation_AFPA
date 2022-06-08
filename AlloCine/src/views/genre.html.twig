@@ -12,4 +12,5 @@
 	{% for genre in genres %}
 	<a href="http://localhost/http/alloCine/Genre/' . $genres->getId() . '">{{ genre.prenom | upper }}&nbsp; {{ genre.nom | upper }}</a><br/>
 	{% endfor %}
+	<a href="http://localhost/http/alloCine/Genre/new">+</a>
 {% endblock %}

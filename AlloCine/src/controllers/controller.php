@@ -35,10 +35,20 @@ class controller
         echo $this->twig->render('film.html.twig', ['films' => $result]);
     }
 
+    public function createFilm()
+    {
+        echo $this->twig->render('createFilm.html.twig');
+    }
+
     public function getAllRealisateur()
     {
         $result = $this->realisateurService->getAllRealisateur();
         echo $this->twig->render('realisateur.html.twig', ['realisateurs' => $result]);
+    }
+
+    public function createRealisateur()
+    {
+        echo $this->twig->render('realisateur.html.twig');
     }
 
     public function getAllActeur()
@@ -47,9 +57,19 @@ class controller
         echo $this->twig->render('acteur.html.twig', ['acteurs' => $result]);
     }
 
+    public function createActeur()
+    {
+        echo $this->twig->render('acteur_new.html.twig');
+    }
+
     public function getAllGenre()
     {
         $result = $this->genreService->getAllGenre();
         echo $this->twig->render('genre.html.twig', ['genres' => $result]);
+    }
+
+    public function createGenre()
+    {
+        echo $this->twig->render('genre_new.html.twig');
     }
 }

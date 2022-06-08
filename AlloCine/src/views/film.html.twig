@@ -12,4 +12,5 @@
 	{% for film in films %}
 	<a href="http://localhost/http/alloCine/Film/' . $films->getId() . '">{{ film.titre | upper }}&nbsp; {{ film.nom | upper }}</a><br/>
 	{% endfor %}
+	<a href="http://localhost/http/alloCine/Film/new">+</a>
 {% endblock %}

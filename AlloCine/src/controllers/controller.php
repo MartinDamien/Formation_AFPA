@@ -34,13 +34,13 @@ class controller
         $result = $this->filmService->getAllFilm();
         echo $this->twig->render('film.html.twig', ['films' => $result]);
     }
-    
+
     public function getAllRealisateur()
     {
         $result = $this->realisateurService->getAllRealisateur();
         echo $this->twig->render('realisateur.html.twig', ['realisateurs' => $result]);
     }
-    
+
     public function getAllActeur()
     {
         $result = $this->acteurService->getAllActeur();

@@ -32,19 +32,22 @@ class controller
     public function getAllFilm()
     {
         $result = $this->filmService->getAllFilm();
-        echo $this->twig->render('film.html.twig');
+        print_r($result);
+        echo $this->twig->render('film.html.twig', ['films' => $result]);
     }
 
     public function getAllGenre()
     {
         $result = $this->genreService->getAllGenre();
-        echo $this->twig->render('genre.html.twig');
+        print_r($result);
+        echo $this->twig->render('genre.html.twig', ['genres' => $result]);
     }
 
     public function getAllRealisateur()
     {
         $result = $this->realisateurService->getAllRealisateur();
-        echo $this->twig->render('realisateur.html.twig');
+        print_r($result);
+        echo $this->twig->render('realisateur.html.twig', ['realisateurs' => $result]);
     }
 
     public function getAllActeur()

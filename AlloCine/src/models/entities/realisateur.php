@@ -2,7 +2,7 @@
 
 namespace alloCine\Models\Entities;
 
-class Realisateur 
+class Realisateur
 {
     private $id;
     private $nom;

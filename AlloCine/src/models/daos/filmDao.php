@@ -1,8 +1,8 @@
 <?php
 
-namespace AlloCine\models\daos;
+namespace alloCine\models\daos;
 
-use AlloCine\models\entities\film;
+use alloCine\models\entities\film;
 
 class FilmDao extends Model
 {

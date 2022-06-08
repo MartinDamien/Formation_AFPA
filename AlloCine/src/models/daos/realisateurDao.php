@@ -1,7 +1,7 @@
 <?php
-namespace AlloCine\models\daos;
+namespace alloCine\models\daos;
 
-use AlloCine\models\entities\realisateur;
+use alloCine\models\entities\realisateur;
 
 class RealisateurDao extends Model{
     public function creeObj($fields){
@@ -21,6 +21,17 @@ class RealisateurDao extends Model{
                 array_push($realisateurs, $this->creeObj($row));
             }
             return $realisateurs;
+        }
+    }
+
+    public function findById($id){
+        $sql = "SELECT * FROM director WHERE id = :id";
+        $stmt = $this->db->prepare($sql);
+        $stmt->bindValue(':id', $id);
+        $result = $stmt->execute();
+        if ($result) {
+            $row = $stmt->fetch(\PDO::FETCH_ASSOC);
+            return $this->creeObj($row);
         }
     }
 }

@@ -1,8 +1,8 @@
 <?php
 
-namespace AlloCine\models\daos;
+namespace alloCine\models\daos;
 
-use AlloCine\models\entities\Acteur;
+use alloCine\models\entities\Acteur;
 
 class ActeurDao extends Model
 {

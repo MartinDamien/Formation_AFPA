@@ -1,6 +1,6 @@
 <?php
 
-namespace AlloCine\Models\Entities;
+namespace alloCine\Models\Entities;
 
 use DateTime;
 

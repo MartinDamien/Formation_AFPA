@@ -1,11 +1,11 @@
 <?php
 
-namespace AlloCine\controllers;
+namespace alloCine\controllers;
 
-use AlloCine\models\services\ActeurService; 
-use AlloCine\models\services\FilmService;
-use AlloCine\models\services\GenreService;
-use AlloCine\models\services\RealisateurService;
+use alloCine\models\services\ActeurService; 
+use alloCine\models\services\FilmService;
+use alloCine\models\services\GenreService;
+use alloCine\models\services\RealisateurService;
 
 class controller
 {

@@ -1,8 +1,8 @@
 <?php
 
-namespace AlloCine\Models\Services;
+namespace alloCine\Models\Services;
 
-use AlloCine\Models\Daos\GenreDao;
+use alloCine\Models\Daos\GenreDao;
 
 class GenreService {
 

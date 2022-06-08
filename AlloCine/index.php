@@ -5,6 +5,9 @@ $base  = dirname($_SERVER['PHP_SELF']);
 if (ltrim($base, '/')) {
     $_SERVER['REQUEST_URI'] = substr($_SERVER['REQUEST_URI'], strlen($base));
 }
+echo($base.'<br>');
+define('_ROOT', str_replace('index.php', '', $_SERVER['SCRIPT_FILENAME']));
+echo(_ROOT);
 
 $routeur = new \Klein\Klein();
 
@@ -73,6 +76,10 @@ $routeur->respond('GET', '/Acteur', function () use ($acteur) {
 
 $routeur->respond('GET', '/Acteur/nouveau', function () use ($acteur) {
     $acteur->createActeur();
+});
+
+$routeur->respond('GET', '/Acteur/addActeur', function () use ($acteur) {
+    $acteur->addActeur();
 });
 
 $routeur->respond('GET', '/Acteur/modif', function () use ($acteur) {

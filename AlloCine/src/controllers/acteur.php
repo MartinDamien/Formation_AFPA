@@ -23,6 +23,11 @@ class acteur {
         echo $this->twig->render('acteur_new.html.twig');
     }
 
+    public function addActeur()
+    {
+        
+    }
+
     public function modifActeur()
     {
         echo $this->twig->render('acteur_modif.html.twig');

@@ -1,6 +1,6 @@
 <?php
 
-namespace alloCine\controllers;
+namespace AlloCine\controllers;
 
 use AlloCine\models\services\ActeurService; 
 use AlloCine\models\services\FilmService;
@@ -49,7 +49,7 @@ class controller
 
     public function getAllActeur()
     {
-        $result = $this->ActeurService->getAllActeur();
+        $result = $this->acteurService->getAllActeur();
         echo $this->twig->render('acteur.html.twig');
     }
 }

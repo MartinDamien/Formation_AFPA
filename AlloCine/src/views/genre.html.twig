@@ -9,6 +9,7 @@
 	</h1>
 {% endblock %}
 {% block content %}
-	{% for genre in genres %} {{ genre.prenom | upper }}&nbsp; {{ genre.nom | upper }}<br/>
+	{% for genre in genres %}
+	<a href="http://localhost/http/alloCine/Genre/' . $genres->getId() . '">{{ genre.prenom | upper }}&nbsp; {{ genre.nom | upper }}</a><br/>
 	{% endfor %}
 {% endblock %}

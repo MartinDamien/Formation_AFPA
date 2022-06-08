@@ -50,6 +50,6 @@ class controller
     public function getAllActeur()
     {
         $result = $this->acteurService->getAllActeur();
-        echo $this->twig->render('acteur.html.twig');
+        echo $this->twig->render('acteur.html.twig', ['acteurs' => $result]);
     }
 }

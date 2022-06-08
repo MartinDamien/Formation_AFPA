@@ -4,24 +4,25 @@
 	- Films
 {% endblock %}
 {% block header %}
-	<h1>
+	<a href="http://localhost/http/alloCine/"><h1>
 		Films
-	</h1>
+	</h1></a>
 {% endblock %}
 {% block content %}
 	{% for film in films %}
 		<div class="film">
 			<h2>
-				{{ film.title }}
+				{{ film.titre }}
 			</h2>
-			<p>
+			 <p>
 				{{ film.description }}
 			</p>
-			<p>
-				{{ film.date }}
-			</p>
+			<img href="{{ film.cover }}">
 			<p>
 				{{ film.duree }}
+			</p>
+			{#<p>
+				{{ film.date }}
 			</p>
 			<p>
 				{{ film.genre }}
@@ -29,13 +30,7 @@
 			<p>
 				{{ film.realisateur }}
 			</p>
-			<p>
-				{{ film.acteurs }}
-			</p>
-			<p>
-				{{ film.note }}
-			</p>
-	<a href="http://localhost/http/alloCine/Film/' . $films->getId() . '">{{ film.titre | upper }}</a><br/>
+			 #}
 	{% endfor %}
 	<a href="http://localhost/http/alloCine/Film/nouveau">+</a>
 {% endblock %}

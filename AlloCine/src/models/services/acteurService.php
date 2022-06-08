@@ -18,5 +18,4 @@ class ActeurService
         $result = $this->acteurDao->findAll();
         return $result;
     }
-    
 }

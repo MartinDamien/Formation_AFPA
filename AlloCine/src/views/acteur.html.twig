@@ -9,8 +9,14 @@
 	</h1>
 {% endblock %}
 {% block content %}
-	{% for acteur in acteurs %} 
-	<a href="http://localhost/http/alloCine/Acteur/' . $acteurs->getId() . '">{{ acteur.prenom | upper }}&nbsp; {{ acteur.nom | upper }}</a><br/>
+	{% for acteur in acteurs %}
+		<div class="acteur">
+			<h2> {{ acteur.prenom }}
+			</h2>
+			<p> {{ acteur.nom }}
+			</p>
+			<img src="{{ acteur.image }}" alt="photo de {{ acteur.nom }} {{ acteur.prenom }}">
+		</div>
 	{% endfor %}
 	<a href="http://localhost/http/alloCine/Acteur/nouveau">+</a>
 {% endblock %}

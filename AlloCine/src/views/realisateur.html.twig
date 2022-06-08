@@ -10,7 +10,13 @@
 {% endblock %}
 {% block content %}
 	{% for realisateur in realisateurs %}
-	<a href="http://localhost/http/alloCine/Realisateur/' . $realisateurs->getId() . '">{{ realisateur.prenom | upper }}&nbsp; {{ realisateur.nom | upper }}</a><br/>
+	<div class="realisateur">
+			<h2> {{ realisateur.prenom }}
+			</h2>
+			<p> {{ realisateur.nom }}
+			</p>
+			<img src="{{ realisateur.image }}" alt="photo de {{ realisateur.prenom }} {{ realisateur.nom }}">
+		</div>
 	{% endfor %}
 	<a href="http://localhost/http/alloCine/Realisateur/nouveau">+</a>
 {% endblock %}

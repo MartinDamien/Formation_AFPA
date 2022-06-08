@@ -10,7 +10,32 @@
 {% endblock %}
 {% block content %}
 	{% for film in films %}
-	<a href="http://localhost/http/alloCine/Film/' . $films->getId() . '">{{ film.titre | upper }}&nbsp; {{ film.nom | upper }}</a><br/>
+		<div class="film">
+			<h2>
+				{{ film.title }}
+			</h2>
+			<p>
+				{{ film.description }}
+			</p>
+			<p>
+				{{ film.date }}
+			</p>
+			<p>
+				{{ film.duree }}
+			</p>
+			<p>
+				{{ film.genre }}
+			</p>
+			<p>
+				{{ film.realisateur }}
+			</p>
+			<p>
+				{{ film.acteurs }}
+			</p>
+			<p>
+				{{ film.note }}
+			</p>
+	<a href="http://localhost/http/alloCine/Film/' . $films->getId() . '">{{ film.titre | upper }}</a><br/>
 	{% endfor %}
 	<a href="http://localhost/http/alloCine/Film/nouveau">+</a>
 {% endblock %}

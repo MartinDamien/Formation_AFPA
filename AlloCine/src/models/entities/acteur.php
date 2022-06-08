@@ -7,6 +7,7 @@ class Acteur
     private $id;
     private $nom;
     private $prenom;
+    private $cover;
 
     public function getId(): int
     {
@@ -38,6 +39,17 @@ class Acteur
     public function setPrenom(string $prenom): Acteur
     {
         $this->prenom = $prenom;
+        return $this;
+    }
+
+    public function getCover(): string
+    {
+        return $this->cover;
+    }
+
+    public function setCover(string $cover): Acteur
+    {
+        $this->cover = $cover;
         return $this;
     }
 }

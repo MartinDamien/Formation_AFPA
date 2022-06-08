@@ -1,16 +1,16 @@
 {% extends "base.html.twig" %}
 
 {% block title %}
-	- realisateur
+	- Realisateurs
 {% endblock %}
 {% block header %}
 	<h1>
-		realisateurs
+		Realisateurs
 	</h1>
 {% endblock %}
 {% block content %}
 	{% for realisateur in realisateurs %}
 	<a href="http://localhost/http/alloCine/Realisateur/' . $realisateurs->getId() . '">{{ realisateur.prenom | upper }}&nbsp; {{ realisateur.nom | upper }}</a><br/>
 	{% endfor %}
-	<a href="http://localhost/http/alloCine/Realisateur/new">+</a>
+	<a href="http://localhost/http/alloCine/Realisateur/nouveau">+</a>
 {% endblock %}

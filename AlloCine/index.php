@@ -40,7 +40,7 @@ $routeur->respond('GET', '/Film', function () use ($film) {
     $film->getAllFilm();
 });
 
-$routeur->respond('GET', '/Film/new', function () use ($film) {
+$routeur->respond('GET', '/Film/nouveau', function () use ($film) {
     $film->createFilm();
 });
 
@@ -56,7 +56,7 @@ $routeur->respond('GET', '/Realisateur', function () use ($realisateur) {
     $realisateur->getAllRealisateur();
 });
 
-$routeur->respond('GET', '/Realisateur/new', function () use ($realisateur) {
+$routeur->respond('GET', '/Realisateur/nouveau', function () use ($realisateur) {
     $realisateur->createRealisateur();
 });
 
@@ -71,7 +71,7 @@ $routeur->respond('GET', '/Acteur', function () use ($acteur) {
     $acteur->getAllActeur();
 });
 
-$routeur->respond('GET', '/Acteur/new', function () use ($acteur) {
+$routeur->respond('GET', '/Acteur/nouveau', function () use ($acteur) {
     $acteur->createActeur();
 });
 
@@ -87,7 +87,7 @@ $routeur->respond('GET', '/Genre', function () use ($genre) {
     $genre->getAllGenre();
 });
 
-$routeur->respond('GET', '/Genre/new', function () use ($genre) {
+$routeur->respond('GET', '/Genre/nouveau', function () use ($genre) {
     $genre->createGenre();
 });
 

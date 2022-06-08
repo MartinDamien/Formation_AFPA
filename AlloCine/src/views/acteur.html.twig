@@ -1,7 +1,7 @@
 {% extends "base.html.twig" %}
 
 {% block title %}
-	- Acteur
+	- Acteurs
 {% endblock %}
 {% block header %}
 	<h1>
@@ -12,5 +12,5 @@
 	{% for acteur in acteurs %} 
 	<a href="http://localhost/http/alloCine/Acteur/' . $acteurs->getId() . '">{{ acteur.prenom | upper }}&nbsp; {{ acteur.nom | upper }}</a><br/>
 	{% endfor %}
-	<a href="http://localhost/http/alloCine/Acteur/new">+</a>
+	<a href="http://localhost/http/alloCine/Acteur/nouveau">+</a>
 {% endblock %}

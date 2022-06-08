@@ -9,8 +9,6 @@
 	</h1>
 {% endblock %}
 {% block content %}
-	{% for acteur in acteurs %}
-    {{ acteur.first_name | upper }}&nbsp;
-    {{ acteur.last_name | upper }}<br/>
+	{% for acteur in acteurs %} {{ acteur.prenom | upper }}&nbsp; {{ acteur.nom | upper }}<br/>
 	{% endfor %}
 {% endblock %}

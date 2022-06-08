@@ -2,7 +2,7 @@
 
 namespace alloCine\controllers;
 
-use alloCine\models\services\ActeurService; 
+use alloCine\models\services\ActeurService;
 use alloCine\models\services\FilmService;
 use alloCine\models\services\GenreService;
 use alloCine\models\services\RealisateurService;

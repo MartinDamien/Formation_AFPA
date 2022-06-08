@@ -16,7 +16,7 @@ class FilmDao extends Model
         // $film->setDate(new DateTime($fields['date']));
         $film->setCouverture($fields['cover_image']);
         // $film->setGenre($fields['genre']);
-
+        return $film;
     }
 
     public function findAll()

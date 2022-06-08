@@ -11,6 +11,7 @@ class GenreDao extends Model
         $genre = new Genre();
         $genre->setId($fields['id']);
         $genre->setNom($fields['name']);
+        return $genre;
     }
 
     public function findAll()
@@ -20,10 +21,9 @@ class GenreDao extends Model
         $result = $stmt->execute();
         if ($result) {
             $genres = [];
-            while ($row =  $stmt->fetch(\PDO::FETCH_ASSOC)) {
-                array_push($genres, $this->creeObj($row));
-            }
-            return $genres;
+            while ($row = $stmt->fetch(\PDO::FETCH_ASSOC)) {
+                array_push($genres, $this->creeObj($row));;
+            }return $genres;
         }
     }
 }

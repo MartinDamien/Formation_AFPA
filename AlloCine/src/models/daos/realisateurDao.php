@@ -9,6 +9,7 @@ class RealisateurDao extends Model{
         $realisateur->setId($fields['id']);
         $realisateur->setNom($fields['last_name']);
         $realisateur->setPrenom($fields['first_name']);
+        return $realisateur;
     }	
 
     public function findAll(){

@@ -11,6 +11,12 @@ class FilmDao extends Model
         $film = new Film();
         $film->setId($fields['id']);
         $film->setTitre($fields['title']);
+        $film->setDescription($fields['description']);
+        $film->setDuree($fields['duration']);
+        // $film->setDate(new DateTime($fields['date']));
+        $film->setCouverture($fields['cover_image']);
+        // $film->setGenre($fields['genre']);
+
     }
 
     public function findAll()
@@ -19,6 +25,7 @@ class FilmDao extends Model
         $stmt = $this->db->prepare($sql);
         $result = $stmt->execute();
         if ($result) {
+            
             $films = [];
             while ($row =  $stmt->fetch(\PDO::FETCH_ASSOC)) {
                 array_push($films, $this->creeObj($row));

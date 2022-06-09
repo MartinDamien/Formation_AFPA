@@ -1,6 +1,7 @@
 {% for animal in animaux %}
 {# <h1>{{ animal.espece }}</h1> #}
 <h2><a href="{{ path('afficher_animal',{'id':animal.id}) }}">{{animal.nom}}</a></h2>
+<img src="{{ animal.image }}" alt="{{ animal.nom }}" width="200px" height="200px">
 <h3>{{ animal.poids }}kg/{{ animal.description }}.</li></h3>
 {% endfor %}
 

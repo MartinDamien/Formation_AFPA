@@ -1,0 +1,10 @@
+<ul> 
+    {% for animal in animaux %} 
+        <ul>
+        {# <h1>{{ animal.espece }}</h1> #}
+        <h2>{{ animal.nom }}</h2>
+        <h3>{{ animal.poids }} kg/{{ animal.description }}. </h3>
+        
+        </ul>
+    {% endfor %} 
+    </ul>

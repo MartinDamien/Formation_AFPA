@@ -4,7 +4,7 @@ namespace AlloCine\models\daos;
 
 use PDO;
 
-abstract class BaseDao {
+abstract class Model {
     protected $db ;
 
     public function __construct(){

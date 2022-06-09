@@ -32,5 +32,8 @@ $routeur->respond('GET','/Film', function () use ($controller) {
     $controller->getAllFilm();
 });
 
+$routeur->respond('GET', '/Acteur', function () use ($controller) {
+    $controller->getAllActeur();
+});
 
 $routeur->dispatch();

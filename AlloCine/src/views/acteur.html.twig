@@ -1,0 +1,10 @@
+{% extends "base.html.twig" %}
+
+{% block header %}
+    {% for %}
+    foreach ($result as $row) {
+        echo $row['first_name'];
+        echo $row['last_name'];
+    }
+    {% endfor %}
+{% endblock %}

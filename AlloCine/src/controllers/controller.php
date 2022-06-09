@@ -22,4 +22,9 @@ class controller
         $result = $this->acteurService->getAllActors();
         echo $this->twig->render('film.html.twig');
     }
+    public function getAllActeur()
+    {
+        $result = $this->acteurService->getAllActeurs();
+        echo $this->twig->render('acteur.html.twig');
+    }
 }

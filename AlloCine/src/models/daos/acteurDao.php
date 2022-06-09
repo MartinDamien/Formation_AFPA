@@ -10,6 +10,9 @@ class ActeurDao extends Model
     {
         $acteur = new Acteur();
         $acteur->setId($fields['id']);
+        $acteur->setPrenom($fields['first_name']);
+        $acteur->setNom($fields['last_name']);
+        return $acteur;
     }
 
     public function findAll()
@@ -33,21 +36,22 @@ class ActeurDao extends Model
         $result = $stmt->execute([$id]);
         if ($result) {
             $lob = $stmt->fetch(\PDO::FETCH_ASSOC);
-            return $this->creeObj($lob);
+            $result = $this->creeObj($lob);
+            var_dump($result);
         }
     }
-    public function create($actor)
+    public function create($acteur)
     {
-        //  print_r($actor) ; die ; 
+        //  print_r($acteur) ; die ; 
         $sql = "INSERT INTO actor (first_name,last_name) VALUES (?,?)";
         $stmt = $this->db->prepare($sql);
-        $result = $stmt->execute([$actor['nom'], $actor['prenom']]);
+        $result = $stmt->execute([$acteur['nom'], $acteur['prenom']]);
     }
     
-    public function update($actor)
+    public function update($acteur)
     {
         $sql = "UPDATE actor SET first_name = ?, last_name = ? WHERE id = ?";
         $stmt = $this->db->prepare($sql);
-        $result = $stmt->execute([$actor['nom'], $actor['prenom'], $actor['id']]);
+        $result = $stmt->execute([$acteur['nom'], $acteur['prenom'], $acteur['id']]);
     }
 }

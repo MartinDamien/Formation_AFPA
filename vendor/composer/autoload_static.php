@@ -37,6 +37,10 @@ class ComposerStaticInit817c28ed115596f86955a96d46043b1b
             'Psr\\EventDispatcher\\' => 20,
             'Psr\\Container\\' => 14,
         ),
+        'A' => 
+        array (
+            'Afpa\\Http\\' => 10,
+        ),
     );
 
     public static $prefixDirsPsr4 = array (
@@ -107,6 +111,10 @@ class ComposerStaticInit817c28ed115596f86955a96d46043b1b
         'Psr\\Container\\' => 
         array (
             0 => __DIR__ . '/..' . '/psr/container/src',
+        ),
+        'Afpa\\Http\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/src',
         ),
     );
 

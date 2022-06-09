@@ -1,5 +1,11 @@
 {
-    "require": {
-        "symfony/webpack-encore-bundle": "^1.14"
-    }
+    "name": "afpa/http",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Damien Martin",
+            "email": "martindamien284@gmail.com"
+        }
+    ],
+    "require": {}
 }

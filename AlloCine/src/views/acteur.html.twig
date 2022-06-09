@@ -1,10 +1,22 @@
 {% extends "base.html.twig" %}
 
+{% block title %}
+	- Acteurs
+{% endblock %}
 {% block header %}
-    {% for %}
-    foreach ($result as $row) {
-        echo $row['first_name'];
-        echo $row['last_name'];
-    }
-    {% endfor %}
+	<a href="http://localhost/http/alloCine/"><h1>
+		Acteurs
+	</h1></a>
+{% endblock %}
+{% block content %}
+	{% for acteur in acteurs %}
+		<div class="acteur">
+			<h2> {{ acteur.prenom }}
+			</h2>
+			<p> {{ acteur.nom }}
+			</p>
+			<img src="{{ acteur.image }}" alt="photo de {{ acteur.nom }} {{ acteur.prenom }}">
+		</div>
+	{% endfor %}
+	<a href="http://localhost/http/alloCine/Acteur/nouveau">+</a>
 {% endblock %}

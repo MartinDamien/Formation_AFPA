@@ -2,15 +2,21 @@
 
 namespace alloCine\models\services;
 
-use alloCine\models\daos\ActeurDao;
+use alloCine\models\daos\acteurDao;
 
 class ActeurService
 {
-    private $ActeurDao;
+    private $acteurDao;
 
     public function __construct()
     {
-        $this->ActeurDao = new ActeurDao();
+        $this->acteurDao = new ActeurDao();
+    }
+
+    public function getAllActeur()
+    {
+        $result = $this->acteurDao->findAll();
+        return $result;
     }
 
     public function getAllActeurs()

@@ -1,0 +1,22 @@
+{% extends "base.html.twig" %}
+
+{% block title %}
+	- Realisateurs
+{% endblock %}
+{% block header %}
+	<a href="http://localhost/http/alloCine/"><h1>
+		Realisateurs
+	</h1></a>
+{% endblock %}
+{% block content %}
+	{% for realisateur in realisateurs %}
+	<div class="realisateur">
+			<h2> {{ realisateur.prenom }}
+			</h2>
+			<p> {{ realisateur.nom }}
+			</p>
+			<img src="{{ realisateur.image }}" alt="photo de {{ realisateur.prenom }} {{ realisateur.nom }}">
+		</div>
+	{% endfor %}
+	<a href="http://localhost/http/alloCine/Realisateur/nouveau">+</a>
+{% endblock %}

@@ -1,0 +1,17 @@
+{% extends "base.html.twig" %} {% block title %} - Acteurs {% endblock %} {%
+block header %}
+<a href="http://localhost/http/alloCine/"><h1>Acteurs</h1></a>
+{% endblock %}
+{% block content %}
+<form action="addActeur" method="post">
+  <label for="nom">
+    Nom
+    <input type="text" name="nom" value="{{ acteur.nom }}" />
+  </label>
+  <label for="prenom">
+    Prénom
+    <input type="text" name="prenom" value="{{ acteur.prenom }}" />
+  </label>
+  <input type="submit" value="Ajouter" />
+</form>
+{% endblock %}

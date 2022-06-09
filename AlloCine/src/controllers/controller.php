@@ -2,9 +2,9 @@
 
 namespace alloCine\controllers;
 
+
 class controller
 {
-
     private $twig;
 
     public function __construct($t)

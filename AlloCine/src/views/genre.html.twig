@@ -1,0 +1,16 @@
+{% extends "base.html.twig" %}
+
+{% block title %}
+	- Genres
+{% endblock %}
+{% block header %}
+	<a href="http://localhost/http/alloCine/"><h1>
+		Genres
+	</h1></a>
+{% endblock %}
+{% block content %}
+	{% for genre in genres %}
+	<a href="http://localhost/http/alloCine/Genre/' . $genres->getId() . '">{{ genre.prenom | upper }}&nbsp; {{ genre.nom | upper }}</a><br/>
+	{% endfor %}
+	<a href="http://localhost/http/alloCine/Genre/nouveau">+</a>
+{% endblock %}

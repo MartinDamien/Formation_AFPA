@@ -1,12 +1,13 @@
 <?php
 
-namespace mvcobjet\Models\Entities;
+namespace alloCine\Models\Entities;
 
-class Realisateur 
+class Realisateur
 {
     private $id;
     private $nom;
     private $prenom;
+    private $cover;
 
     public function getId(): int
     {
@@ -38,6 +39,17 @@ class Realisateur
     public function setPrenom(string $prenom): Realisateur
     {
         $this->prenom = $prenom;
+        return $this;
+    }
+
+    public function getCover(): string
+    {
+        return $this->cover;
+    }
+
+    public function setCover(string $cover): Realisateur
+    {
+        $this->cover = $cover;
         return $this;
     }
 }

@@ -1,0 +1,15 @@
+{% extends "base.html.twig" %} {% block title %} - Realisateurs {% endblock %} {%
+block header %}
+<a href="http://localhost/http/alloCine/"><h1>Realisateurs</h1></a>
+{% endblock %} {% block content %}
+<form action="" method="post">
+  <label for="nom">
+    Nom
+    <input type="text" name="nom" value="{{ acteur.nom }}" />
+  </label>
+  <label for="prenom">
+    Prénom
+    <input type="text" name="prenom" value="{{ acteur.prenom }}" />
+  </label>
+</form>
+{% endblock %}

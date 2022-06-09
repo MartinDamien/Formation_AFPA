@@ -1,6 +1,6 @@
 <?php 
 // DAO : Data Access Object. 
-namespace AlloCine\models\daos;
+namespace alloCine\models\daos;
 
 use PDO;
 

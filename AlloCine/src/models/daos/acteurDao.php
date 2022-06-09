@@ -1,8 +1,8 @@
 <?php
 
-namespace AlloCine\models\daos;
+namespace alloCine\models\daos;
 
-use AlloCine\models\entities\Acteur;
+use alloCine\models\entities\Acteur;
 
 class ActeurDao extends Model
 {
@@ -10,8 +10,8 @@ class ActeurDao extends Model
     {
         $acteur = new Acteur();
         $acteur->setId($fields['id']);
-        $acteur->setPrenom($fields['first_name']);
-        $acteur->setNom($fields['last_name']);
+        $acteur->setNom($fields['first_name']);
+        $acteur->setPrenom($fields['last_name']);
         return $acteur;
     }
 

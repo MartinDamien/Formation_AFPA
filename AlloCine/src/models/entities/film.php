@@ -1,6 +1,6 @@
 <?php
 
-namespace mvcobjet\Models\Entities;
+namespace alloCine\Models\Entities;
 
 use DateTime;
 
@@ -14,7 +14,6 @@ class Film
     private $couverture;
     private $genre;
     private $realisateur;
-    private $acteurs;
 
     public function getId(): int
     {

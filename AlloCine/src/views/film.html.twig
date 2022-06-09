@@ -1,7 +1,36 @@
 {% extends "base.html.twig" %}
 
+{% block title %}
+	- Films
+{% endblock %}
 {% block header %}
-    <h1>
-        Bienvenue
-    </h1>
+	<a href="http://localhost/http/alloCine/"><h1>
+		Films
+	</h1></a>
+{% endblock %}
+{% block content %}
+	{% for film in films %}
+		<div class="film">
+			<h2>
+				{{ film.titre }}
+			</h2>
+			 <p>
+				{{ film.description }}
+			</p>
+			<img href="{{ film.cover }}">
+			<p>
+				{{ film.duree }}
+			</p>
+			{#<p>
+				{{ film.date }}
+			</p>
+			<p>
+				{{ film.genre }}
+			</p>
+			<p>
+				{{ film.realisateur }}
+			</p>
+			 #}
+	{% endfor %}
+	<a href="http://localhost/http/alloCine/Film/nouveau">+</a>
 {% endblock %}

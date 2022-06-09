@@ -39,4 +39,15 @@ class AnimalController extends AbstractController
             'animaux' => $animals,
         ]);
     }
+
+    #[Route('/animal/{id}', name: "afficher_animal")]
+    public function afficherAnimal(ManagerRegistry $doctrine, $id): Response
+    { 
+        $repository = $doctrine->getRepository(Animal::class);
+        $unanimal = $repository->find($id);
+
+        return $this->render('animal/afficheAnimal.html.twig',[ 
+            "animal" => $unanimal 
+        ]);  
+    }
 }

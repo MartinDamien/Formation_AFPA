@@ -35,7 +35,7 @@ class AnimalController extends AbstractController
         $repository = $doctrine->getRepository(Animal::class);
         $animals = $repository->findAll();
 
-        return $this->render('animal/showAll.html.twig', [
+        return $this->render('animal/allAnimal.html.twig', [
             'animaux' => $animals,
         ]);
     }
@@ -78,4 +78,6 @@ class AnimalController extends AbstractController
     { 
         return $this->render('animal/addAnimal.html.twig');  
     }
+
+    
 }

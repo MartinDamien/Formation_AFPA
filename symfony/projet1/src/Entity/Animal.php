@@ -3,6 +3,8 @@
 namespace App\Entity;
 
 use App\Repository\AnimalRepository;
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 
 #[ORM\Entity(repositoryClass: AnimalRepository::class)]
@@ -28,6 +30,14 @@ class Animal
     #[ORM\ManyToOne(targetEntity: Espece::class, inversedBy: 'animaux')]
     #[ORM\JoinColumn(nullable: false)]
     private $espece;
+
+    #[ORM\ManyToMany(targetEntity: Continent::class, mappedBy: 'animaux')]
+    private $continents;
+
+    public function __construct()
+    {
+        $this->continents = new ArrayCollection();
+    }
 
     public function getId(): ?int
     {
@@ -90,6 +100,33 @@ class Animal
     public function setEspece(?Espece $espece): self
     {
         $this->espece = $espece;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection<int, Continent>
+     */
+    public function getContinents(): Collection
+    {
+        return $this->continents;
+    }
+
+    public function addContinent(Continent $continent): self
+    {
+        if (!$this->continents->contains($continent)) {
+            $this->continents[] = $continent;
+            $continent->addAnimaux($this);
+        }
+
+        return $this;
+    }
+
+    public function removeContinent(Continent $continent): self
+    {
+        if ($this->continents->removeElement($continent)) {
+            $continent->removeAnimaux($this);
+        }
 
         return $this;
     }

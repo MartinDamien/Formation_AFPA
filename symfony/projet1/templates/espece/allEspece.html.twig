@@ -1,0 +1,7 @@
+{% for espece in especes %}
+{# <h1>{{ espece.espece }}</h1> #}
+<h2><a href="{{ path('afficher_espece',{'id':espece.id}) }}">{{espece.nom}}</a></h2>
+<img src="{{ espece.image }}" alt="{{ espece.nom }}" width="200px" height="200px">
+<h3>{{ espece.poids }}kg/{{ espece.description }}.</li></h3>
+{% endfor %}
+

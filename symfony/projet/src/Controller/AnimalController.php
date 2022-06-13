@@ -50,4 +50,32 @@ class AnimalController extends AbstractController
             "animal" => $unanimal 
         ]);  
     }
+
+    #[Route('/animal/{id}/edit', name: "edit_animal")]
+    public function editAnimal(ManagerRegistry $doctrine, $id): Response
+    { 
+        $repository = $doctrine->getRepository(Animal::class);
+        $unanimal = $repository->find($id);
+
+        return $this->render('animal/editAnimal.html.twig',[ 
+            "animal" => $unanimal 
+        ]);  
+    }
+
+    #[Route('/animal/{id}/delete', name: "delete_animal")]
+    public function deleteAnimal(ManagerRegistry $doctrine, $id): Response
+    { 
+        $repository = $doctrine->getRepository(Animal::class);
+        $unanimal = $repository->find($id);
+
+        return $this->render('animal/deleteAnimal.html.twig',[ 
+            "animal" => $unanimal 
+        ]);  
+    }
+
+    #[Route('/animal/add', name: "add_animal")]
+    public function addAnimal(): Response
+    { 
+        return $this->render('animal/addAnimal.html.twig');  
+    }
 }

@@ -12,8 +12,8 @@
 		<p class="card-text">Present dans ces pays :<br>
 		 	{% for continent in animal.continents %}{{ continent.libelle }} {% endfor %}
 		</p>
-        <a href="{{ path('app_animal_show',{'id':animal.id}) }}" class="btn btn-primary">modifier</a>
-        <a href="{{ path('app_animal_show',{'id':animal.id}) }}" class="btn btn-primary">supprimer</a>
+        <a href="{{ path('app_animal_edit',{'id':animal.id}) }}" class="btn btn-primary">modifier</a>
+        <a href="{{ path('app_animal_delete',{'id':animal.id}) }}" class="btn btn-primary">supprimer</a>
         <a href="{{ path('app_animal') }}" class="btn btn-primary">retour</a>
     </div>
     <img  src="{{ animal.image }}" class="card-img-top" alt="{{ animal.nom }}" width="200px">

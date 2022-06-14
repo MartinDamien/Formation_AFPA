@@ -67,8 +67,8 @@ class AnimalController extends AbstractController
     /**
      * @Route("/animal/{id}/update", name="app_animal_update")
      */
-    // public function update(AnimalRepository $animalrepo, $id): Response
-    // {
+    public function update(AnimalRepository $animalrepo, $id): Response
+    {
         
-    // }
+    }
 }

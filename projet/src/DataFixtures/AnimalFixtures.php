@@ -60,19 +60,19 @@ class AnimalFixtures extends Fixture
 
         $a4 = new Animal();
         $a4->setNom('dauphin')->addContinent($c1)->addContinent($c3)->addContinent($c4)->setEspece($e1)->setPoid(10)
-        ->setImage("dauphin.png")
+        ->setImage("https://france3-regions.francetvinfo.fr/image/MsQZwFo_SJ1wht0D_3Am3nKzbZg/600x400/regions/2021/02/01/60180da37b829_femke_one_voice-5178652.jpg")
         ->setDescription("puisque moi au contraire, j'ai pu ; Et je dis merci à la vie, je lui dis merci, je chante la vie, je danse la vie... Je ne suis qu'amour! Et finalement, quand beaucoup de gens aujourd'hui me disent : Mais comment fais-tu pour avoir cette humanité ?");
         $manager->persist($a4);
 
         $a5 = new Animal();
         $a5->setNom('Lapin')->addContinent($c1)->addContinent($c2)->setEspece($e1)->setPoid(5)
-        ->setImage("lapin.png")
+        ->setImage("https://image.isu.pub/180119103944-580e505e678b8315b7a35c6423a5307b/jpg/page_1.jpg")
         ->setDescription("Eh bien je leur réponds très simplement, je leur dis que c'est ce goût de l'amour, Ce goût donc qui m'a poussé aujourd'hui à entreprendre une construction mécanique,");
         $manager->persist($a5);
 
         $a6 = new Animal();
         $a6->setNom('Oiseau')->addContinent($c1)->addContinent($c3)->setEspece($e2)->setPoid(3)
-        ->setImage("oiseau.png")
+        ->setImage("https://www.asterix.com/wp-content/uploads/2021/06/Asmatix-01-1024x419.png")
         ->setDescription("Mais demain, qui sait, peut-être simplement à me mettre au service de la communauté, à faire le don, le don de soi...");
         $manager->persist($a6);
 

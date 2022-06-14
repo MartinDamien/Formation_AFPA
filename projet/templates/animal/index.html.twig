@@ -9,7 +9,7 @@
 <div class="card-deck">
 {% for animal in animal %}
 <div class="card  bg-dark text-white text-center" >
-    <img  src="{{ animal.image }}" class="card-img-top" alt="{{ animal.nom }}" width="200px" height="200px">
+    <img  src="{{ animal.image }}" class="card-img-top" alt="{{ animal.nom }}" width="200px" >
     <div class="card-body">
         <h5 class="card-title">race des {{ animal.espece.libelle }}s : {{ animal.nom }}</h5>
         <p  class="card-text">{{ animal.description }}</p>
@@ -17,9 +17,9 @@
 		<p class="card-text">Present dans ces pays :<br>
 		 	{% for continent in animal.continents %}{{ continent.libelle }} {% endfor %}
 		</p>
-        <a href="{{ path('app_animal_add') }}" class="btn btn-primary">afficher</a>
+        <a href="{{ path('app_animal_show',{'id':animal.id}) }}" class="btn btn-primary">afficher</a>
     </div>
 </div>{% endfor %}
 
 </div>
-<a href="{{ path('app_animal_add') }}" class="btn btn-primary">Ajouter un animal</a>{% endblock %}
+<a href="{{ path('app_animal_add') }}" class="btn btn-secondary">Ajouter un animal</a>{% endblock %}

@@ -1,7 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello AnimalController!
-{% endblock %}
+{% block title %}liste des animaux{% endblock %}
 
 {% block body %}
 	<style>
@@ -17,10 +16,10 @@
 		}
 	</style>
 
-	{%for animal in Animaux %}
-		<div class="\"example-wrapper\"">
-			<h1>{{ animal.nom }}</h1>
-			<p>{{ animal.description }}</p>
-		</div>
-	{% endfor %}
+	{% for animal in animal %}
+{# <h1>{{ animal.espece }}</h1> #}
+<h2><a href="{{ path('app_animal',{'animal/id':animal.id}) }}">{{animal.nom}}</a></h2>
+<img src="{{ animal.image }}" alt="{{ animal.nom }}" width="200px" height="200px">
+<h3>{{ animal.poid }}kg/{{ animal.description }}.</li></h3>
+{% endfor %}
 {% endblock %}

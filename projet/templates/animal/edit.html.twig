@@ -4,7 +4,7 @@
 
 {% block body %}
 formulaire de modification
-<form>
+<form action=\"{{ path('app_update_animal', {'id': animal.id}) }}\" method=\"post\">
     <label for="nom">nom</label>
     <input type="text" name="nom" value="{{ animal.nom }}">
 

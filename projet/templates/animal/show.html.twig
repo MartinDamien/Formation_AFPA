@@ -2,10 +2,11 @@
 
 {% block title %}profil{{ animal.nom }}{% endblock %}
 {% block body %}
+
 <img src="{{ animal.image }}" alt="{{ animal.nom }}" width="200px" height="200px">
 <h1>{{ animal.nom }}</h1>
 <p>{{ animal.description }}</p>
-<p>{{ animal.poid }}</p>
-{# <p>{{ animal.continent}}</p> #}
+<p>{{ animal.poid }} Kg</p>
+
 <a href="{{ path('app_animal_edit', {'id': animal.id}) }}">modifier</a>
 {% endblock %}

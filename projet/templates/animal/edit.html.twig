@@ -1,0 +1,21 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Profil:{{ animal.image }}{% endblock %}
+
+{% block body %}
+formulaire de modification
+<form>
+    <label for="nom">nom</label>
+    <input type="text" name="nom" value="{{ animal.nom }}">
+
+    <label for="description">Description</label>
+    <input type="text" name="description" value="{{ animal.description }}">
+
+    <label for="poid">poid</label>
+    <input type=integer" name="poid" value="{{ animal.poid }}">
+
+    <label for="image">Image</label>
+    <input type="text" name="image" value="{{ animal.image }}">
+
+    <input type="submit" value="Modifier">
+{% endblock %}

@@ -1,1 +1,10 @@
-coucou :)
+{% extends 'base.html.twig' %}
+
+{% block title %}profil{{ animal.nom }}{% endblock %}
+{% block body %}
+<img src="{{ animal.image }}" alt="{{ animal.nom }}" width="200px" height="200px">
+<h1>{{ animal.nom }}</h1>
+<p>{{ animal.description }}</p>
+<p>{{ animal.poid }}</p>
+<a href="{{ path('app_animal_edit', {'id': animal.id}) }}">modifier</a>
+{% endblock %}

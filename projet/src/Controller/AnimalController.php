@@ -27,7 +27,7 @@ class AnimalController extends AbstractController
     {
         $animal = $animalrepo->find($id);
         return $this->render('animal/show.html.twig', [
-            'Animal' => $animal,
+            'animal' => $animal,
         ]);
     }
 
@@ -38,7 +38,7 @@ class AnimalController extends AbstractController
     {
         $animal = $animalrepo->find($id);
         return $this->render('animal/edit.html.twig', [
-            'Animal' => $animal,
+            'animal' => $animal,
         ]);
     }
 
@@ -49,7 +49,18 @@ class AnimalController extends AbstractController
     {
         $animal = $animalrepo->find($id);
         return $this->render('animal/delete.html.twig', [
-            'Animal' => $animal,
+            'animal' => $animal,
+        ]);
+    }
+
+    /**
+     * @Route("/animal/add", name="app_animal_add")
+     */
+    public function add(AnimalRepository $animalrepo): Response
+    {
+        $animal = $animalrepo->findAll();
+        return $this->render('animal/add.html.twig', [
+            'animal' => $animal,
         ]);
     }
 }

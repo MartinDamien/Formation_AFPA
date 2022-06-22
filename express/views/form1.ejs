@@ -1,0 +1,15 @@
+<%- include('header') %>
+<h1>FORMULAIRE</h1>
+
+<main>
+    <form action="add_espece" method="post">
+        <label for="libelle">libelle de l'espece :</label>
+        <input type="text" name="libelle" id="libelle" required>
+
+        <label for="description">description de l'espece :</label>
+        <input type="text" name="description" id="description" required>
+        
+
+        <input type="submit" value="envoie">
+    </form>
+</main>

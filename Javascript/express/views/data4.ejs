@@ -1,17 +1,16 @@
 <%- include('header') %>
-<h1>DATA4</h1>
+<a href="http://localhost:8080/ajout_animal" class="btn btn-primary">nouvelle animal</a>
+<hr>
 <div class="card-deck">
-<% if ( locals.especes ) { %>        
-<% especes.forEach(function(espece) { %>
+<% if ( locals.animaux ) { %>        
+<% animaux.forEach(function(animal) { %>
   <div class="card bg-dark text-white text-center" >
     <div class="card-body">
-      <h5 class="card-title"><%= espece.nom %></h5>
-      <p  class="card-text"><%= espece.description %></p>
-      <!-- {% for continent in espece.continents %}{{ continent.libelle }} {% endfor %} -->
-    </p>
-      <a href="#" class="btn btn-primary">modifier</a>
-      <a href="#" class="btn btn-primary">supprimer</a>
-      <a href="#" class="btn btn-primary">retour</a>
+      <h5 class="card-title"><%= animal.nom %></h5>
+      <p  class="card-text"><%= animal.description %></p>
+      <p  class="card-text"><%= animal.poid %></p>
+      <a href="/modif_animal/<%= animal.id %>" class="btn btn-primary">modifier</a>
+      <a href="/remove/<%= animal.id %>" class="btn btn-primary">supprimer</a>
     </div>
   </div>   
 </div> 

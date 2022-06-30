@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <div>
+      <p id="nom"></p>
+      <p id="age"></p>
+    </div>
+
+    <div id="date1"></div>
+    <div id="date2"></div>
+
+    <button id="boutton">Chercher</button>
+    <script>
+      
+      var boutton = document.getElementById('boutton');
+      boutton.addEventListener('click', function(){
+        axios
+          .all([
+            axios.get("https://api.github.com/users/mapbox"),
+            axios.get("https://api.github.com/users/phantomjs")
+          ]).then((tabresp) => {
+            console.log(tabresp);
+            let date1 = tabresp[0].data.created_at;
+            let date2 = tabresp[1].data.created_at;
+            document.getElementById("date1").innerHTML = date1;
+            document.getElementById("date2").innerHTML = date2;
+          });
+          })
+    </script>
+  </body>
+</html>

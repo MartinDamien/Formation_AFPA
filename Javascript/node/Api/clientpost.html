@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <title>client</title>
+</head>
+<body>
+    <input type="text" id="nom">
+    <input type="text" id="prenom">
+
+    <button id="btn">Envoyer</button>
+
+    <script>
+        //ici pas de tag <form>, on va recuperer les données saisies
+        // et les envoyer par la methode post de axios. axios.post()
+
+        //detection du bouton
+        let bt = document.getElementById('btn');
+        bt.addEventListener('click', function(){
+            //recuperation des données
+            let nom = document.getElementById('nom').value;
+            let prenom = document.getElementById('prenom').value;
+            //envoie des données par la methode post
+            console.log(nom,prenom)
+            axios.post('/enregistre', {nom:nom,prenom:prenom})
+        });
+    </script>
+</body>
+</html>

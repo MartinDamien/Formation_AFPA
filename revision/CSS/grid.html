@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>revision grid</title>
+    <style>
+      .grid-1 {
+        display: grid;
+        width: 600px;
+        margin: 0 auto;
+        grid-template-areas:
+          "entete entete entete entete"
+          "aside main main main"
+          "footer footer footer footer";
+      }
+
+      .grid-1 div {
+        color: #bde03f;
+        font-size: 1.5em;
+        padding: 20px;
+      }
+
+      .item1 {
+        grid-area: entete;
+        background-color: #30997a;
+        text-align: center;
+      }
+
+      .item3 {
+        grid-area: aside;
+        background-color: #6a478f;
+        text-align: center;
+      }
+
+      .item2 {
+        grid-area: main;
+        background-color: #da6f2b;
+        text-align: center;
+      }
+
+      .item4 {
+        grid-area: footer;
+        background-color: #076a0b;
+        text-align: center;
+      }
+
+      @media screen and (max-width: 800px) {
+        .grid-1 {
+          grid-template-areas:
+            "entete"
+            "aside"
+            "main"
+            "footer";
+        }
+      }
+
+      @media screen and (max-width: 700px) {
+        .grid-1 {
+          grid-template-areas:
+            "aside"
+            "entete"
+            "main"
+            "footer";
+        }
+      }
+
+      @media screen and (max-width: 600px) {
+        .grid-1 {
+          grid-template-areas:
+            "aside"
+            "main"
+            "entete"
+            "footer";
+        }
+      }
+
+      @media screen and (max-width: 500px) {
+        .grid-1 {
+          grid-template-areas:
+            "main"
+            "aside"
+            "footer"
+            "entete";
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="grid-1">
+      <div class="item1">Entete</div>
+      <div class="item3">Aside</div>
+      <div class="item2">Main</div>
+      <div class="item4">Footer</div>
+    </div>
+  </body>
+</html>

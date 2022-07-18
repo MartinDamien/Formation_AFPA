@@ -1,0 +1,61 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    class car {
+    constructor(model,type,energie){
+        this.model = model;
+        this.type = type;
+        this.energie = energie;
+    }
+
+    getModel(){
+        return this.model;
+    }
+    getType(){
+        return this.type;
+    }
+    getEnergie(){
+        return this.energie;
+    }
+
+    setModel(model){
+        this.model = model;
+    }
+    setType(type){
+        this.type = type;
+    }
+    setEnergie(energie){
+        this.energie = energie;
+    }
+
+
+    //methode
+
+    static start(){
+        console.log("le vehicule démarre");
+    }
+    static stop(){
+        console.log("le vehicule s'arrête");
+    }
+    static accelerer(){
+            console.log("le vehicule accélère");
+    }
+    static freiner(){
+            console.log("le vehicule freine");
+        }
+    }
+
+const car1 = new car("Renault","Clio","essence");
+console.log (car1);
+car1.accelerer();
+
+
+</script>
+</body>
+</html>

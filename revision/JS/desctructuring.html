@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      [a, b, ...rest] = [10, 20, 30, 40, 50];
+
+      console.log(rest);
+
+      function myBio(firstName, lastName, ...rest) {
+        return rest;
+      }
+
+      let infos = myBio("John", "Doe", "Paris", "France", "30");
+
+      console.log(infos);
+
+
+        function myBio2(firstName, lastName, ...rest) {
+            return rest;
+        }
+
+        let infos2 = myBio2("John", "Doe", "Paris", "France", "30");
+
+        console.log(infos2);
+        
+      function somme(...nombres) {
+        let total = 0;
+
+        for (const argument of nombres) {
+          total += argument;
+        }
+
+        return total;
+      }
+
+      console.log(somme(1, 2, 3));
+    </script>
+  </body>
+</html>

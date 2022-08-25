@@ -105,7 +105,7 @@ fred.presentation();
 
 /*________________________________________________________________________________________________________________________________________________ */
 
-let femmes = [{
+let femme = [{
   nom_produit: "robe classe", prix: 25, photo: "robe.png", },
 { nom_produit: "pantalon femmes", prix: 45, photo: "pantalonf.png", },
 { nom_produit: "t-shirt femmes", prix: 35.5, photo: "tshirt.png", },

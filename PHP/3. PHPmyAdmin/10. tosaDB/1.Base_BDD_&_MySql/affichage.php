@@ -1,14 +1,14 @@
-<?php 
+<?php
 
 
 try {
 
 
-    $connection = new PDO("mysql:host=localhost;dbname=1_Premiere","root","");
+    $connection = new PDO("mysql:host=localhost;dbname=1_Premiere", "root", "");
 
     $connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-    
+
 
     // on crée un object de connection a la base de données
 
@@ -18,18 +18,15 @@ try {
 
     $stmt = $connection->prepare($sql);
 
-    $stmt->execute() ;
+    $stmt->execute();
 
-    $result = $stmt->fetchAll(PDO::FETCH_ASSOC); 
+    $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
     echo "<pre>";
 
     print_r($result);
 
     echo "</pre>";
-
-    }
-
-    catch (PDOException $e) { echo $e->getMessage() ; }
-
-?>
+} catch (PDOException $e) {
+    echo $e->getMessage();
+}

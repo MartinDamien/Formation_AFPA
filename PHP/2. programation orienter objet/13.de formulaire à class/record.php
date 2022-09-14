@@ -24,7 +24,4 @@ if( isset($nom)&&($nom != "")){
 /* crée un utilisateur
 if(isset($_POST['nom'])){
     instancier l'objet utilisateur 
-}*/ 
-
-
-?>
+}*/

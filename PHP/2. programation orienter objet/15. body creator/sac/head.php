@@ -5,15 +5,12 @@ class Head
     private $yeux;
     private $nez;
     private $bouche;
-
-
     public function __construct($y, $n, $b)
     {
         $this->yeux = $y;
         $this->nez = $n;
         $this->bouche = $b;
     }
-
     public function getYeux()
     {
         return $this->yeux;

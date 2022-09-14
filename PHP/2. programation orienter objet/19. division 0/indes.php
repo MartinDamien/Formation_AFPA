@@ -10,7 +10,7 @@ function division($dividende, $diviseur)
 
 
 try {
-   echo division(24, 3);
+    echo division(24, 3);
 } catch (Exception $e) {
     echo "erreur ! " . $e->getMessage();
 }

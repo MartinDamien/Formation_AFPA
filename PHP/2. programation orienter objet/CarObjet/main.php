@@ -2,8 +2,8 @@
 
 require "createur.php";
 
-$auto1 = new car();
-$auto2 = new car();
+$auto1 = new car("", "", "", "", "");
+$auto2 = new car("", "", "", "", "");
 
 $auto1->modele = "citroen";
 $auto2->modele = "BMW";

@@ -1,7 +1,7 @@
 <?php
 $s = "hello";
-$f = function () use($s) {
+$f = function () use ($s) {
     echo $s;
 };
-$s ="ta soeur";
+$s = "ta soeur";
 $f();

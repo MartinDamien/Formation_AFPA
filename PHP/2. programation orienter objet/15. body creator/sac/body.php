@@ -10,9 +10,7 @@ class Body
         $this->head = $head;
         $this->tronc = $tronc;
         $this->jambes = $jambes;
-
     }
-
     public function getHead()
     {
         return $this->head;
@@ -25,7 +23,6 @@ class Body
     {
         return $this->jambes;
     }
-
     public function getYeux()
     {
         return $this->head->getYeux();

@@ -27,10 +27,6 @@ require 'utilisateur.php';
 
         <button method="submit">Enregistrer</button>
     </form>
-
-
-   
-    </form>
 </body>
 
 </html>

@@ -17,7 +17,7 @@ class Utilisateur {
         return $this->genre ;
     }
     public function setGenre($g) {
-      
+    
         $this->genre = $g ;
     }
     public function getAge() {

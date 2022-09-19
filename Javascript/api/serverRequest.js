@@ -1,5 +1,5 @@
 // Sending an HTTP Request from a NodeJS server
-const express = require('express');
+const express = require("express");
 const app = express();
 const port = 3000;
 //const http = require("http");
@@ -8,15 +8,13 @@ const https = require("https");
 const Stream = require("stream").Transform;
 const fs = require("fs");
 
-
-
 https
-  .get("https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY", (resp) => { 
+  .get("https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY", (resp) => {
     let data = "";
 
     // A chunk of data has been recieved.
-    resp.on("data", (chunk) => { 
-      data += chunk; 
+    resp.on("data", (chunk) => {
+      data += chunk;
     });
 
     // The whole response has been received. Print out the result.
@@ -51,13 +49,13 @@ https
     console.log("Error: " + err.message);
   });
 
+app.get("/", (req, res) => res.send(""));
 
-app.get('/', (req, res) => res.send(''));
-
-
-app.listen(port, () =>console.log(`application lancé sur l'adresse : http://localhost:${port}, press Ctrl+C to stop, or Ctrl+Shift+C to quit.`));
-
-
+app.listen(port, () =>
+  console.log(
+    `application lancé sur l'adresse : http://localhost:${port}, press Ctrl+C to stop, or Ctrl+Shift+C to quit.`
+  )
+);
 
 /**
  * Astronomy Picture of the Day (APOD)
